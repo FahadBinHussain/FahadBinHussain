@@ -1,2 +1,1 @@
-![]
-(https://raw.githubusercontent.com/FahadBinHussain/FahadBinHussain/main/1.svg)
+![](https://github.com/FahadBinHussain/FahadBinHussain/blob/main/1.svg)
