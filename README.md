@@ -1,6 +1,6 @@
 <div style="display:flex; justify-content:space-between; align-items:center;">
   <h1>Hey There! 👋</h1>
-  <p><img src="https://komarev.com/ghpvc/?username=fahadbinhussain&style=flat-square&color=blueviolet" alt="Profile view counter"></p>
+  <p style="margin-left: auto;"><img src="https://komarev.com/ghpvc/?username=fahadbinhussain&style=flat-square&color=blueviolet" alt="Profile view counter"></p>
 </div>
 
 **I'm Fahad** - I'm a fullstack developer, designer, moderator, and university student based in Bangladesh. I'm interested in development, moderation, and building thriving online communities. I work on random projects in my free time, a lot involving Discord!
