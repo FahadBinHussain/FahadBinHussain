@@ -8,3 +8,14 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FahadBinHussain/FahadBinHussain/output/github-contribution-grid-snake.svg">
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/FahadBinHussain/FahadBinHussain/output/github-contribution-grid-snake.svg">
 </picture>
+
+![Profile view counter](https://komarev.com/ghpvc/?username=fahadbinhussain&style=flat-square&color=blueviolet)
+
+<div style="display:grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); grid-gap: 10px; overflow: hidden;">
+  <img style="width: 100%; height: auto;" src="https://github-readme-stats.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical" />
+  <img style="width: 100%; height: auto;" src="https://github-readme-streak-stats.herokuapp.com/?user=fahadbinhussain&theme=radical&date_format=M%20j[%2C%20Y]" />
+  <img style="width: 100%; height: auto;" src="https://github-readme-stats.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact" />
+  <img style="width: 100%; height: auto;" src="https://github-profile-trophy.vercel.app/?username=fahadbinhussain&theme=dracula&column=4" />
+</div>
+
+<!-- -->
