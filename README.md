@@ -89,7 +89,7 @@
   <div style="display: flex; flex-wrap: wrap;">
           <details open>
           <summary><h4>🎯 Metrics</h4></summary>
-                <img src="/github-metrics.svg" alt="Metrics">
+                <img src="/metrics.classic.svg" alt="Metrics">
           </details>
           <details>
           <summary><h4>💫 Repo Star Data</h4></summary>

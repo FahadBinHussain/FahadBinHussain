@@ -36,6 +36,13 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: 📗 Classic template - Example
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.classic.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_lines: yes
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest
         with:
