@@ -88,8 +88,8 @@
   <summary><h3>📌More Stats</h3></summary>
   <div style="display: flex; flex-wrap: wrap;">
           <details open>
-          <summary><h4>🎯 Metrics</h4></summary>
-                <img src="metrics.classic.svg" alt="Metrics">
+          <summary><h4>💫 Repo Star Data</h4></summary>
+                <img style="margin-left: 10px; margin-right: 10px;" align="top" src="metrics.classic.svg" alt="Metrics">
           </details>
           <details>
           <summary><h4>💫 Repo Star Data</h4></summary>

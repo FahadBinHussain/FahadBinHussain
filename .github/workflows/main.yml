@@ -37,12 +37,13 @@ jobs:
       contents: write
     steps:
       - name: 📗 Classic template - Example
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@master
         with:
           filename: metrics.classic.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+          base: header, repositories
           plugin_lines: yes
+          plugins_errors_fatal: yes
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest
         with:
