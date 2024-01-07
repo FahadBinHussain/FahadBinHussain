@@ -51,7 +51,7 @@
 </picture> -->
 
 </div>
-<details>
+<details open>
   <summary><h3>🔧 Languages & Tools I Primarily Use</h3></summary>
   
   
@@ -82,6 +82,9 @@
   ![Wordpress](https://img.shields.io/badge/wordpress-%23000000.svg?style=for-the-badge&logo=wordpress&logoColor=white)
   ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=white)
   ![Heroku](https://img.shields.io/badge/heroku-%23000000.svg?style=for-the-badge&logo=heroku&logoColor=white)
+  ![Axios](https://img.shields.io/badge/axios-%23000000.svg?style=for-the-badge&logo=axios&logoColor=white)
+  ![puppeteer](https://img.shields.io/badge/puppeteer-%23000000.svg?style=for-the-badge&logo=puppeteer&logoColor=white)
+  ![selenium](https://img.shields.io/badge/selenium-%23000000.svg?style=for-the-badge&logo=selenium&logoColor=white)
 </details>
 
 <details>
