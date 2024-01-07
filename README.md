@@ -31,6 +31,16 @@
 
 </details>
 
+-------
+
+📊 **Weekly development breakdown**
+
+<!--START_SECTION:waka-->
+
+<!--END_SECTION:waka-->
+
+-------
+
 <div markdown="1" style="display: flex;">
 <details open>
     <summary><h3 align="left">📈 My Github Stats:</h3></summary>

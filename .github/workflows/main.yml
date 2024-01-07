@@ -69,3 +69,11 @@ jobs:
           plugin_habits_facts: yes
           plugin_habits_charts: no
           config_timezone: Asia/Dhaka
+  
+  wakatime-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: WakaReadme DevMetrics
+        uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
