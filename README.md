@@ -38,7 +38,10 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Markdown   8 mins          █████████████████████████   100.00 %
+Markdown     8 mins          █████████████████░░░░░░░░   68.41 %
+PowerShell   2 mins          ████░░░░░░░░░░░░░░░░░░░░░   16.03 %
+Python       1 min           ███░░░░░░░░░░░░░░░░░░░░░░   12.63 %
+Other        0 secs          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.94 %
 ```
 
 <!--END_SECTION:waka-->
