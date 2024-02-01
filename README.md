@@ -38,9 +38,8 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Python       1 hr 5 mins     ████████████████████████░   95.87 %
-PowerShell   2 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.95 %
-Other        0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.17 %
+Python   1 hr 3 mins     ████████████████████████▓   99.33 %
+Other    0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.67 %
 ```
 
 <!--END_SECTION:waka-->
