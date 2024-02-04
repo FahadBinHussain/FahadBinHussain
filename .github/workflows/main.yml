@@ -2,7 +2,7 @@ name: Combined Workflow
 on:
   # Schedule daily updates
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "*/10 * * * *"
   # (optional) Run workflow manually
   workflow_dispatch:
   # (optional) Run workflow when pushing on master/main
