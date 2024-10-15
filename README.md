@@ -36,11 +36,7 @@
 <!--START_SECTION:waka-->
 
 ```txt
-JSON         25 mins         █████████▓░░░░░░░░░░░░░░░   38.80 %
-Git Config   22 mins         ████████▒░░░░░░░░░░░░░░░░   33.46 %
-JavaScript   13 mins         █████░░░░░░░░░░░░░░░░░░░░   20.47 %
-Markdown     4 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   06.03 %
-YAML         0 secs          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.24 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
