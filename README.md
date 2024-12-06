@@ -36,7 +36,11 @@
 <!--START_SECTION:waka-->
 
 ```txt
-No activity tracked
+Python       4 hrs 27 mins   ████████████████░░░░░░░░░   63.52 %
+YAML         2 hrs 9 mins    ███████▓░░░░░░░░░░░░░░░░░   30.69 %
+JSON         15 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.76 %
+Text         7 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.67 %
+HTML         1 min           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.28 %
 ```
 
 <!--END_SECTION:waka-->
