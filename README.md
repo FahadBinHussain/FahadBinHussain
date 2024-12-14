@@ -60,11 +60,11 @@ Bash         16 mins         ▓░░░░░░░░░░░░░░░░
   <img height="170" align="right" src="https://github-profile-trophy.vercel.app/?username=fahadbinhussain&theme=dracula&column=4" />
 </div> -->
 
-<!-- <picture>
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FahadBinHussain/FahadBinHussain/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FahadBinHussain/FahadBinHussain/output/github-contribution-grid-snake.svg">
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/FahadBinHussain/FahadBinHussain/output/github-contribution-grid-snake.svg">
-</picture> -->
+</picture>
 
 </div>
 <details open>
