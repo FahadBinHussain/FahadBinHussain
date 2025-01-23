@@ -1,6 +1,10 @@
 import requests
 import os
 import json
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Load configuration
 with open('services_config.json', 'r') as config_file:
@@ -22,6 +26,24 @@ def check_service_status(url):
             return 'major_outage', f'{url} is down.'
     except requests.exceptions.RequestException:
         return 'major_outage', f'{url} is down.'
+
+def get_component_status(component_id):
+    headers = {
+        'Authorization': f'OAuth {STATUSPAGE_API_KEY}',
+        'Content-Type': 'application/json'
+    }
+
+    response = requests.get(
+        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/components/{component_id}',
+        headers=headers
+    )
+
+    if response.status_code == 200:
+        component = response.json()
+        return component['status']
+    else:
+        logging.error('Failed to fetch component status: %s', response.content)
+        return None
 
 def update_statuspage(component_id, component_status, incident_body):
     headers = {
@@ -45,28 +67,59 @@ def update_statuspage(component_id, component_status, incident_body):
         }
     }
 
-    # Update component status
-    component_response = requests.patch(
-        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/components/{component_id}',
-        headers=headers,
-        json=component_update
-    )
+    try:
+        # Update component status
+        component_response = requests.patch(
+            f'https://api.statuspage.io/v1/pages/{PAGE_ID}/components/{component_id}',
+            headers=headers,
+            json=component_update
+        )
 
-    # Create or update incident
-    incident_response = requests.post(
-        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents',
+        # Create or update incident
+        incident_response = requests.post(
+            f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents',
+            headers=headers,
+            json=incident_update
+        )
+
+        if component_response.status_code == 200 and incident_response.status_code == 201:
+            logging.info('StatusPage updated successfully for component: %s', component_id)
+        else:
+            logging.error('Failed to update StatusPage for component: %s - %s - %s', component_id, component_response.content, incident_response.content)
+    except Exception as e:
+        logging.error('Error updating StatusPage for component: %s - %s', component_id, str(e))
+
+def resolve_incident(incident_id):
+    headers = {
+        'Authorization': f'OAuth {STATUSPAGE_API_KEY}',
+        'Content-Type': 'application/json'
+    }
+    incident_update = {
+        'incident': {
+            'status': 'resolved',
+            'body': 'The issue has been resolved.'
+        }
+    }
+
+    response = requests.patch(
+        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/{incident_id}',
         headers=headers,
         json=incident_update
     )
 
-    if component_response.status_code == 200 and incident_response.status_code == 201:
-        print('StatusPage updated successfully for component:', component_id)
+    if response.status_code == 200:
+        logging.info('Incident resolved successfully')
     else:
-        print('Failed to update StatusPage for component:', component_id, component_response.content, incident_response.content)
+        logging.error('Failed to resolve incident: %s', response.content)
 
 if __name__ == '__main__':
     for service in config['services']:
         url = service['url']
         component_id = service['component_id']
+        current_status = get_component_status(component_id)
         component_status, incident_body = check_service_status(url)
-        update_statuspage(component_id, component_status, incident_body)
+
+        if current_status != component_status:
+            update_statuspage(component_id, component_status, incident_body)
+        else:
+            logging.info('No status change for component %s', component_id)

@@ -1,4 +1,4 @@
-name: Check Wakapi Status
+name: Service Status Monitoring and Update
 on:
   schedule:
     - cron: "*/5 * * * *"  # Runs every 5 minutes
@@ -7,10 +7,10 @@ on:
       test_mode:
         description: "Enable test mode to simulate an outage"
         required: false
-        default: "false"
+        default: "false"  # String value
 
 jobs:
-  check-wakapi-status:
+  check-service-status:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -30,7 +30,6 @@ jobs:
         env:
           STATUSPAGE_API_KEY: ${{ secrets.STATUSPAGE_API_KEY }}
           PAGE_ID: ${{ secrets.PAGE_ID }}
-          COMPONENT_ID: ${{ secrets.COMPONENT_ID }}
           TEST_MODE: ${{ github.event.inputs.test_mode }}
         run: |
           python status_update.py
