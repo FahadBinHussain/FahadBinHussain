@@ -2,7 +2,7 @@ import requests
 import os
 
 WAKATIME_API_KEY = os.getenv('WAKATIME_API_KEY')
-API_BASE_URL = "https://wakapi-qt1b.onrender.com/api/v1/users/current/projects"
+API_BASE_URL = "https://wakapi-qt1b.onrender.com/api"
 
 headers = {
     'Authorization': f'Bearer {WAKATIME_API_KEY}'
