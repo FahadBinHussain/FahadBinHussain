@@ -1,6 +1,5 @@
 import requests
 import os
-import re
 
 WAKATIME_API_KEY = os.getenv('WAKATIME_API_KEY')
 API_BASE_URL = "https://wakapi-qt1b.onrender.com/api/v1/users/current/projects"
@@ -11,7 +10,25 @@ headers = {
 
 def fetch_top_projects():
     response = requests.get(API_BASE_URL, headers=headers)
-    projects = response.json().get('data', [])
+    try:
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        projects = response.json()
+    except requests.exceptions.HTTPError as http_err:
+        print(f"HTTP error occurred: {http_err}")
+        projects = []
+    except requests.exceptions.RequestException as err:
+        print(f"Error occurred: {err}")
+        projects = []
+    except ValueError as json_err:
+        print(f"JSON decode error: {json_err}")
+        print(f"Response content: {response.content}")
+        projects = []
+
+    if 'data' in projects:
+        projects = projects['data']
+    else:
+        projects = []
+
     # Sort projects by total time spent
     projects.sort(key=lambda x: x['total_seconds'], reverse=True)
     # Get top 2 projects
@@ -36,4 +53,5 @@ def update_readme(top_projects):
 
 if __name__ == "__main__":
     top_projects = fetch_top_projects()
-    update_readme(top_projects)
+    if top_projects:
+        update_readme(top_projects)
