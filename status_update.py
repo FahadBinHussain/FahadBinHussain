@@ -1,27 +1,29 @@
 import requests
 import os
+import json
 
-# Configuration
+# Load configuration
+with open('services_config.json', 'r') as config_file:
+    config = json.load(config_file)
+
 STATUSPAGE_API_KEY = os.getenv('STATUSPAGE_API_KEY')
 PAGE_ID = os.getenv('PAGE_ID')
-COMPONENT_ID = os.getenv('COMPONENT_ID')
-WAKAPI_URL = 'https://wakapi.dev/api/health'
 TEST_MODE = os.getenv('TEST_MODE', 'false').lower() == 'true'
 
-def check_service_status():
+def check_service_status(url):
     if TEST_MODE:
-        return 'major_outage', 'Simulated outage for testing.'
+        return 'major_outage', f'Simulated outage for testing {url}.'
     
     try:
-        response = requests.get(WAKAPI_URL)
+        response = requests.get(url)
         if response.status_code == 200:
-            return 'operational', 'Wakapi is operational.'
+            return 'operational', f'{url} is operational.'
         else:
-            return 'major_outage', 'Wakapi is down.'
+            return 'major_outage', f'{url} is down.'
     except requests.exceptions.RequestException:
-        return 'major_outage', 'Wakapi is down.'
+        return 'major_outage', f'{url} is down.'
 
-def update_statuspage(component_status, incident_body):
+def update_statuspage(component_id, component_status, incident_body):
     headers = {
         'Authorization': f'OAuth {STATUSPAGE_API_KEY}',
         'Content-Type': 'application/json'
@@ -33,11 +35,11 @@ def update_statuspage(component_status, incident_body):
     }
     incident_update = {
         'incident': {
-            'name': 'Wakapi Service Status',
+            'name': 'Service Status',
             'status': 'investigating' if component_status == 'major_outage' else 'resolved',
             'body': incident_body,
             'components': [{
-                'id': COMPONENT_ID,
+                'id': component_id,
                 'status': component_status
             }]
         }
@@ -45,7 +47,7 @@ def update_statuspage(component_status, incident_body):
 
     # Update component status
     component_response = requests.patch(
-        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/components/{COMPONENT_ID}',
+        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/components/{component_id}',
         headers=headers,
         json=component_update
     )
@@ -58,10 +60,13 @@ def update_statuspage(component_status, incident_body):
     )
 
     if component_response.status_code == 200 and incident_response.status_code == 201:
-        print('StatusPage updated successfully')
+        print('StatusPage updated successfully for component:', component_id)
     else:
-        print('Failed to update StatusPage', component_response.content, incident_response.content)
+        print('Failed to update StatusPage for component:', component_id, component_response.content, incident_response.content)
 
 if __name__ == '__main__':
-    component_status, incident_body = check_service_status()
-    update_statuspage(component_status, incident_body)
+    for service in config['services']:
+        url = service['url']
+        component_id = service['component_id']
+        component_status, incident_body = check_service_status(url)
+        update_statuspage(component_id, component_status, incident_body)

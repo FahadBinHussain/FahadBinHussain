@@ -1,0 +1,16 @@
+{
+    "services": [
+      {
+        "url": "https://wakapi-qt1b.onrender.com/",
+        "component_id": "jyz5q3tn7f3p"
+      },
+      {
+        "url": "https://hakatime-fhz3.onrender.com/#!/login",
+        "component_id": "jjl97lyfv9kx"
+      },
+      {
+        "url": "https://vaultwarden-ssvj.onrender.com/#/login",
+        "component_id": "jtb29nnk8nwl"
+      }
+    ]
+  }
