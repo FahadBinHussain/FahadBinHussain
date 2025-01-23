@@ -1,5 +1,4 @@
 name: Wakatime Metrics
-
 on:
   schedule:
     - cron: "0 * * * *"  # Runs every hour
@@ -9,11 +8,7 @@ jobs:
   wakatime-metrics:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up WakaReadme DevMetrics
+      - name: WakaReadme DevMetrics
         uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          
