@@ -5,9 +5,13 @@ import os
 STATUSPAGE_API_KEY = os.getenv('STATUSPAGE_API_KEY')
 PAGE_ID = os.getenv('PAGE_ID')
 COMPONENT_ID = os.getenv('COMPONENT_ID')
-WAKAPI_URL = 'https://wakapi-qt1b.onrender.com/'
+WAKAPI_URL = 'https://wakapi.dev/api/health'
+TEST_MODE = os.getenv('TEST_MODE', 'false').lower() == 'true'
 
 def check_service_status():
+    if TEST_MODE:
+        return 'major_outage', 'Simulated outage for testing.'
+    
     try:
         response = requests.get(WAKAPI_URL)
         if response.status_code == 200:
