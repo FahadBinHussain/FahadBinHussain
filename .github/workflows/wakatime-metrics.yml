@@ -1,0 +1,14 @@
+name: Wakatime Metrics
+on:
+  schedule:
+    - cron: "0 * * * *"  # Runs every hour
+  workflow_dispatch:
+
+jobs:
+  wakatime-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: WakaReadme DevMetrics
+        uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
