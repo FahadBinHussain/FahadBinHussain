@@ -31,13 +31,14 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: python update_readme.py
 
-      - name: Configure Git
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+      - name: Stash local changes
+        run: git stash
 
       - name: Pull latest changes
         run: git pull origin main
+
+      - name: Apply stash
+        run: git stash pop
 
       - name: Commit and Push changes
         run: |
