@@ -4,13 +4,16 @@ import base64
 from datetime import datetime
 import sys
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+WAKATIME_API_KEY = os.getenv('WAKATIME_API_KEY')
+WAKATIME_USERNAME = os.getenv('WAKATIME_USERNAME')
 
 # Set the default encoding to utf-8
 sys.stdout.reconfigure(encoding='utf-8')
-
-# Directly set the WAKATIME_API_KEY and USERNAME for testing purposes
-WAKATIME_API_KEY = "853c1504-3a07-4ff9-94fb-6cce94b1dd9d"
-WAKATIME_USERNAME = "fahad"
 
 if WAKATIME_API_KEY is None or WAKATIME_USERNAME is None:
     raise ValueError("WAKATIME_API_KEY and WAKATIME_USERNAME environment variables must be set")
