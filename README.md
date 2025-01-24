@@ -50,16 +50,17 @@ unknown      0 hrs 10 mins   █░░░░░░░░░░░░░░░░
 <div markdown="1" style="display: flex;">
 <details open>
     <summary><h3 align="left">📈 My Github Stats:</h3></summary>
-    <div style="display: flex; justify-content: space-between;">
-        <div style="flex: 1;">
+    <div style="display: flex; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px;">
             <img src="https://codestat.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical" alt="fahadbinhussain" />
         </div>
-        <div style="flex: 1; text-align: right;">
+        <div style="flex: 1; min-width: 300px;">
             <img src="https://gitstreak.vercel.app?user=fahadbinhussain&theme=radical" alt="fahadbinhussain" />
         </div>
-    </div>
-    <div style="display: flex; justify-content: center; margin-top: 20px;">
-        <img src="https://codestat.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact" alt="fahadbinhussain" />
+        <div style="flex-basis: 100%; height: 0;"></div>
+        <div style="flex: 1; min-width: 300px;">
+            <img src="https://codestat.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact" alt="fahadbinhussain" />
+        </div>
     </div>
 </details>
 
