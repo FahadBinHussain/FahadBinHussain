@@ -50,15 +50,12 @@ unknown      0 hrs 10 mins   █░░░░░░░░░░░░░░░░
 <div markdown="1" style="display: flex;">
 <details open>
     <summary><h3 align="left">📈 My Github Stats:</h3></summary>
-    <img src="https://codestat.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical"
-        alt="fahadbinhussain" /><img src="https://gitstreak.vercel.app?user=fahadbinhussain&theme=radical"
-        alt="fahadbinhussain" /><img src="https://codestat.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact"
-        alt="fahadbinhussain" /></p>
+    <img src="https://codestat.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical" alt="fahadbinhussain" />
+    <img src="https://gitstreak.vercel.app?user=fahadbinhussain&theme=radical" alt="fahadbinhussain" />
+    <img src="https://codestat.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact" alt="fahadbinhussain" />
+    <img height="170" align="right" src="https://github-profile-trophy.vercel.app/?username=fahadbinhussain&theme=dracula&column=4" /></p>
 </details>
 
-<!-- <div>
-  <img height="170" align="right" src="https://github-profile-trophy.vercel.app/?username=fahadbinhussain&theme=dracula&column=4" />
-</div> -->
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FahadBinHussain/FahadBinHussain/output/github-contribution-grid-snake-dark.svg">
