@@ -36,11 +36,11 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Python       2 hrs 9 mins    ██████████░░░░░░░░░░░░░░░   39.53 %
-Markdown     1 hrs 18 mins   ██████░░░░░░░░░░░░░░░░░░░   23.97 %
-YAML         1 hrs 5 mins    █████░░░░░░░░░░░░░░░░░░░░   20.10 %
-Go           0 hrs 11 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   03.36 %
-JSON         0 hrs 11 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.25 %
+Python       2 hrs 9 mins    ███████████▒░░░░░░░░░░░░░   44.81 %
+YAML         1 hrs 3 mins    █████▓░░░░░░░░░░░░░░░░░░░   22.09 %
+Markdown     0 hrs 44 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   15.18 %
+Go           0 hrs 11 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   03.81 %
+unknown      0 hrs 10 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   03.35 %
 ```
 
 <!--END_SECTION:waka-->
@@ -50,9 +50,9 @@ JSON         0 hrs 11 mins   ▓░░░░░░░░░░░░░░░░
 <div markdown="1" style="display: flex;">
 <details open>
     <summary><h3 align="left">📈 My Github Stats:</h3></summary>
-    <img src="https://github-readme-stats-eta-amber-30.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical" alt="fahadbinhussain" />
-    <img src="https://github-readme-stats-eta-amber-30.vercel.app/api?username=fahadbinhussain&theme=radical&date_format=M%20j[%2C%20Y]" alt="fahadbinhussain" />
-    <img src="https://github-readme-stats-eta-amber-30.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact" alt="fahadbinhussain" /></p>
+    <img src="https://codestat.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical" alt="fahadbinhussain" />
+    <img src="https://gitstreak.vercel.app/api?username=fahadbinhussain&theme=radical&date_format=M%20j[%2C%20Y]" alt="fahadbinhussain" />
+    <img src="https://codestat.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact" alt="fahadbinhussain" />
 </details>
 
 <!-- <div>
