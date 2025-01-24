@@ -1,7 +1,17 @@
 name: Service Status Monitoring and Update
+
+# Remove or comment out the schedule section to stop auto execution
+# on:
+#   schedule:
+#     - cron: "*/5 * * * *"  # Runs every 5 minutes
+#   workflow_dispatch:
+#     inputs:
+#       test_mode:
+#         description: "Enable test mode to simulate an outage"
+#         required: false
+#         default: "false"  # String value
+
 on:
-  schedule:
-    - cron: "*/5 * * * *"  # Runs every 5 minutes
   workflow_dispatch:
     inputs:
       test_mode:
