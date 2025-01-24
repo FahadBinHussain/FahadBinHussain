@@ -31,12 +31,18 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: python update_readme.py
 
-      - name: Commit and Push changes
+      - name: Configure Git
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Pull latest changes
+        run: git pull origin main
+
+      - name: Commit and Push changes
+        run: |
           git add README.md
-          git commit -m 'Update README with Wakatime metrics'
-          git push
+          git commit -m 'Update README with Wakatime metrics' || echo "No changes to commit"
+          git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
