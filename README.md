@@ -51,7 +51,7 @@ unknown      0 hrs 10 mins   █░░░░░░░░░░░░░░░░
 <details open>
     <summary><h3 align="left">📈 My Github Stats:</h3></summary>
     <img src="https://codestat.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical" alt="fahadbinhussain" />
-    <img src="https://gitstreak.vercel.app/api?username=fahadbinhussain&theme=radical&date_format=M%20j[%2C%20Y]" alt="fahadbinhussain" />
+    <img src="https://gitstreak.vercel.app/api?username=fahadbinhussain&theme=radical&date_format=M%20j[%2C%20Y]" alt="fahadbinhussain" type="image/svg+xml" />
     <img src="https://codestat.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact" alt="fahadbinhussain" />
 </details>
 
