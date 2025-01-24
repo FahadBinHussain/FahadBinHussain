@@ -3,6 +3,7 @@ import re
 import base64
 from datetime import datetime
 import sys
+import os
 
 # Set the default encoding to utf-8
 sys.stdout.reconfigure(encoding='utf-8')
@@ -23,7 +24,7 @@ headers = {
 # API base URL for fetching heartbeats
 HEARTBEATS_API_URL = f"https://wakapi-qt1b.onrender.com/api/compat/wakatime/v1/users/{WAKATIME_USERNAME}/heartbeats"
 
-def fetch_most_recent_project():
+def fetch_most_recent_projects():
     # Get the current date in YYYY-MM-DD format
     current_date = datetime.now().strftime('%Y-%m-%d')
     response = requests.get(HEARTBEATS_API_URL, headers=headers, params={'date': current_date})
@@ -53,11 +54,15 @@ def fetch_most_recent_project():
         # Extract project names from heartbeats
         projects = [hb['project'] for hb in heartbeats if 'project' in hb and hb['project']]
         
-        if projects:
-            # Get the most recent project (assuming the list is sorted by time)
-            most_recent_project = projects[0]
-            print(f"Most recent project: {most_recent_project}")
-            return most_recent_project
+        # Remove duplicates while preserving order
+        seen = set()
+        unique_projects = [x for x in projects if not (x in seen or seen.add(x))]
+
+        if unique_projects:
+            # Get the two most recent projects
+            most_recent_projects = unique_projects[:2]
+            print(f"Most recent projects: {most_recent_projects}")
+            return most_recent_projects
         else:
             print("No projects found in heartbeats.")
             return None
@@ -65,32 +70,46 @@ def fetch_most_recent_project():
         print("No heartbeats found or heartbeats list is invalid.")
         return None
 
-def update_readme(most_recent_project):
-    if not most_recent_project:
-        print("No recent project found to update README.")
+def update_readme(most_recent_projects):
+    if not most_recent_projects or len(most_recent_projects) < 2:
+        print("Less than two recent projects found to update README.")
         return
 
-    try:
-        with open('README.md', 'r', encoding='utf-8') as file:
-            readme_content = file.read()
-    except FileNotFoundError:
+    readme_path = 'README.md'
+
+    # Check if README.md file exists
+    if not os.path.isfile(readme_path):
         print("README.md file not found.")
         return
 
-    # New projects section content
-    new_projects_text = f"- 🔭 Currently actively developing my {most_recent_project} project."
-    print(f"New projects text: {new_projects_text}")
+    try:
+        with open(readme_path, 'r', encoding='utf-8') as file:
+            readme_content = file.read()
+        print("Successfully read README.md")
+    except Exception as e:
+        print(f"Error reading README.md: {e}")
+        return
 
-    # Define a regex pattern to find the line to be replaced
-    pattern = re.compile(r"- 🔭 Currently actively developing my .*project\.")
+    # Define the line to be updated
+    line_to_update = re.compile(r"- 🔭 Currently actively developing my .* projects\.")
+    
+    # New projects section content
+    new_projects_text = f"- 🔭 Currently actively developing my [{most_recent_projects[0]}](https://github.com/FahadBinHussain/{most_recent_projects[0]}) & [{most_recent_projects[1]}](https://github.com/FahadBinHussain/{most_recent_projects[1]}) projects."
 
     # Replace the line matching the pattern with the new content
-    updated_readme_content = re.sub(pattern, new_projects_text, readme_content)
+    if line_to_update.search(readme_content):
+        updated_readme_content = line_to_update.sub(new_projects_text, readme_content)
+    else:
+        print("Pattern not found in README.md, adding new project text.")
+        updated_readme_content = readme_content + "\n" + new_projects_text
 
-    with open('README.md', 'w', encoding='utf-8') as file:
-        file.write(updated_readme_content)
-    print("README.md has been updated.")
+    try:
+        with open(readme_path, 'w', encoding='utf-8') as file:
+            file.write(updated_readme_content)
+        print("Successfully updated README.md")
+    except Exception as e:
+        print(f"Error writing README.md: {e}")
 
 if __name__ == "__main__":
-    most_recent_project = fetch_most_recent_project()
-    update_readme(most_recent_project)
+    most_recent_projects = fetch_most_recent_projects()
+    update_readme(most_recent_projects)
