@@ -38,6 +38,7 @@ def fetch_most_recent_projects():
     try:
         response.raise_for_status()  # Raise an exception for HTTP errors
         data = response.json()
+        print(f"API response data: {data}")  # Debug statement
         heartbeats = data.get('data', [])
     except requests.exceptions.HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")
@@ -54,12 +55,16 @@ def fetch_most_recent_projects():
         # Print the fetched heartbeats for debugging
         print(f"Fetched heartbeats: {heartbeats}")
 
-        # Extract project names from heartbeats
-        projects = [hb['project'] for hb in heartbeats if 'project' in hb and hb['project']]
+        # Extract project names and timestamps from heartbeats
+        projects_with_timestamps = [(hb['project'], hb['time']) for hb in heartbeats if 'project' in hb and hb['project']]
+        
+        # Sort projects by timestamp in descending order (most recent first)
+        projects_with_timestamps.sort(key=lambda x: x[1], reverse=True)
         
         # Remove duplicates while preserving order
         seen = set()
-        unique_projects = [x for x in projects if not (x in seen or seen.add(x))]
+        unique_projects = [x[0] for x in projects_with_timestamps if not (x[0] in seen or seen.add(x[0]))]
+        print(f"Unique projects: {unique_projects}")  # Debug statement
 
         if unique_projects:
             # Get the two most recent projects
