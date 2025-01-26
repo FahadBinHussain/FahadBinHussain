@@ -17,7 +17,7 @@ jobs:
           python-version: '3.x'
       
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests python-dotenv # python-dotenv is needed for update_readme.py 
 
       - name: WakaReadme DevMetrics
         uses: athul/waka-readme@master
