@@ -29,6 +29,7 @@ jobs:
       - name: Update README with Top Projects
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          WAKATIME_USERNAME: ${{ secrets.WAKATIME_USERNAME }}
         run: python update_readme.py
       
       - name: Configure Git
