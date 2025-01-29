@@ -36,14 +36,21 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-      
+
+      - name: Check for local changes
+        id: changes
+        run: |
+          git diff --exit-code || echo "::set-output name=changes::true"
+
       - name: Stash local changes
+        if: steps.changes.outputs.changes == 'true'
         run: git stash
 
       - name: Pull latest changes
         run: git pull origin main
 
       - name: Apply stash
+        if: steps.changes.outputs.changes == 'true'
         run: git stash pop
 
       - name: Commit and Push changes
