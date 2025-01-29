@@ -1,8 +1,11 @@
 {
     "services": [
       {
-        "url": "https://wakapi-qt1b.onrender.com/health",
-        "component_id": "jyz5q3tn7f3p"
+        "url": "https://wakapi-qt1b.onrender.com/api/health",
+        "components": [
+            { "name": "app", "component_id": "ngzcrsbhjs6r" },
+            { "name": "db", "component_id": "y0c62d4dp26m" }
+        ]
       },
       {
         "url": "https://hakatime-fhz3.onrender.com/#!/login",

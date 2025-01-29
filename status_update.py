@@ -14,7 +14,29 @@ STATUSPAGE_API_KEY = os.getenv('STATUSPAGE_API_KEY')
 PAGE_ID = os.getenv('PAGE_ID')
 TEST_MODE = os.getenv('TEST_MODE', 'false').lower() == 'true'
 
-def check_service_status(url):
+def check_wakapi_service_status(url):
+    if TEST_MODE:
+        return {'app': 'major_outage', 'db': 'major_outage'}, f'Simulated outage for testing {url}.'
+    
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            response_body = response.text.strip()
+            status_parts = response_body.split("\n")
+            status_dict = {part.split('=')[0]: part.split('=')[1] for part in status_parts}
+            component_statuses = {}
+            for component, status in status_dict.items():
+                if status == '1':
+                    component_statuses[component] = 'operational'
+                else:
+                    component_statuses[component] = 'major_outage'
+            return component_statuses, f'{url} health check completed with components status.'
+        else:
+            return {'app': 'major_outage', 'db': 'major_outage'}, f'{url} is down.'
+    except requests.exceptions.RequestException:
+        return {'app': 'major_outage', 'db': 'major_outage'}, f'{url} is down.'
+
+def check_general_service_status(url):
     if TEST_MODE:
         return 'major_outage', f'Simulated outage for testing {url}.'
     
@@ -82,7 +104,7 @@ def update_statuspage(component_id, component_status, incident_body):
             json=incident_update
         )
 
-        if component_response.status_code == 200 and incident_response.status_code == 201:
+        if component_response.status_code == 200 and incident_response.status_code in [200, 201]:
             logging.info('StatusPage updated successfully for component: %s', component_id)
         else:
             logging.error('Failed to update StatusPage for component: %s - %s - %s', component_id, component_response.content, incident_response.content)
@@ -115,11 +137,27 @@ def resolve_incident(incident_id):
 if __name__ == '__main__':
     for service in config['services']:
         url = service['url']
-        component_id = service['component_id']
-        current_status = get_component_status(component_id)
-        component_status, incident_body = check_service_status(url)
+        if 'components' in service:
+            # Handle Wakapi services with multiple components
+            for component in service['components']:
+                component_name = component['name']
+                component_id = component['component_id']
+                current_status = get_component_status(component_id)
 
-        if current_status != component_status:
-            update_statuspage(component_id, component_status, incident_body)
+                component_statuses, incident_body = check_wakapi_service_status(url)
+
+                new_status = component_statuses.get(component_name, 'major_outage')
+                if current_status != new_status:
+                    update_statuspage(component_id, new_status, incident_body)
+                else:
+                    logging.info('No status change for component %s', component_id)
         else:
-            logging.info('No status change for component %s', component_id)
+            # Handle general services
+            component_id = service['component_id']
+            current_status = get_component_status(component_id)
+            component_status, incident_body = check_general_service_status(url)
+
+            if current_status != component_status:
+                update_statuspage(component_id, component_status, incident_body)
+            else:
+                logging.info('No status change for component %s', component_id)
