@@ -178,29 +178,22 @@ def resolve_incident(incident_id):
         logging.error('Failed to resolve incident: %s', response.content)
 
 if __name__ == '__main__':
+    outage_detected = False
     for service in config['services']:
         url = service['url']
         if 'components' in service:
-            # Handle Wakapi services with multiple components
             for component in service['components']:
-                component_name = component['name']
-                component_id = component['component_id']
-                current_status = get_component_status(component_id)
-
-                component_statuses, incident_body = check_wakapi_service_status(url)
-
-                new_status = component_statuses.get(component_name, 'major_outage')
-                if current_status != new_status:
-                    update_statuspage(component_id, new_status, incident_body)
-                else:
-                    logging.info('No status change for component %s', component_id)
+                component_statuses, _ = check_wakapi_service_status(url)
+                if any(status != 'operational' for status in component_statuses.values()):
+                    outage_detected = True
         else:
-            # Handle general services
-            component_id = service['component_id']
-            current_status = get_component_status(component_id)
-            component_status, incident_body = check_general_service_status(url)
+            status, _ = check_general_service_status(url)
+            if status != 'operational':
+                outage_detected = True
 
-            if current_status != component_status:
-                update_statuspage(component_id, component_status, incident_body)
-            else:
-                logging.info('No status change for component %s', component_id)
+    if outage_detected:
+        logging.error('Outage detected - failing workflow to trigger notifications')
+        exit(1)
+    else:
+        logging.info('All services operational')
+        exit(0)
