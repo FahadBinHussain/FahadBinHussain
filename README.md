@@ -40,7 +40,7 @@ YAML         0 hrs 2 mins    ████████████▒░░░░
 HTML         0 hrs 2 mins    ███████████▒░░░░░░░░░░░░░   45.15 %
 JSON         0 hrs 0 mins    ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.24 %
 JavaScript   0 hrs 0 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.12 %
-unknown      0 hrs 0 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.75 %
+TypeScript   0 hrs 0 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.75 %
 ```
 
 <!--END_SECTION:waka-->
