@@ -36,11 +36,8 @@
 <!--START_SECTION:waka-->
 
 ```txt
-YAML         0 hrs 2 mins    ████████████▒░░░░░░░░░░░░   49.63 %
-HTML         0 hrs 2 mins    ███████████▒░░░░░░░░░░░░░   45.15 %
-JSON         0 hrs 0 mins    ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.24 %
-JavaScript   0 hrs 0 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.12 %
-TypeScript   0 hrs 0 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.75 %
+HTML   0 hrs 2 mins    ████████████▓░░░░░░░░░░░░   50.21 %
+YAML   0 hrs 2 mins    ████████████▒░░░░░░░░░░░░   49.79 %
 ```
 
 <!--END_SECTION:waka-->
