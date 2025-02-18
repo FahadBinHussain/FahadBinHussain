@@ -36,8 +36,7 @@
 <!--START_SECTION:waka-->
 
 ```txt
-HTML   0 hrs 2 mins    ████████████▓░░░░░░░░░░░░   50.21 %
-YAML   0 hrs 2 mins    ████████████▒░░░░░░░░░░░░   49.79 %
+HTML   0 hrs 2 mins    █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
