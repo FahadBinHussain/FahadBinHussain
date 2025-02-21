@@ -36,7 +36,8 @@
 <!--START_SECTION:waka-->
 
 ```txt
-HTML   0 hrs 2 mins    █████████████████████████   100.00 %
+Text   0 hrs 6 mins    ██████████████████▓░░░░░░   75.26 %
+HTML   0 hrs 2 mins    ██████▒░░░░░░░░░░░░░░░░░░   24.74 %
 ```
 
 <!--END_SECTION:waka-->
