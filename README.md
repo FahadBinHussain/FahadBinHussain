@@ -36,8 +36,8 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Text   0 hrs 8 mins    ████████████████████░░░░░   80.52 %
-Bash   0 hrs 2 mins    █████░░░░░░░░░░░░░░░░░░░░   19.48 %
+Text   0 hrs 6 mins    ███████████████░░░░░░░░░░   60.53 %
+Bash   0 hrs 4 mins    ██████████░░░░░░░░░░░░░░░   39.47 %
 ```
 
 <!--END_SECTION:waka-->
