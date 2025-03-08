@@ -4,12 +4,16 @@
 
 <h1 align="center">Hi There! 👋, I'm Fahad (Fahad Bin Hussain)<h3 align="center">🧠 Premium Software Engineer </h3></h1>
 
-<p align="right"> <a href="https://www.linkedin.com/in/fahadbinhussain/" target="_blank">
-        <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a><a href="mailto:fahadbinhussain001@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a><a href="https://github.com/sponsors/fahadbinhussain" target="_blank">
-        <img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a><a href="https://www.buymeacoffee.com/fahadbinhu6" target="_blank">
-        <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee"/></a>
-    
-        
+<p align="right"> 
+        <a href="https://www.linkedin.com/in/fahadbinhussain/" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+        <a href="mailto:fahadbinhussain001@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>
+        <a href="https://github.com/sponsors/fahadbinhussain" target="_blank"><img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AA" alt="Github Sponsor"/></a>
+        <a href="https://www.buymeacoffee.com/fahadbinhu6" target="_blank"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee"/></a>          
+</p>
+
+<p align="right"> 
+        <a href="https://oangrybird.onrender.com/" target="_blank"><img src="https://img.shields.io/badge/Personal_Site-00FFFF?style=for-the-badge&logo=react&logoColor=black" alt="Work in progess ..."/></a>
+        <a href="https://algoject.statuspage.io/" target="_blank"><img src="https://img.shields.io/badge/AlgoJect_Status-00CCFF?style=for-the-badge&logo=statuspage&logoColor=black" alt="AlgoJect Status"/></a>
 </p>
 
 <div style="padding-left: 20px;">
@@ -36,7 +40,11 @@
 <!--START_SECTION:waka-->
 
 ```txt
-Markdown   0 hrs 2 mins    █████████████████████████   100.00 %
+Python       2 hrs 44 mins   ███████▓░░░░░░░░░░░░░░░░░   31.29 %
+Markdown     2 hrs 5 mins    ██████░░░░░░░░░░░░░░░░░░░   23.86 %
+YAML         1 hrs 25 mins   ████░░░░░░░░░░░░░░░░░░░░░   16.28 %
+JSON         0 hrs 43 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   08.15 %
+JavaScript   0 hrs 34 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.50 %
 ```
 
 <!--END_SECTION:waka-->
