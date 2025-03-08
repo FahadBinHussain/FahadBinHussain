@@ -113,5 +113,9 @@ No activity tracked
   </div>
 </details>
 
+<img src="https://wakapi-qt1b.onrender.com/api/badge/fahad/interval:any/project:FahadBinHussain" 
+     alt="Wakapi Time Tracking" 
+     title="Minimum amount of time spent on this project">
+
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
