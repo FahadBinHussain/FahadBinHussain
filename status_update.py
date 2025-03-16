@@ -27,9 +27,9 @@ if not TEST_MODE and (not STATUSPAGE_API_KEY or not PAGE_ID):
     logging.error('Exiting due to missing credentials')
     exit(1)
 
-def check_wakapi_service_status(url):
+def check_multi_component_service_status(url, service_name):
     if TEST_MODE:
-        return {'app': 'major_outage', 'db': 'major_outage'}, f'Simulated outage for testing {url}.'
+        return {'frontend': 'major_outage', 'backend': 'major_outage'}, f'Simulated outage for testing {url}.'
     
     try:
         response = requests.get(url)
@@ -47,10 +47,24 @@ def check_wakapi_service_status(url):
             return component_statuses, f'{url} health check completed with components status.'
         else:
             logging.info('Service status for %s: major_outage', url)
-            return {'app': 'major_outage', 'db': 'major_outage'}, f'{url} is down.'
+            # Default component names based on the service
+            default_components = {
+                'wakapi': ['app', 'db'],
+                'xenovate': ['frontend', 'backend']
+            }
+            components = default_components.get(service_name, ['service'])
+            component_statuses = {comp: 'major_outage' for comp in components}
+            return component_statuses, f'{url} is down.'
     except requests.exceptions.RequestException:
         logging.info('Service status for %s: major_outage', url)
-        return {'app': 'major_outage', 'db': 'major_outage'}, f'{url} is down.'
+        # Default component names based on the service
+        default_components = {
+            'wakapi': ['app', 'db'],
+            'xenovate': ['frontend', 'backend']
+        }
+        components = default_components.get(service_name, ['service'])
+        component_statuses = {comp: 'major_outage' for comp in components}
+        return component_statuses, f'{url} is down.'
 
 def check_general_service_status(url):
     if TEST_MODE:
@@ -177,17 +191,44 @@ def resolve_incident(incident_id):
     else:
         logging.error('Failed to resolve incident: %s', response.content)
 
+def get_service_name_from_url(url):
+    """Extract service name from URL for multi-component services"""
+    if 'wakapi' in url.lower():
+        return 'wakapi'
+    elif 'xenovate' in url.lower():
+        return 'xenovate'
+    else:
+        return 'unknown'
+
 if __name__ == '__main__':
     outage_detected = False
     for service in config['services']:
         url = service['url']
         if 'components' in service:
+            # Handle multi-component services (wakapi, xenovate, etc.)
+            service_name = get_service_name_from_url(url)
+            component_statuses, message = check_multi_component_service_status(url, service_name)
             for component in service['components']:
-                component_statuses, _ = check_wakapi_service_status(url)
-                if any(status != 'operational' for status in component_statuses.values()):
+                component_name = component['name']
+                component_id = component['component_id']
+                component_status = component_statuses.get(component_name, 'major_outage')
+                
+                current_status = get_component_status(component_id)
+                if current_status != component_status:
+                    update_statuspage(component_id, component_status, 
+                                      f"{component_name} status: {component_status}. {message}")
+                    
+                if component_status != 'operational':
                     outage_detected = True
         else:
-            status, _ = check_general_service_status(url)
+            # Handle single-component services
+            status, message = check_general_service_status(url)
+            component_id = service['component_id']
+            
+            current_status = get_component_status(component_id)
+            if current_status != status:
+                update_statuspage(component_id, status, message)
+                
             if status != 'operational':
                 outage_detected = True
 

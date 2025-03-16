@@ -36,8 +36,11 @@
         "component_id": "mwm93kgbckv5"
       },
       {
-        "url": "https://xenovate.onrender.com/",
-        "component_id": "fsgjgr1m7zqg"
+        "url": "https://xenovate.onrender.com/api/health",
+        "components": [
+            { "name": "frontend", "component_id": "fsgjgr1m7zqg" },
+            { "name": "backend", "component_id": "08q6f7n0zm25" }
+        ]
       }
     ]
   }
