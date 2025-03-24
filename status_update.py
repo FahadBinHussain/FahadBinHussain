@@ -44,69 +44,102 @@ def check_multi_component_service_status(url, service_name):
         'xenovate': ['frontend', 'backend']
     }
     
-    try:
-        # Add a random delay between 0.1 and 0.5 seconds to prevent race conditions
-        time.sleep(random.uniform(0.1, 0.5))
-        
-        response = requests.get(url, timeout=10)
-        if response.status_code == 200:
-            try:
-                response_body = response.text.strip()
-                status_parts = response_body.split("\n")
-                status_dict = {}
-                
-                # Parse the response more robustly
-                for part in status_parts:
-                    if '=' in part:
-                        key, value = part.split('=', 1)
-                        status_dict[key] = value
-                
-                component_statuses = {}
-                for component, status in status_dict.items():
-                    if status == '1':
-                        component_statuses[component] = 'operational'
-                    else:
-                        component_statuses[component] = 'major_outage'
-                
-                # If we couldn't parse any components, use the defaults
-                if not component_statuses:
+    # Progressive timeout strategy - start with shorter timeout and increase on retries
+    timeout = 5  # Start with a 5-second timeout
+    max_timeout = 15  # Maximum timeout in seconds
+    retry_attempts = 2  # Number of retry attempts
+    
+    for attempt in range(retry_attempts + 1):
+        try:
+            # Add a random delay between 0.1 and 0.5 seconds to prevent race conditions
+            time.sleep(random.uniform(0.1, 0.5))
+            
+            logging.info(f"Attempt {attempt+1}/{retry_attempts+1} for {url} with timeout={timeout}s")
+            response = requests.get(url, timeout=timeout)
+            
+            if response.status_code == 200:
+                try:
+                    response_body = response.text.strip()
+                    status_parts = response_body.split("\n")
+                    status_dict = {}
+                    
+                    # Parse the response more robustly
+                    for part in status_parts:
+                        if '=' in part:
+                            key, value = part.split('=', 1)
+                            status_dict[key] = value
+                    
+                    component_statuses = {}
+                    for component, status in status_dict.items():
+                        if status == '1':
+                            component_statuses[component] = 'operational'
+                        else:
+                            component_statuses[component] = 'major_outage'
+                    
+                    # If we couldn't parse any components, use the defaults
+                    if not component_statuses:
+                        components = default_components.get(service_name, ['service'])
+                        component_statuses = {comp: 'operational' for comp in components}
+                    
+                    logging.info('Service status for %s: %s', url, component_statuses)
+                    return component_statuses, f'{url} health check completed successfully.'
+                except Exception as e:
+                    logging.warning('Error parsing response from %s: %s. Assuming service is operational.', url, str(e))
                     components = default_components.get(service_name, ['service'])
                     component_statuses = {comp: 'operational' for comp in components}
-                
-                logging.info('Service status for %s: %s', url, component_statuses)
-                return component_statuses, f'{url} health check completed successfully.'
-            except Exception as e:
-                logging.warning('Error parsing response from %s: %s. Assuming service is operational.', url, str(e))
+                    return component_statuses, f'{url} appears to be operational but response format is unexpected.'
+            else:
+                # Only return error immediately on the last attempt
+                if attempt == retry_attempts:
+                    components = default_components.get(service_name, ['service'])
+                    component_statuses = {comp: 'major_outage' for comp in components}
+                    logging.warning('Service status for %s: HTTP %s - Setting components to major_outage', url, response.status_code)
+                    return component_statuses, f'{url} returned HTTP {response.status_code}.'
+        except requests.exceptions.RequestException as e:
+            # Only return error immediately on the last attempt
+            if attempt == retry_attempts:
                 components = default_components.get(service_name, ['service'])
-                component_statuses = {comp: 'operational' for comp in components}
-                return component_statuses, f'{url} appears to be operational but response format is unexpected.'
-        else:
-            components = default_components.get(service_name, ['service'])
-            component_statuses = {comp: 'major_outage' for comp in components}
-            logging.warning('Service status for %s: HTTP %s - Setting components to major_outage', url, response.status_code)
-            return component_statuses, f'{url} returned HTTP {response.status_code}.'
-    except requests.exceptions.RequestException as e:
-        components = default_components.get(service_name, ['service'])
-        component_statuses = {comp: 'major_outage' for comp in components}
-        logging.warning('Service status for %s: Connection error - %s', url, str(e))
-        return component_statuses, f'{url} connection error: {str(e)}.'
+                component_statuses = {comp: 'major_outage' for comp in components}
+                logging.warning('Service status for %s: Connection error - %s', url, str(e))
+                return component_statuses, f'{url} connection error: {str(e)}.'
+        
+        # Increase timeout for next attempt if we're retrying
+        if attempt < retry_attempts:
+            timeout = min(timeout * 1.5, max_timeout)  # Increase timeout by 50% for next attempt
 
 def check_general_service_status(url):
     if TEST_MODE:
         logging.info('Test mode status for %s: major_outage', url)
         return 'major_outage', f'Simulated outage for testing {url}.'
     
-    try:
-        response = requests.get(url, timeout=10)
-        if response.status_code == 200:
-            logging.info('Service status for %s: operational', url)
-            return 'operational', f'{url} is operational.'
-        else:
-            logging.warning('Service status for %s: HTTP %s - major_outage', url, response.status_code)
-            return 'major_outage', f'{url} returned HTTP {response.status_code}.'
-    except requests.exceptions.RequestException as e:
-        logging.warning('Service status for %s: Connection error - %s', url, str(e))
-        return 'major_outage', f'{url} connection error: {str(e)}.'
+    # Progressive timeout strategy - start with shorter timeout and increase on retries
+    timeout = 5  # Start with a 5-second timeout
+    max_timeout = 15  # Maximum timeout in seconds
+    retry_attempts = 2  # Number of retry attempts
+    
+    for attempt in range(retry_attempts + 1):
+        try:
+            logging.info(f"Attempt {attempt+1}/{retry_attempts+1} for {url} with timeout={timeout}s")
+            response = requests.get(url, timeout=timeout)
+            
+            if response.status_code == 200:
+                logging.info('Service status for %s: operational', url)
+                return 'operational', f'{url} is operational.'
+            else:
+                # Only return error on the last attempt
+                if attempt == retry_attempts:
+                    logging.warning('Service status for %s: HTTP %s - major_outage', url, response.status_code)
+                    return 'major_outage', f'{url} returned HTTP {response.status_code}.'
+        except requests.exceptions.RequestException as e:
+            # Only return error on the last attempt
+            if attempt == retry_attempts:
+                logging.warning('Service status for %s: Connection error - %s', url, str(e))
+                return 'major_outage', f'{url} connection error: {str(e)}.'
+        
+        # Increase timeout for next attempt if we're retrying
+        if attempt < retry_attempts:
+            timeout = min(timeout * 1.5, max_timeout)  # Increase timeout by 50% for next attempt
+            time.sleep(random.uniform(0.5, 1.0))  # Add a small delay between attempts
 
 def get_component_status(component_id):
     if not STATUSPAGE_API_KEY or not PAGE_ID:
@@ -154,20 +187,9 @@ def update_statuspage(component_id, component_status, incident_body):
             'status': component_status
         }
     }
-    incident_update = {
-        'incident': {
-            'name': 'Service Status',
-            'status': 'investigating' if component_status == 'major_outage' else 'resolved',
-            'body': incident_body,
-            'components': [{
-                'id': component_id,
-                'status': component_status
-            }]
-        }
-    }
-
+    
     try:
-        # Update component status
+        # First, update component status
         component_response = requests.patch(
             f'https://api.statuspage.io/v1/pages/{PAGE_ID}/components/{component_id}',
             headers=headers,
@@ -178,18 +200,77 @@ def update_statuspage(component_id, component_status, incident_body):
         if component_response.status_code == 401:
             logging.error('Authentication failed during component update')
             return
+        elif component_response.status_code != 200:
+            logging.error('Failed to update component status: %s - %s', component_id, component_response.content)
+            return
 
-        # Create or update incident
-        incident_response = requests.post(
-            f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents',
-            headers=headers,
-            json=incident_update
-        )
-
-        if component_response.status_code == 200 and incident_response.status_code in [200, 201]:
-            logging.info('StatusPage updated successfully for component: %s', component_id)
+        # Only create incident if the component is not operational
+        if component_status != 'operational':
+            # Check if there's already an active incident for this component
+            incidents_response = requests.get(
+                f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/unresolved',
+                headers=headers,
+                timeout=15
+            )
+            
+            if incidents_response.status_code == 200:
+                incidents = incidents_response.json()
+                existing_incident = None
+                
+                # Look for an existing incident that includes this component
+                for incident in incidents:
+                    incident_components = incident.get('components', {})
+                    if component_id in incident_components:
+                        existing_incident = incident
+                        break
+                
+                if existing_incident:
+                    # Update existing incident
+                    incident_id = existing_incident['id']
+                    update_response = requests.patch(
+                        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/{incident_id}',
+                        headers=headers,
+                        json={
+                            'incident': {
+                                'body': incident_body,
+                                'status': 'investigating'
+                            }
+                        },
+                        timeout=15
+                    )
+                    
+                    if update_response.status_code == 200:
+                        logging.info('Updated existing incident for component: %s', component_id)
+                    else:
+                        logging.error('Failed to update existing incident: %s - %s', incident_id, update_response.content)
+                else:
+                    # Create new incident
+                    incident_update = {
+                        'incident': {
+                            'name': f'Service Issue - {component_id}',
+                            'status': 'investigating',
+                            'body': incident_body,
+                            'component_ids': [component_id]  # Use component_ids instead of components
+                        }
+                    }
+                    
+                    incident_response = requests.post(
+                        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents',
+                        headers=headers,
+                        json=incident_update,
+                        timeout=15
+                    )
+                    
+                    if incident_response.status_code in [200, 201]:
+                        logging.info('Created new incident for component: %s', component_id)
+                    else:
+                        logging.error('Failed to create incident for component: %s - %s', component_id, incident_response.content)
+            else:
+                logging.error('Failed to get unresolved incidents: %s', incidents_response.content)
         else:
-            logging.error('Failed to update StatusPage for component: %s - %s - %s', component_id, component_response.content, incident_response.content)
+            logging.info('Component %s is operational, no incident created', component_id)
+        
+        logging.info('StatusPage updated successfully for component: %s', component_id)
     except Exception as e:
         logging.error('Error updating StatusPage for component: %s - %s', component_id, str(e))
 
@@ -235,8 +316,8 @@ def is_real_outage(status_dict):
 
 if __name__ == '__main__':
     outage_detected = False
-    retry_count = 0
     max_retries = 3
+    retry_delay = 2  # Longer delay between main retries
     
     for service in config['services']:
         url = service['url']
@@ -246,19 +327,11 @@ if __name__ == '__main__':
             # Handle multi-component services (wakapi, xenovate, etc.)
             service_name = get_service_name_from_url(url)
             
-            # Do multiple checks for multi-component services to avoid false positives
-            for attempt in range(max_retries):
-                component_statuses, message = check_multi_component_service_status(url, service_name)
-                
-                # If all components show outage, we double-check once more after a delay
-                if is_real_outage(component_statuses):
-                    logging.info('Potential outage detected for %s, retrying to confirm...', url)
-                    time.sleep(1)  # Wait a second before retrying
-                    continue
-                else:
-                    # At least one component is operational, so break out of retry loop
-                    break
-                    
+            # Start with a single check using our progressive timeout approach
+            component_statuses, message = check_multi_component_service_status(url, service_name)
+            
+            # If we detected an outage with the progressive checks already implemented,
+            # we don't need to do additional retries as the check function already does retries
             for component in service['components']:
                 component_name = component['name']
                 component_id = component['component_id']
@@ -272,21 +345,9 @@ if __name__ == '__main__':
                 if component_status != 'operational':
                     service_outage = True
         else:
-            # Handle single-component services
+            # Handle single-component services - the check function already implements retries
             status, message = check_general_service_status(url)
             component_id = service['component_id']
-            
-            # For non-multi-component services, retry if outage detected
-            if status != 'operational':
-                for attempt in range(1, max_retries):
-                    logging.info('Potential outage detected for %s, retrying to confirm (%d/%d)...', 
-                                url, attempt, max_retries-1)
-                    time.sleep(1)  # Wait a second before retrying
-                    retry_status, _ = check_general_service_status(url)
-                    if retry_status == 'operational':
-                        status = 'operational'
-                        message = f'{url} is operational after {attempt} retries.'
-                        break
             
             current_status = get_component_status(component_id)
             if current_status != status:
