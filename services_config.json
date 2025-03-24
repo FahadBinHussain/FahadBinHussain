@@ -1,35 +1,47 @@
 {
-    "services": [
-      {
-        "url": "https://wakapi-qt1b.onrender.com/api/health",
-        "components": [
-            { "name": "app", "component_id": "ngzcrsbhjs6r" },
-            { "name": "db", "component_id": "y0c62d4dp26m" }
-        ]
-      },
-      {
-        "url": "https://oangrybird.onrender.com/health",
-        "component_id": "crjwgwhz2220"
-      },
-      {
-        "url": "https://hakatime-fhz3.onrender.com/#!/login",
-        "component_id": "jjl97lyfv9kx"
-      },
-      {
-        "url": "https://vaultwarden-ssvj.onrender.com/#/login",
-        "component_id": "jtb29nnk8nwl"
-      },
-      {
-        "url": "https://spotstory.onrender.com/health",
-        "component_id": "tqyq0n8k1m51"
-      },
-      {
-        "url": "https://algovian.onrender.com/",
-        "component_id": "mwm93kgbckv5"
-      },
-      {
-        "url": "https://xenovate.onrender.com/",
-        "component_id": "fsgjgr1m7zqg"
-      }
-    ]
-  }
+  "services": [
+    {
+      "url": "https://wakapi-qt1b.onrender.com/api/health",
+      "components": [
+          { "name": "app", "component_id": "ngzcrsbhjs6r" },
+          { "name": "db", "component_id": "y0c62d4dp26m" }
+      ]
+    },
+    {
+      "url": "https://oangrybird.onrender.com/health",
+      "component_id": "crjwgwhz2220"
+    },
+    {
+      "url": "https://hakatime-fhz3.onrender.com/#!/login",
+      "component_id": "jjl97lyfv9kx"
+    },
+    {
+      "url": "https://vaultwarden-ssvj.onrender.com/#/login",
+      "component_id": "jtb29nnk8nwl"
+    },
+    {
+      "url": "https://spotstory.onrender.com/health",
+      "component_id": "tqyq0n8k1m51"
+    },
+    {
+      "url": "https://codestat.vercel.app/",
+      "component_id": "gbzzw652kfb4"
+    },
+    {
+      "url": "https://gitstreak.vercel.app/",
+      "component_id": "ktrr793v7n68"
+    },
+    {
+      "url": "https://algovian.onrender.com/",
+      "component_id": "mwm93kgbckv5"
+    },
+    {
+      "url": "https://xenovate.onrender.com/",
+      "component_id": "fsgjgr1m7zqg"
+    },
+    {
+      "url": "https://bright-hope.vercel.app/",
+      "component_id": "1pksc2p6w385"
+    }
+  ]
+}
