@@ -204,26 +204,48 @@ def update_statuspage(component_id, component_status, incident_body):
             logging.error('Failed to update component status: %s - %s', component_id, component_response.content)
             return
 
-        # Only create incident if the component is not operational
-        if component_status != 'operational':
-            # Check if there's already an active incident for this component
-            incidents_response = requests.get(
-                f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/unresolved',
-                headers=headers,
-                timeout=15
-            )
+        # Get unresolved incidents regardless of component status
+        incidents_response = requests.get(
+            f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/unresolved',
+            headers=headers,
+            timeout=15
+        )
+        
+        if incidents_response.status_code == 200:
+            incidents = incidents_response.json()
+            existing_incident = None
             
-            if incidents_response.status_code == 200:
-                incidents = incidents_response.json()
-                existing_incident = None
+            # Look for an existing incident that includes this component
+            for incident in incidents:
+                incident_components = incident.get('components', {})
+                if component_id in incident_components:
+                    existing_incident = incident
+                    break
+
+            if component_status == 'operational':
+                # If component is operational and there's an existing incident, resolve it
+                if existing_incident:
+                    incident_id = existing_incident['id']
+                    resolve_response = requests.patch(
+                        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/{incident_id}',
+                        headers=headers,
+                        json={
+                            'incident': {
+                                'status': 'resolved',
+                                'body': 'The service has returned to operational status.'
+                            }
+                        },
+                        timeout=15
+                    )
+                    
+                    if resolve_response.status_code == 200:
+                        logging.info('Resolved incident %s for component: %s', incident_id, component_id)
+                    else:
+                        logging.error('Failed to resolve incident: %s - %s', incident_id, resolve_response.content)
                 
-                # Look for an existing incident that includes this component
-                for incident in incidents:
-                    incident_components = incident.get('components', {})
-                    if component_id in incident_components:
-                        existing_incident = incident
-                        break
-                
+                logging.info('Component %s is operational', component_id)
+            else:
+                # Handle non-operational status as before
                 if existing_incident:
                     # Update existing incident
                     incident_id = existing_incident['id']
@@ -250,7 +272,7 @@ def update_statuspage(component_id, component_status, incident_body):
                             'name': f'Service Issue - {component_id}',
                             'status': 'investigating',
                             'body': incident_body,
-                            'component_ids': [component_id]  # Use component_ids instead of components
+                            'component_ids': [component_id]
                         }
                     }
                     
@@ -265,37 +287,12 @@ def update_statuspage(component_id, component_status, incident_body):
                         logging.info('Created new incident for component: %s', component_id)
                     else:
                         logging.error('Failed to create incident for component: %s - %s', component_id, incident_response.content)
-            else:
-                logging.error('Failed to get unresolved incidents: %s', incidents_response.content)
         else:
-            logging.info('Component %s is operational, no incident created', component_id)
+            logging.error('Failed to get unresolved incidents: %s', incidents_response.content)
         
         logging.info('StatusPage updated successfully for component: %s', component_id)
     except Exception as e:
         logging.error('Error updating StatusPage for component: %s - %s', component_id, str(e))
-
-def resolve_incident(incident_id):
-    headers = {
-        'Authorization': f'OAuth {STATUSPAGE_API_KEY}',
-        'Content-Type': 'application/json'
-    }
-    incident_update = {
-        'incident': {
-            'status': 'resolved',
-            'body': 'The issue has been resolved.'
-        }
-    }
-
-    response = requests.patch(
-        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/{incident_id}',
-        headers=headers,
-        json=incident_update
-    )
-
-    if response.status_code == 200:
-        logging.info('Incident resolved successfully')
-    else:
-        logging.error('Failed to resolve incident: %s', response.content)
 
 def get_service_name_from_url(url):
     """Extract service name from URL for multi-component services"""
