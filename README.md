@@ -28,7 +28,7 @@
 <details open> <summary><h3>🚀 About Me</h3></summary>
 
 - 🎓 I am pursuing a Bachelor of Science in Computer Science and Engineering.
-- 🔭 Currently actively developing my [FahadBinHussain](https://github.com/FahadBinHussain/FahadBinHussain) & [bright-hope](https://github.com/FahadBinHussain/bright-hope) projects.
+- 🔭 Currently actively developing my [Wall-You-Need](https://github.com/FahadBinHussain/Wall-You-Need) & [FahadBinHussain](https://github.com/FahadBinHussain/FahadBinHussain) projects.
 - 🤝 I’m looking for assistance with my [DotsAndBoxesMipsAssemblyEdition](https://github.com/FahadBinHussain/DotsAndBoxesMipsAssemblyEdition) repository.
 - 🌱 I’m currently further expanding my knowledge in **C++**
 - ⚡ Fun fact **I love eating spicy food 🌶️ & talking about space🌌🧑‍🚀**
