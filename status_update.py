@@ -204,7 +204,7 @@ def update_statuspage(component_id, component_status, incident_body):
             logging.error('Failed to update component status: %s - %s', component_id, component_response.content)
             return
 
-        # Get unresolved incidents regardless of component status
+        # Get unresolved incidents
         incidents_response = requests.get(
             f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/unresolved',
             headers=headers,
@@ -213,42 +213,48 @@ def update_statuspage(component_id, component_status, incident_body):
         
         if incidents_response.status_code == 200:
             incidents = incidents_response.json()
-            existing_incident = None
+            existing_incidents = []
             
-            # Look for an existing incident that includes this component
+            # Look for ALL existing incidents that include this component
+            # More robust checking for component association with incident
             for incident in incidents:
-                incident_components = incident.get('components', {})
-                if component_id in incident_components:
-                    existing_incident = incident
-                    break
+                # Check if component is in the incident name (since this is how we create them)
+                if f"Service Issue - {component_id}" == incident.get('name'):
+                    existing_incidents.append(incident)
+                # Also check if component is in the components dict (backcompat)
+                elif component_id in incident.get('components', {}):
+                    existing_incidents.append(incident)
+            
+            logging.info(f"Found {len(existing_incidents)} existing unresolved incidents for component {component_id}")
 
             if component_status == 'operational':
-                # If component is operational and there's an existing incident, resolve it
-                if existing_incident:
-                    incident_id = existing_incident['id']
-                    resolve_response = requests.patch(
-                        f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/{incident_id}',
-                        headers=headers,
-                        json={
-                            'incident': {
-                                'status': 'resolved',
-                                'body': 'The service has returned to operational status.'
-                            }
-                        },
-                        timeout=15
-                    )
-                    
-                    if resolve_response.status_code == 200:
-                        logging.info('Resolved incident %s for component: %s', incident_id, component_id)
-                    else:
-                        logging.error('Failed to resolve incident: %s - %s', incident_id, resolve_response.content)
+                # If component is operational, resolve ALL existing incidents for this component
+                if existing_incidents:
+                    for existing_incident in existing_incidents:
+                        incident_id = existing_incident['id']
+                        resolve_response = requests.patch(
+                            f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/{incident_id}',
+                            headers=headers,
+                            json={
+                                'incident': {
+                                    'status': 'resolved',
+                                    'body': 'The service has returned to operational status.'
+                                }
+                            },
+                            timeout=15
+                        )
+                        
+                        if resolve_response.status_code == 200:
+                            logging.info('Resolved incident %s for component: %s', incident_id, component_id)
+                        else:
+                            logging.error('Failed to resolve incident: %s - %s', incident_id, resolve_response.content)
                 
                 logging.info('Component %s is operational', component_id)
             else:
-                # Handle non-operational status as before
-                if existing_incident:
-                    # Update existing incident
-                    incident_id = existing_incident['id']
+                # For non-operational status, use the first incident if any exist, otherwise create new
+                if existing_incidents:
+                    # Update most recent existing incident
+                    incident_id = existing_incidents[0]['id']
                     update_response = requests.patch(
                         f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents/{incident_id}',
                         headers=headers,
@@ -335,9 +341,9 @@ if __name__ == '__main__':
                 component_status = component_statuses.get(component_name, 'major_outage')
                 
                 current_status = get_component_status(component_id)
-                if current_status != component_status:
-                    update_statuspage(component_id, component_status, 
-                                     f"{component_name} status: {component_status}. {message}")
+                # Always update when we run the check - this ensures resolution happens properly
+                update_statuspage(component_id, component_status, 
+                                 f"{component_name} status: {component_status}. {message}")
                 
                 if component_status != 'operational':
                     service_outage = True
@@ -347,8 +353,8 @@ if __name__ == '__main__':
             component_id = service['component_id']
             
             current_status = get_component_status(component_id)
-            if current_status != status:
-                update_statuspage(component_id, status, message)
+            # Always update when we run the check - this ensures resolution happens properly
+            update_statuspage(component_id, status, message)
             
             if status != 'operational':
                 service_outage = True
