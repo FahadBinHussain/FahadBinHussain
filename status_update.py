@@ -29,6 +29,26 @@ if not TEST_MODE and (not STATUSPAGE_API_KEY or not PAGE_ID):
     logging.error('Exiting due to missing credentials')
     exit(1)
 
+def is_render_service(url):
+    """Check if the URL is for a service hosted on Render"""
+    return 'onrender.com' in url.lower()
+
+def get_service_specific_timeout(url, service_name=None):
+    """Get service-specific timeout values based on the URL or service name"""
+    base_timeout = 5  # Default base timeout
+    max_timeout = 15  # Default max timeout
+    
+    # Special case for Wakapi which seems to have longer cold starts
+    if 'wakapi' in url.lower():
+        base_timeout = 30  # Much longer initial timeout for Wakapi
+        max_timeout = 45  # Higher maximum timeout
+    # General case for all Render services
+    elif is_render_service(url):
+        base_timeout = 15  # Longer initial timeout for Render services
+        max_timeout = 30  # Higher maximum timeout
+    
+    return base_timeout, max_timeout
+
 def check_multi_component_service_status(url, service_name):
     if TEST_MODE:
         default_components = {
@@ -44,9 +64,11 @@ def check_multi_component_service_status(url, service_name):
         'xenovate': ['frontend', 'backend']
     }
     
-    # Progressive timeout strategy - start with shorter timeout and increase on retries
-    timeout = 5  # Start with a 5-second timeout
-    max_timeout = 15  # Maximum timeout in seconds
+    # Get service-specific timeout values
+    base_timeout, max_timeout = get_service_specific_timeout(url, service_name)
+    
+    # Progressive timeout strategy - start with service-specific timeout and increase on retries
+    timeout = base_timeout  # Start with the service-specific timeout
     retry_attempts = 2  # Number of retry attempts
     
     for attempt in range(retry_attempts + 1):
@@ -112,9 +134,11 @@ def check_general_service_status(url):
         logging.info('Test mode status for %s: major_outage', url)
         return 'major_outage', f'Simulated outage for testing {url}.'
     
-    # Progressive timeout strategy - start with shorter timeout and increase on retries
-    timeout = 5  # Start with a 5-second timeout
-    max_timeout = 15  # Maximum timeout in seconds
+    # Get service-specific timeout values
+    base_timeout, max_timeout = get_service_specific_timeout(url)
+    
+    # Progressive timeout strategy - start with service-specific timeout and increase on retries
+    timeout = base_timeout
     retry_attempts = 2  # Number of retry attempts
     
     for attempt in range(retry_attempts + 1):

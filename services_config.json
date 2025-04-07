@@ -2,10 +2,7 @@
   "services": [
     {
       "url": "https://wakapi-qt1b.onrender.com/api/health",
-      "components": [
-          { "name": "app", "component_id": "ngzcrsbhjs6r" },
-          { "name": "db", "component_id": "y0c62d4dp26m" }
-      ]
+      "component_id": "ngzcrsbhjs6r"
     },
     {
       "url": "https://oangrybird.onrender.com/health",
