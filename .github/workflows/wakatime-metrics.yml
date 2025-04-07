@@ -9,24 +9,54 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
       
       - name: Install dependencies
         run: pip install requests python-dotenv # python-dotenv is needed for update_readme.py 
 
+      - name: Check if Wakapi instance is available
+        id: check_wakapi
+        run: |
+          MAX_RETRIES=3
+          RETRY_COUNT=0
+          HTTP_CODE=0
+          
+          while [ $RETRY_COUNT -lt $MAX_RETRIES ] && [ $HTTP_CODE -ne 200 ]; do
+            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" https://wakapi-qt1b.onrender.com/api/v1/users/current)
+            
+            if [ $HTTP_CODE -eq 200 ]; then
+              echo "Wakapi instance is available"
+              echo "wakapi_available=true" >> $GITHUB_OUTPUT
+              break
+            else
+              echo "Wakapi instance returned status $HTTP_CODE, retrying in 10 seconds..."
+              RETRY_COUNT=$((RETRY_COUNT+1))
+              sleep 10
+            fi
+          done
+          
+          if [ $HTTP_CODE -ne 200 ]; then
+            echo "Wakapi instance is not available after $MAX_RETRIES retries"
+            echo "wakapi_available=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: WakaReadme DevMetrics
+        if: steps.check_wakapi.outputs.wakapi_available == 'true'
         uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           ### meta
           API_BASE_URL: https://wakapi-qt1b.onrender.com/api
+          # Additional parameters if needed
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Update README with Top Projects
+        if: steps.check_wakapi.outputs.wakapi_available == 'true'
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           WAKATIME_USERNAME: ${{ secrets.WAKATIME_USERNAME }}
@@ -40,7 +70,7 @@ jobs:
       - name: Check for local changes
         id: changes
         run: |
-          git diff --exit-code || echo "::set-output name=changes::true"
+          git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
 
       - name: Stash local changes
         if: steps.changes.outputs.changes == 'true'
