@@ -51,6 +51,7 @@ jobs:
         if: steps.check_wakapi.outputs.wakapi_available == 'true'
         uses: athul/waka-readme@master
         with:
+          API_BASE_URL: https//wakapi-qt1b.onrender.com/api/compat/wakatime/
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           # Additional parameters if needed
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
