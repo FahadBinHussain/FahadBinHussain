@@ -52,8 +52,6 @@ jobs:
         uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          ### meta
-          API_BASE_URL: https//wakapi-qt1b.onrender.com/api/compat/wakatime/
           # Additional parameters if needed
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SHOW_TITLE: true
