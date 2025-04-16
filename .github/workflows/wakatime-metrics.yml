@@ -49,11 +49,10 @@ jobs:
 
       - name: WakaReadme DevMetrics
         if: steps.check_wakapi.outputs.wakapi_available == 'true'
-        uses: athul/waka-readme@master
+        uses: athul/waka-readme@v0.3.1
         with:
           API_BASE_URL: https://wakapi-qt1b.onrender.com/api/
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           # Explicitly set parameters
           REPOSITORY: ${{ github.repository }}
           TARGET_BRANCH: main
