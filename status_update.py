@@ -49,86 +49,6 @@ def get_service_specific_timeout(url, service_name=None):
     
     return base_timeout, max_timeout
 
-def check_multi_component_service_status(url, service_name):
-    if TEST_MODE:
-        default_components = {
-            'wakapi': {'app': 'major_outage', 'db': 'major_outage'},
-            'xenovate': {'frontend': 'major_outage', 'backend': 'major_outage'}
-        }
-        component_statuses = default_components.get(service_name, {'service': 'major_outage'})
-        return component_statuses, f'Simulated outage for testing {url}.'
-    
-    # Default component names based on the service
-    default_components = {
-        'wakapi': ['app', 'db'],
-        'xenovate': ['frontend', 'backend']
-    }
-    
-    # Get service-specific timeout values
-    base_timeout, max_timeout = get_service_specific_timeout(url, service_name)
-    
-    # Progressive timeout strategy - start with service-specific timeout and increase on retries
-    timeout = base_timeout  # Start with the service-specific timeout
-    retry_attempts = 2  # Number of retry attempts
-    
-    for attempt in range(retry_attempts + 1):
-        try:
-            # Add a random delay between 0.1 and 0.5 seconds to prevent race conditions
-            time.sleep(random.uniform(0.1, 0.5))
-            
-            logging.info(f"Attempt {attempt+1}/{retry_attempts+1} for {url} with timeout={timeout}s")
-            response = requests.get(url, timeout=timeout)
-            
-            if response.status_code == 200:
-                try:
-                    response_body = response.text.strip()
-                    status_parts = response_body.split("\n")
-                    status_dict = {}
-                    
-                    # Parse the response more robustly
-                    for part in status_parts:
-                        if '=' in part:
-                            key, value = part.split('=', 1)
-                            status_dict[key] = value
-                    
-                    component_statuses = {}
-                    for component, status in status_dict.items():
-                        if status == '1':
-                            component_statuses[component] = 'operational'
-                        else:
-                            component_statuses[component] = 'major_outage'
-                    
-                    # If we couldn't parse any components, use the defaults
-                    if not component_statuses:
-                        components = default_components.get(service_name, ['service'])
-                        component_statuses = {comp: 'operational' for comp in components}
-                    
-                    logging.info('Service status for %s: %s', url, component_statuses)
-                    return component_statuses, f'{url} health check completed successfully.'
-                except Exception as e:
-                    logging.warning('Error parsing response from %s: %s. Assuming service is operational.', url, str(e))
-                    components = default_components.get(service_name, ['service'])
-                    component_statuses = {comp: 'operational' for comp in components}
-                    return component_statuses, f'{url} appears to be operational but response format is unexpected.'
-            else:
-                # Only return error immediately on the last attempt
-                if attempt == retry_attempts:
-                    components = default_components.get(service_name, ['service'])
-                    component_statuses = {comp: 'major_outage' for comp in components}
-                    logging.warning('Service status for %s: HTTP %s - Setting components to major_outage', url, response.status_code)
-                    return component_statuses, f'{url} returned HTTP {response.status_code}.'
-        except requests.exceptions.RequestException as e:
-            # Only return error immediately on the last attempt
-            if attempt == retry_attempts:
-                components = default_components.get(service_name, ['service'])
-                component_statuses = {comp: 'major_outage' for comp in components}
-                logging.warning('Service status for %s: Connection error - %s', url, str(e))
-                return component_statuses, f'{url} connection error: {str(e)}.'
-        
-        # Increase timeout for next attempt if we're retrying
-        if attempt < retry_attempts:
-            timeout = min(timeout * 1.5, max_timeout)  # Increase timeout by 50% for next attempt
-
 def check_general_service_status(url):
     if TEST_MODE:
         logging.info('Test mode status for %s: major_outage', url)
@@ -324,71 +244,37 @@ def update_statuspage(component_id, component_status, incident_body):
     except Exception as e:
         logging.error('Error updating StatusPage for component: %s - %s', component_id, str(e))
 
-def get_service_name_from_url(url):
-    """Extract service name from URL for multi-component services"""
-    if 'wakapi' in url.lower():
-        return 'wakapi'
-    elif 'xenovate' in url.lower():
-        return 'xenovate'
-    else:
-        return 'unknown'
-
-def is_real_outage(status_dict):
-    """Verifies if there's a real outage by checking all component statuses"""
-    if not status_dict:
-        return True  # If no status data, assume outage
-    
-    # Check if all components report an outage
-    return all(status != 'operational' for status in status_dict.values())
-
 if __name__ == '__main__':
-    outage_detected = False
-    max_retries = 3
-    retry_delay = 2  # Longer delay between main retries
-    
+    overall_outage_detected = False # Use a clearer name
+
     for service in config['services']:
         url = service['url']
-        service_outage = False
-        
-        if 'components' in service:
-            # Handle multi-component services (wakapi, xenovate, etc.)
-            service_name = get_service_name_from_url(url)
-            
-            # Start with a single check using our progressive timeout approach
-            component_statuses, message = check_multi_component_service_status(url, service_name)
-            
-            # If we detected an outage with the progressive checks already implemented,
-            # we don't need to do additional retries as the check function already does retries
-            for component in service['components']:
-                component_name = component['name']
-                component_id = component['component_id']
-                component_status = component_statuses.get(component_name, 'major_outage')
-                
-                current_status = get_component_status(component_id)
-                # Always update when we run the check - this ensures resolution happens properly
-                update_statuspage(component_id, component_status, 
-                                 f"{component_name} status: {component_status}. {message}")
-                
-                if component_status != 'operational':
-                    service_outage = True
-        else:
-            # Handle single-component services - the check function already implements retries
-            status, message = check_general_service_status(url)
-            component_id = service['component_id']
-            
-            current_status = get_component_status(component_id)
-            # Always update when we run the check - this ensures resolution happens properly
-            update_statuspage(component_id, status, message)
-            
-            if status != 'operational':
-                service_outage = True
-        
-        if service_outage:
-            outage_detected = True
+        # Ensure component_id exists, otherwise skip or log error
+        if 'component_id' not in service:
+            logging.warning(f"Skipping service {service.get('url', 'Unknown URL')} - missing 'component_id' in config.")
+            continue
 
-    if outage_detected:
-        logging.error('Outage detected - failing workflow to trigger notifications')
+        component_id = service['component_id']
+
+        # Perform the check for the service
+        status, message = check_general_service_status(url)
+
+        # Update StatusPage regardless of the result
+        # Only update if not in test mode
+        if not TEST_MODE:
+             update_statuspage(component_id, status, message)
+        else:
+             logging.info(f"TEST MODE: Would update component {component_id} to {status} with message: {message}")
+
+
+        # If this service is not operational, mark that an outage was detected
+        if status != 'operational':
+            overall_outage_detected = True
+
+    # After checking all services, decide the exit code
+    if overall_outage_detected:
+        logging.error('One or more services reported an outage - failing workflow to trigger notifications')
         exit(1)
     else:
-        logging.info('All services operational')
+        logging.info('All services checked and operational')
         exit(0)
