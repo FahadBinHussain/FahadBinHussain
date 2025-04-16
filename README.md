@@ -42,13 +42,13 @@
 ```txt
 From: 09 April 2025 - To: 16 April 2025
 
-Total Time: 19 hrs 34 mins
+Total Time: 19 hrs 42 mins
 
-XAML         6 hrs 53 mins   ████████▓░░░░░░░░░░░░░░░░   35.21 %
-C#           4 hrs 52 mins   ██████▒░░░░░░░░░░░░░░░░░░   24.85 %
-unknown      2 hrs 46 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   14.13 %
-TypeScript   1 hrs 47 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.08 %
-JSON         0 hrs 51 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.38 %
+XAML         6 hrs 44 mins   ████████▓░░░░░░░░░░░░░░░░   34.19 %
+C#           4 hrs 49 mins   ██████░░░░░░░░░░░░░░░░░░░   24.44 %
+unknown      2 hrs 46 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   14.04 %
+TypeScript   1 hrs 57 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.88 %
+JSON         0 hrs 51 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.35 %
 ```
 
 <!--END_SECTION:waka-->
