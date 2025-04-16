@@ -53,8 +53,15 @@ jobs:
         with:
           API_BASE_URL: https://wakapi-qt1b.onrender.com/api/
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          # Additional parameters if needed
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          # Explicitly set parameters
+          REPOSITORY: ${{ github.repository }}
+          TARGET_BRANCH: main
+          TARGET_PATH: README.md
+          COMMIT_MESSAGE: "Update WakaTime stats in README"
+          COMMITTER_NAME: github-actions[bot]
+          COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+          # Other parameters from previous state (if still desired)
           SHOW_TITLE: true
           SHOW_TOTAL: true
           TIME_RANGE: last_7_days
