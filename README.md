@@ -40,15 +40,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 12 April 2025 - To: 19 April 2025
+From: 13 April 2025 - To: 19 April 2025
 
-Total Time: 13 hrs 34 mins
+Total Time: 13 hrs 47 mins
 
-TypeScript   3 hrs 15 mins   ██████░░░░░░░░░░░░░░░░░░░   23.96 %
-unknown      3 hrs 9 mins    █████▓░░░░░░░░░░░░░░░░░░░   23.22 %
-JSON         1 hrs 29 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.99 %
-TSX          1 hrs 24 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.28 %
-C#           1 hrs 3 mins    ██░░░░░░░░░░░░░░░░░░░░░░░   07.75 %
+TypeScript   3 hrs 15 mins   ██████░░░░░░░░░░░░░░░░░░░   23.58 %
+unknown      3 hrs 9 mins    █████▓░░░░░░░░░░░░░░░░░░░   22.86 %
+JSON         1 hrs 29 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.82 %
+C#           1 hrs 26 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.41 %
+TSX          1 hrs 24 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.12 %
 ```
 
 <!--END_SECTION:waka-->
