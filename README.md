@@ -42,13 +42,13 @@
 ```txt
 From: 26 April 2025 - To: 03 May 2025
 
-Total Time: 16 hrs 16 mins
+Total Time: 17 hrs 13 mins
 
-Rust         8 hrs 8 mins    ████████████▓░░░░░░░░░░░░   50.01 %
-TypeScript   2 hrs 46 mins   ████▒░░░░░░░░░░░░░░░░░░░░   17.00 %
-TSX          1 hrs 47 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.99 %
-JSON         1 hrs 36 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.81 %
-Python       0 hrs 39 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.04 %
+Rust         8 hrs 12 mins   ████████████░░░░░░░░░░░░░   47.66 %
+TypeScript   2 hrs 46 mins   ████░░░░░░░░░░░░░░░░░░░░░   16.06 %
+JSON         1 hrs 58 mins   ███░░░░░░░░░░░░░░░░░░░░░░   11.44 %
+TSX          1 hrs 47 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.38 %
+Python       0 hrs 39 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   03.82 %
 ```
 
 <!--END_SECTION:waka-->
