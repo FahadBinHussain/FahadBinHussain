@@ -44,7 +44,7 @@ From: 04 May 2025 - To: 11 May 2025
 
 Total Time: 21 hrs 5 mins
 
-TSX          12 hrs 31 mins  ███████████████░░░░░░░░░░   59.43 %
+TSX          12 hrs 31 mins  ███████████████░░░░░░░░░░   59.42 %
 TypeScript   3 hrs 6 mins    ███▓░░░░░░░░░░░░░░░░░░░░░   14.68 %
 JSON         1 hrs 31 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   07.18 %
 unknown      1 hrs 7 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.29 %
