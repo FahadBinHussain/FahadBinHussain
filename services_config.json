@@ -1,7 +1,7 @@
 {
   "services": [
     {
-      "url": "https://wakapi-qt1b.onrender.com/api/health",
+      "url": "https://wakapi-qt1b.onrender.com/api/",
       "component_id": "ngzcrsbhjs6r"
     },
     {
