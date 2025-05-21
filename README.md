@@ -42,13 +42,13 @@
 ```txt
 From: 14 May 2025 - To: 20 May 2025
 
-Total Time: 2 hrs 47 mins
+Total Time: 2 hrs 36 mins
 
-Rust       0 hrs 54 mins   ████████░░░░░░░░░░░░░░░░░   32.22 %
-JSON       0 hrs 42 mins   ██████▒░░░░░░░░░░░░░░░░░░   25.06 %
-Svelte     0 hrs 26 mins   ████░░░░░░░░░░░░░░░░░░░░░   15.73 %
-unknown    0 hrs 15 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.16 %
-Python     0 hrs 12 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   07.14 %
+Rust       0 hrs 54 mins   ████████▓░░░░░░░░░░░░░░░░   34.37 %
+JSON       0 hrs 42 mins   ██████▓░░░░░░░░░░░░░░░░░░   26.82 %
+Svelte     0 hrs 26 mins   ████▒░░░░░░░░░░░░░░░░░░░░   16.79 %
+unknown    0 hrs 15 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.77 %
+Python     0 hrs 10 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.41 %
 ```
 
 <!--END_SECTION:waka-->
