@@ -44,7 +44,7 @@ From: 19 May 2025 - To: 26 May 2025
 
 Total Time: 6 hrs 38 mins
 
-TSX          1 hrs 41 mins   ██████▒░░░░░░░░░░░░░░░░░░   25.38 %
+TSX          1 hrs 41 mins   ██████▒░░░░░░░░░░░░░░░░░░   25.39 %
 Rust         1 hrs 32 mins   █████▓░░░░░░░░░░░░░░░░░░░   23.09 %
 TypeScript   1 hrs 13 mins   ████▓░░░░░░░░░░░░░░░░░░░░   18.40 %
 Markdown     0 hrs 56 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   14.05 %
