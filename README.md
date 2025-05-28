@@ -28,7 +28,7 @@
 <details open> <summary><h3>🚀 About Me</h3></summary>
 
 - 🎓 I am pursuing a Bachelor of Science in Computer Science and Engineering.
-- 🔭 Currently actively developing my [Goodreads-Scraper](https://github.com/FahadBinHussain/Goodreads-Scraper) & [Fandom-Scraper](https://github.com/FahadBinHussain/Fandom-Scraper) projects.
+- 🔭 Currently actively developing my [boi](https://github.com/FahadBinHussain/boi) & [Goodreads-Scraper](https://github.com/FahadBinHussain/Goodreads-Scraper) projects.
 - 🤝 I’m looking for assistance with my [DotsAndBoxesMipsAssemblyEdition](https://github.com/FahadBinHussain/DotsAndBoxesMipsAssemblyEdition) repository.
 - 🌱 I’m currently further expanding my knowledge in **C++**
 - ⚡ Fun fact **I love eating spicy food 🌶️ & talking about space🌌🧑‍🚀**
