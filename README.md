@@ -42,13 +42,13 @@
 ```txt
 From: 23 May 2025 - To: 30 May 2025
 
-Total Time: 26 hrs 37 mins
+Total Time: 27 hrs 9 mins
 
-TSX          11 hrs 18 mins  ██████████▓░░░░░░░░░░░░░░   42.47 %
-TypeScript   5 hrs 20 mins   █████░░░░░░░░░░░░░░░░░░░░   20.06 %
-unknown      3 hrs 56 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   14.77 %
-JSX          2 hrs 49 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.57 %
-HTML         1 hrs 11 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.47 %
+TSX          11 hrs 32 mins  ██████████▓░░░░░░░░░░░░░░   42.50 %
+TypeScript   5 hrs 28 mins   █████░░░░░░░░░░░░░░░░░░░░   20.13 %
+unknown      3 hrs 56 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   14.48 %
+JSX          2 hrs 49 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.36 %
+HTML         1 hrs 11 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.38 %
 ```
 
 <!--END_SECTION:waka-->
