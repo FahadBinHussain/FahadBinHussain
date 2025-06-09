@@ -42,11 +42,11 @@
 ```txt
 From: 02 June 2025 - To: 09 June 2025
 
-Total Time: 0 hrs 44 mins
+Total Time: 0 hrs 39 mins
 
-TSX          0 hrs 22 mins   ████████████░░░░░░░░░░░░░   48.66 %
-TypeScript   0 hrs 12 mins   ██████▓░░░░░░░░░░░░░░░░░░   26.03 %
-CSS          0 hrs 11 mins   ██████▒░░░░░░░░░░░░░░░░░░   25.31 %
+TSX          0 hrs 17 mins   ██████████▓░░░░░░░░░░░░░░   42.31 %
+TypeScript   0 hrs 12 mins   ███████▒░░░░░░░░░░░░░░░░░   29.27 %
+CSS          0 hrs 11 mins   ███████░░░░░░░░░░░░░░░░░░   28.42 %
 ```
 
 <!--END_SECTION:waka-->
