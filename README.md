@@ -40,13 +40,11 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 02 June 2025 - To: 09 June 2025
+From: 09 June 2025 - To: 16 June 2025
 
-Total Time: 0 hrs 39 mins
+Total Time: 0 hrs 0 mins
 
-TSX          0 hrs 17 mins   ██████████▓░░░░░░░░░░░░░░   42.31 %
-TypeScript   0 hrs 12 mins   ███████▒░░░░░░░░░░░░░░░░░   29.27 %
-CSS          0 hrs 11 mins   ███████░░░░░░░░░░░░░░░░░░   28.42 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
