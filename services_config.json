@@ -5,6 +5,10 @@
       "component_id": "crjwgwhz2220"
     },
     {
+      "url": "https://wakapi-qt1b.onrender.com/api/health",
+      "component_id": "ngzcrsbhjs6r"
+    },
+    {
       "url": "https://vaultwarden-ssvj.onrender.com/#/login",
       "component_id": "jtb29nnk8nwl"
     },
