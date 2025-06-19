@@ -44,8 +44,8 @@ From: 12 June 2025 - To: 18 June 2025
 
 Total Time: 4 hrs 29 mins
 
-Bash         1 hrs 24 mins   ███████▓░░░░░░░░░░░░░░░░░   31.14 %
-Unknown      0 hrs 54 mins   █████░░░░░░░░░░░░░░░░░░░░   19.99 %
+Bash         1 hrs 24 mins   ███████▓░░░░░░░░░░░░░░░░░   31.15 %
+Unknown      0 hrs 54 mins   █████░░░░░░░░░░░░░░░░░░░░   20.00 %
 Markdown     0 hrs 43 mins   ████░░░░░░░░░░░░░░░░░░░░░   16.10 %
 TSX          0 hrs 42 mins   ████░░░░░░░░░░░░░░░░░░░░░   15.59 %
 Typescript   0 hrs 23 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   08.40 %
