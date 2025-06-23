@@ -42,13 +42,13 @@
 ```txt
 From: 16 June 2025 - To: 22 June 2025
 
-Total Time: 5 hrs 25 mins
+Total Time: 5 hrs 52 mins
 
-TSX          2 hrs 23 mins   ███████████░░░░░░░░░░░░░░   43.96 %
-Bash         1 hrs 7 mins    █████▒░░░░░░░░░░░░░░░░░░░   20.75 %
-Typescript   0 hrs 19 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.92 %
-JSX          0 hrs 18 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.62 %
-Unknown      0 hrs 17 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.34 %
+TSX          2 hrs 23 mins   ██████████░░░░░░░░░░░░░░░   40.48 %
+Bash         1 hrs 7 mins    ████▓░░░░░░░░░░░░░░░░░░░░   19.11 %
+Markdown     0 hrs 47 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   13.33 %
+Typescript   0 hrs 19 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.45 %
+Unknown      0 hrs 15 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.39 %
 ```
 
 <!--END_SECTION:waka-->
