@@ -40,15 +40,11 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 30 June 2025 - To: 06 July 2025
+From: 01 July 2025 - To: 08 July 2025
 
-Total Time: 4 hrs 22 mins
+Total Time: 0 hrs 0 mins
 
-Javascript   1 hrs 18 mins   ███████▒░░░░░░░░░░░░░░░░░   29.85 %
-Json         0 hrs 56 mins   █████▒░░░░░░░░░░░░░░░░░░░   21.40 %
-JSX          0 hrs 42 mins   ████░░░░░░░░░░░░░░░░░░░░░   15.95 %
-Typescript   0 hrs 30 mins   ███░░░░░░░░░░░░░░░░░░░░░░   11.39 %
-TSX          0 hrs 16 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.10 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
