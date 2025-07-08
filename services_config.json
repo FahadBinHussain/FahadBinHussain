@@ -1,6 +1,10 @@
 {
   "services": [
     {
+      "url": "https://algovian-93fz.onrender.com",
+      "component_id": "mwm93kgbckv5"
+    },
+    {
       "url": "https://oangrybird.onrender.com/health",
       "component_id": "crjwgwhz2220"
     },
@@ -23,10 +27,6 @@
     {
       "url": "https://gitstreak.vercel.app/",
       "component_id": "ktrr793v7n68"
-    },
-    {
-      "url": "https://algovian-93fz.onrender.com",
-      "component_id": "mwm93kgbckv5"
     },
     {
       "url": "https://xenovate.onrender.com/",
