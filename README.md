@@ -40,11 +40,12 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 08 July 2025 - To: 08 July 2025
+From: 02 July 2025 - To: 08 July 2025
 
 Total Time: 0 hrs 7 mins
 
 Json   0 hrs 7 mins    █████████████████████████   100.00 %
+JSX    0 hrs 0 mins    ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 %
 ```
 
 <!--END_SECTION:waka-->
