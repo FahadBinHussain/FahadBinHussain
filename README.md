@@ -42,10 +42,9 @@
 ```txt
 From: 11 July 2025 - To: 18 July 2025
 
-Total Time: 0 hrs 15 mins
+Total Time: 0 hrs 0 mins
 
-JSX    0 hrs 14 mins   ███████████████████████▓░   94.34 %
-Html   0 hrs 1 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.66 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
