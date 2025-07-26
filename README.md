@@ -47,7 +47,6 @@ Total Time: 0 hrs 22 mins
 Python     0 hrs 12 mins   ██████████████░░░░░░░░░░░   56.57 %
 Markdown   0 hrs 7 mins    ████████▒░░░░░░░░░░░░░░░░   33.46 %
 CSV        0 hrs 2 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   09.97 %
-XML        0 hrs 0 mins    ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 %
 ```
 
 <!--END_SECTION:waka-->
