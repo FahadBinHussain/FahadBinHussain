@@ -42,11 +42,11 @@
 ```txt
 From: 22 July 2025 - To: 29 July 2025
 
-Total Time: 0 hrs 22 mins
+Total Time: 0 hrs 30 mins
 
-Python     0 hrs 12 mins   ██████████████░░░░░░░░░░░   56.57 %
-Markdown   0 hrs 7 mins    ████████▒░░░░░░░░░░░░░░░░   33.46 %
-CSV        0 hrs 2 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   09.97 %
+Python     0 hrs 12 mins   ██████████░░░░░░░░░░░░░░░   40.35 %
+CSV        0 hrs 11 mins   █████████░░░░░░░░░░░░░░░░   35.78 %
+Markdown   0 hrs 7 mins    ██████░░░░░░░░░░░░░░░░░░░   23.87 %
 ```
 
 <!--END_SECTION:waka-->
