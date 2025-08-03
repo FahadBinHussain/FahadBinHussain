@@ -42,9 +42,10 @@
 ```txt
 From: 27 July 2025 - To: 03 August 2025
 
-Total Time: 0 hrs 9 mins
+Total Time: 0 hrs 20 mins
 
-CSV   0 hrs 9 mins    █████████████████████████   100.00 %
+Python   0 hrs 10 mins   ████████████▓░░░░░░░░░░░░   51.01 %
+CSV      0 hrs 10 mins   ████████████▒░░░░░░░░░░░░   48.99 %
 ```
 
 <!--END_SECTION:waka-->
