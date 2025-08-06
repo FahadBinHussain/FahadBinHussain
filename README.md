@@ -40,15 +40,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 29 July 2025 - To: 05 August 2025
+From: 30 July 2025 - To: 06 August 2025
 
-Total Time: 2 hrs 53 mins
+Total Time: 2 hrs 57 mins
 
-JSX          2 hrs 14 mins   ███████████████████▒░░░░░   77.78 %
-Json         0 hrs 15 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   08.78 %
-Javascript   0 hrs 11 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.36 %
-Python       0 hrs 10 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.83 %
-CSS          0 hrs 1 mins    ░░░░░░░░░░░░░░░░░░░░░░░░░   00.66 %
+JSX          2 hrs 25 mins   ████████████████████▓░░░░   82.30 %
+Json         0 hrs 15 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   08.59 %
+Python       0 hrs 10 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.70 %
+Javascript   0 hrs 4 mins    ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.19 %
+CSS          0 hrs 1 mins    ░░░░░░░░░░░░░░░░░░░░░░░░░   00.64 %
 ```
 
 <!--END_SECTION:waka-->
