@@ -40,15 +40,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 11 August 2025 - To: 17 August 2025
+From: 11 August 2025 - To: 18 August 2025
 
-Total Time: 1 hrs 42 mins
+Total Time: 1 hrs 55 mins
 
-JSX      1 hrs 29 mins   █████████████████████▓░░░   86.93 %
-Jsonc    0 hrs 8 mins    ██░░░░░░░░░░░░░░░░░░░░░░░   07.62 %
-Rust     0 hrs 2 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.81 %
-CSS      0 hrs 1 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.27 %
-Html     0 hrs 1 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.87 %
+JSX          1 hrs 29 mins   ███████████████████▒░░░░░   77.27 %
+Jsonc        0 hrs 8 mins    █▓░░░░░░░░░░░░░░░░░░░░░░░   06.77 %
+Javascript   0 hrs 8 mins    █▓░░░░░░░░░░░░░░░░░░░░░░░   06.59 %
+Html         0 hrs 5 mins    █░░░░░░░░░░░░░░░░░░░░░░░░   04.05 %
+Python       0 hrs 2 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.97 %
 ```
 
 <!--END_SECTION:waka-->
