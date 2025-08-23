@@ -40,13 +40,13 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 16 August 2025 - To: 22 August 2025
+From: 16 August 2025 - To: 23 August 2025
 
 Total Time: 26 hrs 2 mins
 
-JSX            21 hrs 19 mins  ████████████████████▒░░░░   81.90 %
+JSX            21 hrs 19 mins  ████████████████████▒░░░░   81.89 %
 Xaml           1 hrs 17 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   04.93 %
-Json           0 hrs 51 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.27 %
+Json           0 hrs 51 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.26 %
 CSS            0 hrs 33 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.11 %
 Markdown       0 hrs 31 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.01 %
 ```
