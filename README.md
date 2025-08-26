@@ -28,7 +28,7 @@
 <details open> <summary><h3>🚀 About Me</h3></summary>
 
 - 🎓 I am pursuing a Bachelor of Science in Computer Science and Engineering.
-- 🔭 Currently actively developing my [messenger-utils](https://github.com/FahadBinHussain/messenger-utils) & [cloud-sync-note-taker](https://github.com/FahadBinHussain/cloud-sync-note-taker) projects.
+- 🔭 Currently actively developing my [alphacoder py](https://github.com/FahadBinHussain/alphacoder py) & [Wall-You-Need-Next-Gen](https://github.com/FahadBinHussain/Wall-You-Need-Next-Gen) projects.
 - 🤝 I’m looking for assistance with my [DotsAndBoxesMipsAssemblyEdition](https://github.com/FahadBinHussain/DotsAndBoxesMipsAssemblyEdition) repository.
 - 🌱 I’m currently further expanding my knowledge in **C++**
 - ⚡ Fun fact **I love eating spicy food 🌶️ & talking about space🌌🧑‍🚀**
