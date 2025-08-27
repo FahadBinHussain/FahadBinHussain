@@ -57,10 +57,10 @@ def fetch_most_recent_projects():
 
         # Extract project names and timestamps from heartbeats
         projects_with_timestamps = [(hb['project'], hb['time']) for hb in heartbeats if 'project' in hb and hb['project']]
-        
+
         # Sort projects by timestamp in descending order (most recent first)
         projects_with_timestamps.sort(key=lambda x: x[1], reverse=True)
-        
+
         # Remove duplicates while preserving order
         seen = set()
         unique_projects = [x[0] for x in projects_with_timestamps if not (x[0] in seen or seen.add(x[0]))]
@@ -79,8 +79,8 @@ def fetch_most_recent_projects():
         return None
 
 def update_readme(most_recent_projects):
-    if not most_recent_projects or len(most_recent_projects) < 2:
-        print("Less than two recent projects found to update README.")
+    if not most_recent_projects:
+        print("No recent projects found to update README.")
         return
 
     readme_path = 'README.md'
@@ -100,7 +100,7 @@ def update_readme(most_recent_projects):
 
     # Define the line to be updated
     line_to_update = re.compile(r"- 🔭 Currently actively developing my .* projects\.")
-    
+
     # New projects section content
     new_projects_text = f"- 🔭 Currently actively developing my [{most_recent_projects[0]}](https://github.com/FahadBinHussain/{most_recent_projects[0]}) & [{most_recent_projects[1]}](https://github.com/FahadBinHussain/{most_recent_projects[1]}) projects."
 
