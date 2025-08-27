@@ -37,7 +37,7 @@ def get_service_specific_timeout(url, service_name=None):
     """Get service-specific timeout values based on the URL or service name"""
     base_timeout = 5  # Default base timeout
     max_timeout = 15  # Default max timeout
-    
+
     # Special case for Wakapi which seems to have longer cold starts
     if 'wakapi' in url.lower():
         base_timeout = 30  # Much longer initial timeout for Wakapi
@@ -46,26 +46,30 @@ def get_service_specific_timeout(url, service_name=None):
     elif is_render_service(url):
         base_timeout = 15  # Longer initial timeout for Render services
         max_timeout = 30  # Higher maximum timeout
-    
+    # Add Vercel-hosted services
+    elif 'vercel.app' in url.lower():
+        base_timeout = 10  # Slightly longer initial timeout for Vercel
+        max_timeout = 25   # Max timeout
+
     return base_timeout, max_timeout
 
 def check_general_service_status(url):
     if TEST_MODE:
         logging.info('Test mode status for %s: major_outage', url)
         return 'major_outage', f'Simulated outage for testing {url}.'
-    
+
     # Get service-specific timeout values
     base_timeout, max_timeout = get_service_specific_timeout(url)
-    
+
     # Progressive timeout strategy - start with service-specific timeout and increase on retries
     timeout = base_timeout
     retry_attempts = 2  # Number of retry attempts
-    
+
     for attempt in range(retry_attempts + 1):
         try:
             logging.info(f"Attempt {attempt+1}/{retry_attempts+1} for {url} with timeout={timeout}s")
             response = requests.get(url, timeout=timeout)
-            
+
             if response.status_code == 200:
                 logging.info('Service status for %s: operational', url)
                 return 'operational', f'{url} is operational.'
@@ -79,7 +83,7 @@ def check_general_service_status(url):
             if attempt == retry_attempts:
                 logging.warning('Service status for %s: Connection error - %s', url, str(e))
                 return 'major_outage', f'{url} connection error: {str(e)}.'
-        
+
         # Increase timeout for next attempt if we're retrying
         if attempt < retry_attempts:
             timeout = min(timeout * 1.5, max_timeout)  # Increase timeout by 50% for next attempt
@@ -87,7 +91,7 @@ def check_general_service_status(url):
 
 def get_component_status(component_id):
     if not STATUSPAGE_API_KEY or not PAGE_ID:
-        logging.error('Missing Statuspage credentials - API_KEY: %s, PAGE_ID: %s', 
+        logging.error('Missing Statuspage credentials - API_KEY: %s, PAGE_ID: %s',
                      bool(STATUSPAGE_API_KEY), bool(PAGE_ID))
         return None
 
@@ -131,7 +135,7 @@ def update_statuspage(component_id, component_status, incident_body):
             'status': component_status
         }
     }
-    
+
     try:
         # First, update component status
         component_response = requests.patch(
@@ -154,11 +158,11 @@ def update_statuspage(component_id, component_status, incident_body):
             headers=headers,
             timeout=15
         )
-        
+
         if incidents_response.status_code == 200:
             incidents = incidents_response.json()
             existing_incidents = []
-            
+
             # Look for ALL existing incidents that include this component
             # More robust checking for component association with incident
             for incident in incidents:
@@ -168,7 +172,7 @@ def update_statuspage(component_id, component_status, incident_body):
                 # Also check if component is in the components dict (backcompat)
                 elif component_id in incident.get('components', {}):
                     existing_incidents.append(incident)
-            
+
             logging.info(f"Found {len(existing_incidents)} existing unresolved incidents for component {component_id}")
 
             if component_status == 'operational':
@@ -187,12 +191,12 @@ def update_statuspage(component_id, component_status, incident_body):
                             },
                             timeout=15
                         )
-                        
+
                         if resolve_response.status_code == 200:
                             logging.info('Resolved incident %s for component: %s', incident_id, component_id)
                         else:
                             logging.error('Failed to resolve incident: %s - %s', incident_id, resolve_response.content)
-                
+
                 logging.info('Component %s is operational', component_id)
             else:
                 # For non-operational status, use the first incident if any exist, otherwise create new
@@ -210,7 +214,7 @@ def update_statuspage(component_id, component_status, incident_body):
                         },
                         timeout=15
                     )
-                    
+
                     if update_response.status_code == 200:
                         logging.info('Updated existing incident for component: %s', component_id)
                     else:
@@ -225,21 +229,21 @@ def update_statuspage(component_id, component_status, incident_body):
                             'component_ids': [component_id]
                         }
                     }
-                    
+
                     incident_response = requests.post(
                         f'https://api.statuspage.io/v1/pages/{PAGE_ID}/incidents',
                         headers=headers,
                         json=incident_update,
                         timeout=15
                     )
-                    
+
                     if incident_response.status_code in [200, 201]:
                         logging.info('Created new incident for component: %s', component_id)
                     else:
                         logging.error('Failed to create incident for component: %s - %s', component_id, incident_response.content)
         else:
             logging.error('Failed to get unresolved incidents: %s', incidents_response.content)
-        
+
         logging.info('StatusPage updated successfully for component: %s', component_id)
     except Exception as e:
         logging.error('Error updating StatusPage for component: %s - %s', component_id, str(e))
