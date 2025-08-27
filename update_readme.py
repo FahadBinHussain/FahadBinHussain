@@ -85,7 +85,6 @@ def update_readme(most_recent_projects):
 
     readme_path = 'README.md'
 
-    # Check if README.md file exists
     if not os.path.isfile(readme_path):
         print("README.md file not found.")
         return
@@ -98,13 +97,21 @@ def update_readme(most_recent_projects):
         print(f"Error reading README.md: {e}")
         return
 
-    # Define the line to be updated
     line_to_update = re.compile(r"- 🔭 Currently actively developing my .* projects\.")
 
-    # New projects section content
-    new_projects_text = f"- 🔭 Currently actively developing my [{most_recent_projects[0]}](https://github.com/FahadBinHussain/{most_recent_projects[0]}) & [{most_recent_projects[1]}](https://github.com/FahadBinHussain/{most_recent_projects[1]}) projects."
+    # Build text depending on how many projects we have
+    if len(most_recent_projects) >= 2:
+        new_projects_text = (
+            f"- 🔭 Currently actively developing my "
+            f"[{most_recent_projects[0]}](https://github.com/FahadBinHussain/{most_recent_projects[0]}) "
+            f"& [{most_recent_projects[1]}](https://github.com/FahadBinHussain/{most_recent_projects[1]}) projects."
+        )
+    else:  # only 1 project
+        new_projects_text = (
+            f"- 🔭 Currently actively developing my "
+            f"[{most_recent_projects[0]}](https://github.com/FahadBinHussain/{most_recent_projects[0]}) project."
+        )
 
-    # Replace the line matching the pattern with the new content
     if line_to_update.search(readme_content):
         updated_readme_content = line_to_update.sub(new_projects_text, readme_content)
     else:
