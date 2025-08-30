@@ -42,13 +42,13 @@
 ```txt
 From: 23 August 2025 - To: 30 August 2025
 
-Total Time: 21 hrs 20 mins
+Total Time: 21 hrs 12 mins
 
-C#             7 hrs 42 mins   █████████░░░░░░░░░░░░░░░░   36.08 %
-TSX            4 hrs 4 mins    ████▓░░░░░░░░░░░░░░░░░░░░   19.07 %
-Typescript     2 hrs 42 mins   ███░░░░░░░░░░░░░░░░░░░░░░   12.65 %
-Python         2 hrs 2 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   09.50 %
-Xaml           1 hrs 13 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.69 %
+C#             7 hrs 42 mins   █████████░░░░░░░░░░░░░░░░   36.30 %
+TSX            4 hrs 4 mins    ████▓░░░░░░░░░░░░░░░░░░░░   19.18 %
+Typescript     2 hrs 42 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   12.72 %
+Python         2 hrs 2 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   09.55 %
+Xaml           1 hrs 13 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.73 %
 ```
 
 <!--END_SECTION:waka-->
