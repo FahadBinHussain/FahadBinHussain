@@ -42,12 +42,12 @@
 ```txt
 From: 27 August 2025 - To: 03 September 2025
 
-Total Time: 12 hrs 26 mins
+Total Time: 12 hrs 25 mins
 
-TSX            4 hrs 53 mins   █████████▓░░░░░░░░░░░░░░░   39.26 %
-Typescript     3 hrs 57 mins   ████████░░░░░░░░░░░░░░░░░   31.72 %
+TSX            4 hrs 53 mins   █████████▓░░░░░░░░░░░░░░░   39.31 %
+Typescript     3 hrs 57 mins   ████████░░░░░░░░░░░░░░░░░   31.75 %
 Rust           0 hrs 51 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.81 %
-Json           0 hrs 47 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.25 %
+Json           0 hrs 47 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.26 %
 Shell script   0 hrs 24 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.22 %
 ```
 
