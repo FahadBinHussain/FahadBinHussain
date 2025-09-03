@@ -42,13 +42,13 @@
 ```txt
 From: 27 August 2025 - To: 03 September 2025
 
-Total Time: 11 hrs 56 mins
+Total Time: 11 hrs 38 mins
 
-TSX            4 hrs 11 mins   ████████▓░░░░░░░░░░░░░░░░   35.08 %
-Typescript     2 hrs 44 mins   █████▓░░░░░░░░░░░░░░░░░░░   22.88 %
-C#             2 hrs 7 mins    ████▒░░░░░░░░░░░░░░░░░░░░   17.71 %
-Json           0 hrs 47 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.55 %
-Python         0 hrs 23 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.28 %
+TSX            4 hrs 11 mins   █████████░░░░░░░░░░░░░░░░   36.01 %
+Typescript     2 hrs 44 mins   ██████░░░░░░░░░░░░░░░░░░░   23.49 %
+C#             2 hrs 7 mins    ████▓░░░░░░░░░░░░░░░░░░░░   18.18 %
+Json           0 hrs 45 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.39 %
+Bash           0 hrs 22 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.14 %
 ```
 
 <!--END_SECTION:waka-->
