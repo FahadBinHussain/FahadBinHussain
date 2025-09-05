@@ -142,3 +142,4 @@ Json           0 hrs 13 mins   ▓░░░░░░░░░░░░░░░�
 - 🔭 Currently actively developing my [Wall-You-Need-Next-Gen](https://github.com/FahadBinHussain/Wall-You-Need-Next-Gen) project.
 - 🔭 Currently actively developing my [Islam](https://github.com/FahadBinHussain/Islam) project.
 - 🔭 Currently actively developing my [Islam](https://github.com/FahadBinHussain/Islam) project.
+- 🔭 Currently actively developing my [Islam](https://github.com/FahadBinHussain/Islam) project.
