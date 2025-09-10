@@ -44,8 +44,8 @@ From: 03 September 2025 - To: 10 September 2025
 
 Total Time: 8 hrs 57 mins
 
-Unknown        5 hrs 47 mins   ████████████████░░░░░░░░░   64.64 %
-Rust           0 hrs 58 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.90 %
+Unknown        5 hrs 47 mins   ████████████████░░░░░░░░░   64.63 %
+Rust           0 hrs 59 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.91 %
 TSX            0 hrs 41 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   07.64 %
 Markdown       0 hrs 36 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.72 %
 Typescript     0 hrs 29 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.37 %
