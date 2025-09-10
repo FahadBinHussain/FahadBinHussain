@@ -42,13 +42,13 @@
 ```txt
 From: 03 September 2025 - To: 10 September 2025
 
-Total Time: 9 hrs 4 mins
+Total Time: 8 hrs 45 mins
 
-Unknown        5 hrs 47 mins   ████████████████░░░░░░░░░   63.79 %
-Rust           0 hrs 53 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.81 %
-TSX            0 hrs 46 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   08.49 %
-Typescript     0 hrs 43 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   07.81 %
-Markdown       0 hrs 36 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.56 %
+Unknown        5 hrs 47 mins   ████████████████▓░░░░░░░░   66.06 %
+Rust           0 hrs 53 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.17 %
+TSX            0 hrs 41 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   07.81 %
+Markdown       0 hrs 36 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.80 %
+Typescript     0 hrs 29 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.49 %
 ```
 
 <!--END_SECTION:waka-->
