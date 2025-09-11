@@ -44,7 +44,7 @@ From: 04 September 2025 - To: 11 September 2025
 
 Total Time: 11 hrs 18 mins
 
-Unknown        6 hrs 2 mins    █████████████▒░░░░░░░░░░░   53.41 %
+Unknown        6 hrs 2 mins    █████████████▒░░░░░░░░░░░   53.42 %
 Rust           2 hrs 28 mins   █████▒░░░░░░░░░░░░░░░░░░░   21.86 %
 TSX            0 hrs 58 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   08.51 %
 Typescript     0 hrs 41 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.05 %
