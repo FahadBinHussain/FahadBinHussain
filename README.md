@@ -42,10 +42,10 @@
 ```txt
 From: 05 September 2025 - To: 11 September 2025
 
-Total Time: 7 hrs 22 mins
+Total Time: 7 hrs 21 mins
 
 Unknown      5 hrs 47 mins   ███████████████████▓░░░░░   78.56 %
-Markdown     0 hrs 35 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   07.97 %
+Markdown     0 hrs 35 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   07.96 %
 Rust         0 hrs 28 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.44 %
 Typescript   0 hrs 10 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.21 %
 C#           0 hrs 8 mins    ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.84 %
