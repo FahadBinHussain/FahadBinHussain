@@ -44,10 +44,10 @@ From: 09 September 2025 - To: 16 September 2025
 
 Total Time: 1 hrs 2 mins
 
-Rust         0 hrs 24 mins   █████████▒░░░░░░░░░░░░░░░   37.81 %
-Markdown     0 hrs 13 mins   █████░░░░░░░░░░░░░░░░░░░░   20.38 %
-Typescript   0 hrs 8 mins    ███░░░░░░░░░░░░░░░░░░░░░░   12.15 %
-Python       0 hrs 7 mins    ███░░░░░░░░░░░░░░░░░░░░░░   11.75 %
+Rust         0 hrs 24 mins   █████████▒░░░░░░░░░░░░░░░   37.84 %
+Markdown     0 hrs 13 mins   █████░░░░░░░░░░░░░░░░░░░░   20.40 %
+Typescript   0 hrs 8 mins    ███░░░░░░░░░░░░░░░░░░░░░░   12.08 %
+Python       0 hrs 7 mins    ███░░░░░░░░░░░░░░░░░░░░░░   11.76 %
 TSX          0 hrs 6 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   09.39 %
 ```
 
