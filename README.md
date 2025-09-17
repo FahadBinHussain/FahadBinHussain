@@ -42,12 +42,12 @@
 ```txt
 From: 10 September 2025 - To: 17 September 2025
 
-Total Time: 0 hrs 19 mins
+Total Time: 0 hrs 10 mins
 
-Python     0 hrs 7 mins    █████████▓░░░░░░░░░░░░░░░   38.66 %
-Json       0 hrs 5 mins    ███████░░░░░░░░░░░░░░░░░░   28.07 %
-Rust       0 hrs 4 mins    █████▓░░░░░░░░░░░░░░░░░░░   22.86 %
-Markdown   0 hrs 2 mins    ██▓░░░░░░░░░░░░░░░░░░░░░░   10.41 %
+Json       0 hrs 5 mins    ████████████▒░░░░░░░░░░░░   49.60 %
+Rust       0 hrs 2 mins    █████▓░░░░░░░░░░░░░░░░░░░   22.81 %
+Markdown   0 hrs 2 mins    ███▓░░░░░░░░░░░░░░░░░░░░░   15.31 %
+Python     0 hrs 1 mins    ███░░░░░░░░░░░░░░░░░░░░░░   12.28 %
 ```
 
 <!--END_SECTION:waka-->
