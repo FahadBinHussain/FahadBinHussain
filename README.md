@@ -44,9 +44,9 @@ From: 12 September 2025 - To: 19 September 2025
 
 Total Time: 0 hrs 8 mins
 
-Json       0 hrs 5 mins    ████████████████░░░░░░░░░   64.26 %
-Markdown   0 hrs 2 mins    █████░░░░░░░░░░░░░░░░░░░░   19.83 %
-Python     0 hrs 1 mins    ████░░░░░░░░░░░░░░░░░░░░░   15.91 %
+Json       0 hrs 5 mins    ███████████████▓░░░░░░░░░   62.14 %
+Markdown   0 hrs 2 mins    █████▒░░░░░░░░░░░░░░░░░░░   21.01 %
+Python     0 hrs 1 mins    ████▒░░░░░░░░░░░░░░░░░░░░   16.85 %
 ```
 
 <!--END_SECTION:waka-->
