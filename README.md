@@ -42,11 +42,9 @@
 ```txt
 From: 12 September 2025 - To: 19 September 2025
 
-Total Time: 0 hrs 8 mins
+Total Time: 0 hrs 2 mins
 
-Json       0 hrs 5 mins    ███████████████▓░░░░░░░░░   62.14 %
-Markdown   0 hrs 2 mins    █████▒░░░░░░░░░░░░░░░░░░░   21.01 %
-Python     0 hrs 1 mins    ████▒░░░░░░░░░░░░░░░░░░░░   16.85 %
+Markdown   0 hrs 2 mins    █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
