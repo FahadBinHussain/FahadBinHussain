@@ -145,4 +145,4 @@ Markdown   0 hrs 2 mins    █████████████████�
 - 🔭 Currently actively developing my [Islam](https://github.com/FahadBinHussain/Islam) project.
 - 🔭 Currently actively developing my [Islam](https://github.com/FahadBinHussain/Islam) project.
 - 🔭 Currently actively developing my [Islam](https://github.com/FahadBinHussain/Islam) project.
-- 🔭 Currently actively developing my [TheWarden](https://github.com/FahadBinHussain/TheWarden) & [scene_grab_v](https://github.com/FahadBinHussain/scene_grab_v) projects.
+- 🔭 Currently actively developing my [Awesome-Nano-Banana-images](https://github.com/FahadBinHussain/Awesome-Nano-Banana-images) project.
