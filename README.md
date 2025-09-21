@@ -147,3 +147,4 @@ Markdown   0 hrs 2 mins    █████████████████�
 - 🔭 Currently actively developing my [Islam](https://github.com/FahadBinHussain/Islam) project.
 - 🔭 Currently actively developing my [Awesome-Nano-Banana-images](https://github.com/FahadBinHussain/Awesome-Nano-Banana-images) project.
 - 🔭 Currently actively developing my [Awesome-Nano-Banana-images](https://github.com/FahadBinHussain/Awesome-Nano-Banana-images) project.
+- 🔭 Currently actively developing my [Awesome-Nano-Banana-images](https://github.com/FahadBinHussain/Awesome-Nano-Banana-images) project.
