@@ -42,9 +42,9 @@
 ```txt
 From: 25 September 2025 - To: 02 October 2025
 
-Total Time: 0 hrs 9 mins
+Total Time: 0 hrs 7 mins
 
-Markdown   0 hrs 9 mins    █████████████████████████   100.00 %
+Markdown   0 hrs 7 mins    █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
