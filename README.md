@@ -44,8 +44,8 @@ From: 11 October 2025 - To: 18 October 2025
 
 Total Time: 14 hrs 36 mins
 
-TSX            10 hrs 23 mins  █████████████████▓░░░░░░░   71.17 %
-Typescript     2 hrs 12 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   15.03 %
+TSX            10 hrs 24 mins  █████████████████▓░░░░░░░   71.20 %
+Typescript     2 hrs 12 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   15.01 %
 Json           0 hrs 33 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   03.73 %
 Unknown        0 hrs 17 mins   ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.92 %
 Bash           0 hrs 16 mins   ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.81 %
