@@ -42,10 +42,9 @@
 ```txt
 From: 20 October 2025 - To: 27 October 2025
 
-Total Time: 0 hrs 16 mins
+Total Time: 0 hrs 7 mins
 
-TSX          0 hrs 13 mins   ███████████████████░░░░░░   76.24 %
-Typescript   0 hrs 4 mins    ██████░░░░░░░░░░░░░░░░░░░   23.76 %
+TSX   0 hrs 7 mins    █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
