@@ -42,13 +42,13 @@
 ```txt
 From: 26 October 2025 - To: 02 November 2025
 
-Total Time: 1 hrs 14 mins
+Total Time: 1 hrs 23 mins
 
-Html         0 hrs 20 mins   ██████▓░░░░░░░░░░░░░░░░░░   26.52 %
-CSS          0 hrs 19 mins   ██████▒░░░░░░░░░░░░░░░░░░   25.93 %
-Python       0 hrs 15 mins   █████░░░░░░░░░░░░░░░░░░░░   19.98 %
-XML          0 hrs 13 mins   ████▒░░░░░░░░░░░░░░░░░░░░   17.62 %
-Markdown     0 hrs 5 mins    █▓░░░░░░░░░░░░░░░░░░░░░░░   06.39 %
+Html         0 hrs 20 mins   ██████░░░░░░░░░░░░░░░░░░░   23.49 %
+CSS          0 hrs 19 mins   █████▓░░░░░░░░░░░░░░░░░░░   22.96 %
+Python       0 hrs 15 mins   ████▒░░░░░░░░░░░░░░░░░░░░   17.69 %
+XML          0 hrs 13 mins   ████░░░░░░░░░░░░░░░░░░░░░   15.66 %
+Kotlin       0 hrs 9 mins    ███░░░░░░░░░░░░░░░░░░░░░░   11.39 %
 ```
 
 <!--END_SECTION:waka-->
