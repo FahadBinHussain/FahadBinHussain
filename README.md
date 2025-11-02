@@ -171,3 +171,4 @@ Markdown     0 hrs 5 mins    █▓░░░░░░░░░░░░░░░
 - 🔭 Currently actively developing my [Awesome-Nano-Banana-images](https://github.com/FahadBinHussain/Awesome-Nano-Banana-images) project.
 - 🔭 Currently actively developing my [CSE391](https://github.com/FahadBinHussain/CSE391) project.
 - 🔭 Currently actively developing my [CSE391](https://github.com/FahadBinHussain/CSE391) project.
+- 🔭 Currently actively developing my [Hydra](https://github.com/FahadBinHussain/Hydra) & [CSE391](https://github.com/FahadBinHussain/CSE391) projects.
