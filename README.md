@@ -171,4 +171,4 @@ CSS               0 hrs 19 mins   █▓░░░░░░░░░░░░░�
 - 🔭 Currently actively developing my [Awesome-Nano-Banana-images](https://github.com/FahadBinHussain/Awesome-Nano-Banana-images) project.
 - 🔭 Currently actively developing my [CSE391](https://github.com/FahadBinHussain/CSE391) project.
 - 🔭 Currently actively developing my [CSE391](https://github.com/FahadBinHussain/CSE391) project.
-- 🔭 Currently actively developing my [Decidr](https://github.com/FahadBinHussain/Decidr) & [Moodify](https://github.com/FahadBinHussain/Moodify) projects.
+- 🔭 Currently actively developing my [Raini](https://github.com/FahadBinHussain/Raini) & [Decidr](https://github.com/FahadBinHussain/Decidr) projects.
