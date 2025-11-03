@@ -171,4 +171,4 @@ XML        0 hrs 14 mins   ███▓░░░░░░░░░░░░░�
 - 🔭 Currently actively developing my [Awesome-Nano-Banana-images](https://github.com/FahadBinHussain/Awesome-Nano-Banana-images) project.
 - 🔭 Currently actively developing my [CSE391](https://github.com/FahadBinHussain/CSE391) project.
 - 🔭 Currently actively developing my [CSE391](https://github.com/FahadBinHussain/CSE391) project.
-- 🔭 Currently actively developing my [Hydra](https://github.com/FahadBinHussain/Hydra) & [CSE391](https://github.com/FahadBinHussain/CSE391) projects.
+- 🔭 Currently actively developing my [Dreamora](https://github.com/FahadBinHussain/Dreamora) & [Hydra](https://github.com/FahadBinHussain/Hydra) projects.
