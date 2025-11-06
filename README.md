@@ -180,4 +180,4 @@ YAML              0 hrs 51 mins   ██▒░░░░░░░░░░░░�
 - 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
 - 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
 - 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
-- 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) & [Ambion](https://github.com/FahadBinHussain/Ambion) projects.
+- 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) project.
