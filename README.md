@@ -42,13 +42,13 @@
 ```txt
 From: 31 October 2025 - To: 06 November 2025
 
-Total Time: 10 hrs 55 mins
+Total Time: 10 hrs 52 mins
 
-Kotlin            2 hrs 29 mins   █████▓░░░░░░░░░░░░░░░░░░░   22.76 %
-Dart              1 hrs 26 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   13.12 %
-Html              1 hrs 10 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.71 %
-Typescript        0 hrs 59 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.06 %
-YAML              0 hrs 54 mins   ██░░░░░░░░░░░░░░░░░░░░░░░   08.18 %
+Kotlin            2 hrs 29 mins   █████▓░░░░░░░░░░░░░░░░░░░   22.89 %
+Dart              1 hrs 26 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   13.20 %
+Html              1 hrs 22 mins   ███░░░░░░░░░░░░░░░░░░░░░░   12.62 %
+Typescript        0 hrs 59 mins   ██▒░░░░░░░░░░░░░░░░░░░░░░   09.11 %
+Unknown           0 hrs 47 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   07.16 %
 ```
 
 <!--END_SECTION:waka-->
