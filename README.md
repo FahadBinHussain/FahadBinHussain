@@ -189,4 +189,4 @@ Unknown           0 hrs 54 mins   ██░░░░░░░░░░░░░�
 - 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) project.
 - 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) project.
 - 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) project.
-- 🔭 Currently actively developing my [Thotz](https://github.com/FahadBinHussain/Thotz) & [ambion](https://github.com/FahadBinHussain/ambion) projects.
+- 🔭 Currently actively developing my [Stardate](https://github.com/FahadBinHussain/Stardate) & [Fontio](https://github.com/FahadBinHussain/Fontio) projects.
