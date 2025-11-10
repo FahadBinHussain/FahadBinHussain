@@ -190,3 +190,4 @@ Html              0 hrs 54 mins   ██▒░░░░░░░░░░░░�
 - 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) project.
 - 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) project.
 - 🔭 Currently actively developing my [permavid](https://github.com/FahadBinHussain/permavid) project.
+- 🔭 Currently actively developing my [permavid](https://github.com/FahadBinHussain/permavid) project.
