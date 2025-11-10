@@ -192,3 +192,4 @@ YAML              0 hrs 38 mins   ██░░░░░░░░░░░░░�
 - 🔭 Currently actively developing my [permavid](https://github.com/FahadBinHussain/permavid) project.
 - 🔭 Currently actively developing my [permavid](https://github.com/FahadBinHussain/permavid) project.
 - 🔭 Currently actively developing my [permavid](https://github.com/FahadBinHussain/permavid) project.
+- 🔭 Currently actively developing my [permavid](https://github.com/FahadBinHussain/permavid) project.
