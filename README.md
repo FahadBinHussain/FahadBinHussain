@@ -189,4 +189,4 @@ Unknown           0 hrs 55 mins   ██▒░░░░░░░░░░░░�
 - 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) project.
 - 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) project.
 - 🔭 Currently actively developing my [ambion](https://github.com/FahadBinHussain/ambion) project.
-- 🔭 Currently actively developing my [permavid](https://github.com/FahadBinHussain/permavid) & [Synapse](https://github.com/FahadBinHussain/Synapse) projects.
+- 🔭 Currently actively developing my [permavid](https://github.com/FahadBinHussain/permavid) project.
