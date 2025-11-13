@@ -40,15 +40,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 06 November 2025 - To: 12 November 2025
+From: 06 November 2025 - To: 13 November 2025
 
-Total Time: 6 hrs 15 mins
+Total Time: 6 hrs 25 mins
 
-Typescript        1 hrs 30 mins   ██████░░░░░░░░░░░░░░░░░░░   24.01 %
-TSX               1 hrs 7 mins    ████▒░░░░░░░░░░░░░░░░░░░░   17.84 %
-Unknown           0 hrs 42 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   11.06 %
-Kotlin            0 hrs 39 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.52 %
-YAML              0 hrs 20 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.42 %
+Typescript        1 hrs 30 mins   ██████░░░░░░░░░░░░░░░░░░░   23.41 %
+TSX               1 hrs 6 mins    ████▒░░░░░░░░░░░░░░░░░░░░   17.06 %
+Unknown           0 hrs 42 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.79 %
+Kotlin            0 hrs 39 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.26 %
+YAML              0 hrs 20 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.29 %
 ```
 
 <!--END_SECTION:waka-->
