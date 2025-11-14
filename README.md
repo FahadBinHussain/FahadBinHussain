@@ -247,3 +247,4 @@ C#               0 hrs 23 mins   █▒░░░░░░░░░░░░░�
 - 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
 - 🔭 Currently actively developing my [Wall-You-Need-Next-Gen](https://github.com/FahadBinHussain/Wall-You-Need-Next-Gen) project.
 - 🔭 Currently actively developing my [Wall-You-Need-Next-Gen](https://github.com/FahadBinHussain/Wall-You-Need-Next-Gen) project.
+- 🔭 Currently actively developing my [Wall-You-Need-Next-Gen](https://github.com/FahadBinHussain/Wall-You-Need-Next-Gen) project.
