@@ -42,13 +42,13 @@
 ```txt
 From: 09 November 2025 - To: 15 November 2025
 
-Total Time: 10 hrs 51 mins
+Total Time: 10 hrs 41 mins
 
-C#           2 hrs 28 mins   █████▓░░░░░░░░░░░░░░░░░░░   22.71 %
-Json         2 hrs 10 mins   █████░░░░░░░░░░░░░░░░░░░░   19.96 %
-Typescript   1 hrs 30 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   13.85 %
-TSX          1 hrs 11 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.87 %
-Markdown     1 hrs 1 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   09.36 %
+C#           2 hrs 28 mins   █████▓░░░░░░░░░░░░░░░░░░░   23.07 %
+Json         2 hrs 10 mins   █████░░░░░░░░░░░░░░░░░░░░   20.27 %
+Typescript   1 hrs 30 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   14.07 %
+TSX          1 hrs 11 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   11.04 %
+Markdown     1 hrs 1 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   09.51 %
 ```
 
 <!--END_SECTION:waka-->
