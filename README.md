@@ -267,4 +267,4 @@ Bash         1 hrs 1 mins    ██▒░░░░░░░░░░░░░░
 - 🔭 Currently actively developing my [Wall-You-Need-Next-Gen](https://github.com/FahadBinHussain/Wall-You-Need-Next-Gen) project.
 - 🔭 Currently actively developing my [Wall-You-Need-Next-Gen](https://github.com/FahadBinHussain/Wall-You-Need-Next-Gen) project.
 - 🔭 Currently actively developing my [Wall-You-Need-Next-Gen](https://github.com/FahadBinHussain/Wall-You-Need-Next-Gen) project.
-- 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) & [standalone](https://github.com/FahadBinHussain/standalone) projects.
+- 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
