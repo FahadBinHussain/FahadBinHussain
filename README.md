@@ -270,4 +270,4 @@ Bash         1 hrs 10 mins   ██▓░░░░░░░░░░░░░░
 - 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
 - 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
 - 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
-- 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) & [permavid](https://github.com/FahadBinHussain/permavid) projects.
+- 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
