@@ -1,3 +1,50 @@
-.svg
 .env
 .venv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+/.venv/
+
+# Pytest/cache/coverage
+.pytest_cache/
+.cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Type checkers
+.mypy_cache/
+.pyre/
+.pytype/
+
+# Editors/IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*~
+*.swp
+*.swo
+
+# Node
+node_modules/
+
+# Project-specific generated output
+output/

@@ -12,23 +12,28 @@ load_dotenv()
 WAKATIME_API_KEY = os.getenv('WAKATIME_API_KEY')
 WAKATIME_USERNAME = os.getenv('WAKATIME_USERNAME')
 
-# Set the default encoding to utf-8
-sys.stdout.reconfigure(encoding='utf-8')
+# Set the default encoding to utf-8 where available
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+except Exception:
+    # Older Python versions or environments may not support reconfigure; ignore silently
+    pass
 
-if WAKATIME_API_KEY is None or WAKATIME_USERNAME is None:
-    raise ValueError("WAKATIME_API_KEY and WAKATIME_USERNAME environment variables must be set")
-
-# Encode the API key as Base64 and prefix with 'Basic '
-encoded_api_key = base64.b64encode(WAKATIME_API_KEY.encode()).decode()
-headers = {
-    'Authorization': f'Basic {encoded_api_key}'
-}
+# Encode the API key as Base64 and prefix with 'Basic ' if present
+if WAKATIME_API_KEY:
+    encoded_api_key = base64.b64encode(WAKATIME_API_KEY.encode()).decode()
+    headers = {'Authorization': f'Basic {encoded_api_key}'}
+else:
+    headers = {}
 
 # API base URL for fetching heartbeats
 HEARTBEATS_API_URL = f"https://wakapi-qt1b.onrender.com/api/compat/wakatime/v1/users/{WAKATIME_USERNAME}/heartbeats"
 
 def fetch_most_recent_projects():
     # Get the current date in YYYY-MM-DD format
+    if WAKATIME_API_KEY is None or WAKATIME_USERNAME is None:
+        print("WAKATIME_API_KEY and WAKATIME_USERNAME are not set. Skipping fetch.")
+        return None
     current_date = datetime.now().strftime('%Y-%m-%d')
     response = requests.get(HEARTBEATS_API_URL, headers=headers, params={'date': current_date})
     print(f"Response status code: {response.status_code}")
@@ -67,8 +72,8 @@ def fetch_most_recent_projects():
         print(f"Unique projects: {unique_projects}")  # Debug statement
 
         if unique_projects:
-            # Get the two most recent projects
-            most_recent_projects = unique_projects[:2]
+            # Get the three most recent projects
+            most_recent_projects = unique_projects[:3]
             print(f"Most recent projects: {most_recent_projects}")
             return most_recent_projects
         else:
@@ -78,12 +83,62 @@ def fetch_most_recent_projects():
         print("No heartbeats found or heartbeats list is invalid.")
         return None
 
-def update_readme(most_recent_projects):
+def build_new_projects_text(most_recent_projects, max_projects=3):
+    if not most_recent_projects:
+        return None
+
+    projects = most_recent_projects[:max_projects]
+    links = [f"[{p}](https://github.com/FahadBinHussain/{p})" for p in projects]
+
+    if len(links) == 1:
+        return f"- 🔭 Currently actively developing my {links[0]} project."
+    elif len(links) == 2:
+        return f"- 🔭 Currently actively developing my {links[0]} & {links[1]} projects."
+    else:
+        # Join all but the last with commas, use & before the final project
+        return f"- 🔭 Currently actively developing my {', '.join(links[:-1])} & {links[-1]} projects."
+
+
+def replace_projects_block(readme_content: str, new_projects_text: str) -> str:
+    """Replace one or more lines that start with the projects line with a single new_projects_text.
+
+    The regex matches either 'project.' or 'projects.' and supports CRLF/LF newlines.
+    """
+    if not new_projects_text:
+        return readme_content
+
+    # Match one or more occurrences (possible blocks) of the projects statement lines
+    # We match lines individually and include optional whitespace and CRLF/LF
+    block_re = re.compile(r"^\s*- 🔭 Currently actively developing my .*?project(?:s)?\.\s*$\r?\n?", re.M)
+
+    if block_re.search(readme_content):
+        # Remove all existing occurrences (deduplicate)
+        content_clean = block_re.sub('', readme_content)
+
+        # Insert the new projects line after the first bullet that describes education (approx location)
+        insert_after_re = re.compile(r"(^\s*- 🎓 .*?$\r?\n?)", re.M)
+        if insert_after_re.search(content_clean):
+            content_inserted = insert_after_re.sub(r"\1" + new_projects_text + "\n", content_clean, count=1)
+            return content_inserted
+        else:
+            # fallback: append to the end
+            if not content_clean.endswith("\n"):
+                content_clean += "\n"
+            return content_clean + new_projects_text + "\n"
+    else:
+        # If not found, append the projects line at the end
+        if not readme_content.endswith("\n"):
+            readme_content += "\n"
+    # If no occurrences found, append to end as before
+    return readme_content + new_projects_text + "\n"
+
+
+def update_readme(most_recent_projects, readme_path='README.md'):
     if not most_recent_projects:
         print("No recent projects found to update README.")
         return
 
-    readme_path = 'README.md'
+    # Allow custom readme_path for testing/invocation
 
     if not os.path.isfile(readme_path):
         print("README.md file not found.")
@@ -97,26 +152,13 @@ def update_readme(most_recent_projects):
         print(f"Error reading README.md: {e}")
         return
 
-    line_to_update = re.compile(r"- 🔭 Currently actively developing my .* projects\.")
+    new_projects_text = build_new_projects_text(most_recent_projects)
 
-    # Build text depending on how many projects we have
-    if len(most_recent_projects) >= 2:
-        new_projects_text = (
-            f"- 🔭 Currently actively developing my "
-            f"[{most_recent_projects[0]}](https://github.com/FahadBinHussain/{most_recent_projects[0]}) "
-            f"& [{most_recent_projects[1]}](https://github.com/FahadBinHussain/{most_recent_projects[1]}) projects."
-        )
-    else:  # only 1 project
-        new_projects_text = (
-            f"- 🔭 Currently actively developing my "
-            f"[{most_recent_projects[0]}](https://github.com/FahadBinHussain/{most_recent_projects[0]}) project."
-        )
+    if not new_projects_text:
+        print("No recent projects found to update README.")
+        return
 
-    if line_to_update.search(readme_content):
-        updated_readme_content = line_to_update.sub(new_projects_text, readme_content)
-    else:
-        print("Pattern not found in README.md, adding new project text.")
-        updated_readme_content = readme_content + "\n" + new_projects_text
+    updated_readme_content = replace_projects_block(readme_content, new_projects_text)
 
     try:
         with open(readme_path, 'w', encoding='utf-8') as file:
