@@ -2,7 +2,7 @@
         src="https://komarev.com/ghpvc/?username=fahadbinhussain&style=flat-square&color=blueviolet"
         alt="fahadbinhussain" /></p>
 
-<h1 align="center">Hi There! 👋, I'm Fahad (Fahad Bin Hussain)<h3 align="center">🧠 Premium Software Engineer </h3></h1>
+<h1 align="center">Hi There! 👋, I'm Fahad<h3 align="center">🧠 Premium Software Engineer </h3></h1>
 
 <p align="right"> 
         <a href="https://www.linkedin.com/in/fahadbinhussain/" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
