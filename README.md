@@ -28,7 +28,7 @@
 <details open> <summary><h3>🚀 About Me</h3></summary>
 
 - 🎓 I am pursuing a Bachelor of Science in Computer Science and Engineering.
-- 🔭 Currently actively developing my [CSE391](https://github.com/FahadBinHussain/CSE391), [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) & [Uddog](https://github.com/FahadBinHussain/Uddog) projects.
+- 🔭 Currently actively developing my [vubon-skills](https://github.com/FahadBinHussain/vubon-skills) project.
 - 🤝 I’m looking for assistance with my [DotsAndBoxesMipsAssemblyEdition](https://github.com/FahadBinHussain/DotsAndBoxesMipsAssemblyEdition) repository.
 - 🌱 I’m currently further expanding my knowledge in **C++**
 - ⚡ Fun fact **I love eating spicy food 🌶️ & talking about space🌌🧑‍🚀**
