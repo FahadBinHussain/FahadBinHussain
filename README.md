@@ -42,9 +42,9 @@
 ```txt
 From: 13 December 2025 - To: 19 December 2025
 
-Total Time: 18 hrs 30 mins
+Total Time: 18 hrs 29 mins
 
-TSX          11 hrs 24 mins  ███████████████▒░░░░░░░░░   61.65 %
+TSX          11 hrs 24 mins  ███████████████▒░░░░░░░░░   61.64 %
 Typescript   2 hrs 39 mins   ███▓░░░░░░░░░░░░░░░░░░░░░   14.30 %
 Bash         1 hrs 20 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   07.17 %
 Markdown     1 hrs 13 mins   █▓░░░░░░░░░░░░░░░░░░░░░░░   06.59 %
