@@ -42,13 +42,13 @@
 ```txt
 From: 18 December 2025 - To: 25 December 2025
 
-Total Time: 34 hrs 12 mins
+Total Time: 33 hrs 48 mins
 
-TSX          22 hrs 46 mins  ████████████████▓░░░░░░░░   66.57 %
-Json         4 hrs 0 mins    ███░░░░░░░░░░░░░░░░░░░░░░   11.70 %
-Typescript   3 hrs 0 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   08.79 %
-Bash         0 hrs 52 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.54 %
-Markdown     0 hrs 51 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.51 %
+TSX          22 hrs 29 mins  ████████████████▓░░░░░░░░   66.56 %
+Json         4 hrs 0 mins    ███░░░░░░░░░░░░░░░░░░░░░░   11.84 %
+Typescript   3 hrs 0 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   08.89 %
+Markdown     0 hrs 51 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.54 %
+Bash         0 hrs 44 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.18 %
 ```
 
 <!--END_SECTION:waka-->
