@@ -42,13 +42,13 @@
 ```txt
 From: 28 December 2025 - To: 04 January 2026
 
-Total Time: 18 hrs 39 mins
+Total Time: 18 hrs 49 mins
 
-TSX          10 hrs 17 mins  █████████████▓░░░░░░░░░░░   55.15 %
-Typescript   3 hrs 36 mins   ████▓░░░░░░░░░░░░░░░░░░░░   19.32 %
-CSS          1 hrs 4 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.75 %
-Json         1 hrs 3 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.63 %
-Unknown      0 hrs 50 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.49 %
+TSX          10 hrs 17 mins  █████████████▓░░░░░░░░░░░   54.65 %
+Typescript   3 hrs 46 mins   █████░░░░░░░░░░░░░░░░░░░░   20.05 %
+CSS          1 hrs 4 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.70 %
+Json         1 hrs 3 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.58 %
+Unknown      0 hrs 50 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.45 %
 ```
 
 <!--END_SECTION:waka-->
