@@ -42,13 +42,13 @@
 ```txt
 From: 03 January 2026 - To: 10 January 2026
 
-Total Time: 15 hrs 44 mins
+Total Time: 16 hrs 11 mins
 
-Typescript   6 hrs 58 mins   ███████████░░░░░░░░░░░░░░   44.26 %
-TSX          6 hrs 48 mins   ██████████▓░░░░░░░░░░░░░░   43.29 %
-Python       0 hrs 40 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.19 %
-JSX          0 hrs 28 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.93 %
-Markdown     0 hrs 19 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.06 %
+Typescript   6 hrs 58 mins   ██████████▓░░░░░░░░░░░░░░   43.01 %
+TSX          6 hrs 48 mins   ██████████▓░░░░░░░░░░░░░░   42.06 %
+Python       0 hrs 40 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   04.07 %
+Unknown      0 hrs 37 mins   █░░░░░░░░░░░░░░░░░░░░░░░░   03.81 %
+JSX          0 hrs 28 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.85 %
 ```
 
 <!--END_SECTION:waka-->
