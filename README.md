@@ -42,10 +42,10 @@
 ```txt
 From: 01 February 2026 - To: 08 February 2026
 
-Total Time: 5 hrs 41 mins
+Total Time: 5 hrs 42 mins
 
-TSX          3 hrs 12 mins   ██████████████░░░░░░░░░░░   56.30 %
-Json         0 hrs 53 mins   ████░░░░░░░░░░░░░░░░░░░░░   15.64 %
+TSX          3 hrs 12 mins   ██████████████░░░░░░░░░░░   56.27 %
+Json         0 hrs 53 mins   ████░░░░░░░░░░░░░░░░░░░░░   15.63 %
 JSX          0 hrs 44 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   12.82 %
 Typescript   0 hrs 19 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.43 %
 Markdown     0 hrs 16 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   04.82 %
