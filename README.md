@@ -40,15 +40,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 31 January 2026 - To: 07 February 2026
+From: 01 February 2026 - To: 07 February 2026
 
-Total Time: 5 hrs 15 mins
+Total Time: 5 hrs 23 mins
 
-TSX          3 hrs 12 mins   ███████████████▒░░░░░░░░░   60.94 %
-Json         0 hrs 53 mins   ████▒░░░░░░░░░░░░░░░░░░░░   16.92 %
-JSX          0 hrs 44 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   13.88 %
-Unknown      0 hrs 10 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.02 %
-Markdown     0 hrs 9 mins    ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.77 %
+TSX          3 hrs 12 mins   ███████████████░░░░░░░░░░   59.48 %
+Json         0 hrs 53 mins   ████░░░░░░░░░░░░░░░░░░░░░   16.52 %
+JSX          0 hrs 44 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   13.55 %
+Markdown     0 hrs 16 mins   █▒░░░░░░░░░░░░░░░░░░░░░░░   05.10 %
+Unknown      0 hrs 10 mins   ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.95 %
 ```
 
 <!--END_SECTION:waka-->
