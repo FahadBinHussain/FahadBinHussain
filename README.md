@@ -44,7 +44,7 @@ From: 01 March 2026 - To: 08 March 2026
 
 Total Time: 12 hrs 47 mins
 
-Java         8 hrs 2 mins          ███████████████▓░░░░░░░░░   62.84 %
+Java         8 hrs 2 mins          ███████████████▓░░░░░░░░░   62.83 %
 XML          2 hrs 4 mins          ████░░░░░░░░░░░░░░░░░░░░░   16.15 %
 Json         1 hrs 26 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   11.27 %
 Markdown     0 hrs 41 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.35 %
