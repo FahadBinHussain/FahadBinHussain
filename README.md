@@ -28,7 +28,7 @@
 <details open> <summary><h3>🚀 About Me</h3></summary>
 
 - 🎓 I am pursuing a Bachelor of Science in Computer Science and Engineering.
-- 🔭 Currently actively developing my [bazartoday](https://github.com/FahadBinHussain/bazartoday), [vubon-ecommerce](https://github.com/FahadBinHussain/vubon-ecommerce) & [vubon-virtuals](https://github.com/FahadBinHussain/vubon-virtuals) projects.
+- 🔭 Currently actively developing my [Wall-You-Need-Next-Gen](https://github.com/FahadBinHussain/Wall-You-Need-Next-Gen), [bazartoday](https://github.com/FahadBinHussain/bazartoday) & [vubon-ecommerce](https://github.com/FahadBinHussain/vubon-ecommerce) projects.
 - 🤝 I’m looking for assistance with my [DotsAndBoxesMipsAssemblyEdition](https://github.com/FahadBinHussain/DotsAndBoxesMipsAssemblyEdition) repository.
 - 🌱 I’m currently further expanding my knowledge in **C++**
 - ⚡ Fun fact **I love eating spicy food 🌶️ & talking about space🌌🧑‍🚀**
