@@ -42,10 +42,10 @@
 ```txt
 From: 06 March 2026 - To: 13 March 2026
 
-Total Time: 11 hrs 58 mins
+Total Time: 11 hrs 59 mins
 
 TSX          2 hrs 36 mins         █████▒░░░░░░░░░░░░░░░░░░░   21.68 %
-JSX          1 hrs 52 mins         ████░░░░░░░░░░░░░░░░░░░░░   15.56 %
+JSX          1 hrs 52 mins         ████░░░░░░░░░░░░░░░░░░░░░   15.55 %
 Markdown     1 hrs 42 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.21 %
 Json         1 hrs 30 mins         ███░░░░░░░░░░░░░░░░░░░░░░   12.48 %
 XML          0 hrs 58 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   08.13 %
