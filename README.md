@@ -42,13 +42,13 @@
 ```txt
 From: 09 March 2026 - To: 15 March 2026
 
-Total Time: 13 hrs 20 mins
+Total Time: 12 hrs 41 mins
 
-TSX          2 hrs 56 mins         █████▒░░░░░░░░░░░░░░░░░░░   21.93 %
-JSX          2 hrs 12 mins         ████░░░░░░░░░░░░░░░░░░░░░   16.53 %
-Markdown     1 hrs 40 mins         ███░░░░░░░░░░░░░░░░░░░░░░   12.48 %
-Json         1 hrs 33 mins         ███░░░░░░░░░░░░░░░░░░░░░░   11.58 %
-Unknown      1 hrs 26 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.70 %
+TSX          2 hrs 48 mins         █████▓░░░░░░░░░░░░░░░░░░░   22.05 %
+JSX          2 hrs 9 mins          ████▒░░░░░░░░░░░░░░░░░░░░   16.98 %
+Markdown     1 hrs 32 mins         ███░░░░░░░░░░░░░░░░░░░░░░   12.13 %
+Unknown      1 hrs 26 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   11.26 %
+Json         1 hrs 19 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.45 %
 ```
 
 <!--END_SECTION:waka-->
