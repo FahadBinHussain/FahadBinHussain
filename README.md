@@ -42,11 +42,11 @@
 ```txt
 From: 14 March 2026 - To: 21 March 2026
 
-Total Time: 0 hrs 10 mins
+Total Time: 0 hrs 5 mins
 
-Unknown   0 hrs 5 mins          █████████████▒░░░░░░░░░░░   52.98 %
-Python    0 hrs 2 mins          ██████░░░░░░░░░░░░░░░░░░░   24.04 %
-JSX       0 hrs 2 mins          █████▓░░░░░░░░░░░░░░░░░░░   22.98 %
+Python    0 hrs 2 mins          ███████████▓░░░░░░░░░░░░░   46.76 %
+JSX       0 hrs 2 mins          ███████████▒░░░░░░░░░░░░░   44.71 %
+Unknown   0 hrs 0 mins          ██░░░░░░░░░░░░░░░░░░░░░░░   08.53 %
 ```
 
 <!--END_SECTION:waka-->
