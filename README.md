@@ -42,10 +42,9 @@
 ```txt
 From: 15 March 2026 - To: 22 March 2026
 
-Total Time: 0 hrs 4 mins
+Total Time: 0 hrs 2 mins
 
-Python    0 hrs 2 mins          ████████████▓░░░░░░░░░░░░   51.12 %
-JSX       0 hrs 2 mins          ████████████▒░░░░░░░░░░░░   48.88 %
+JSX       0 hrs 2 mins          █████████████████████████   100.00 %
 Unknown   0 hrs 0 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 %
 ```
 
