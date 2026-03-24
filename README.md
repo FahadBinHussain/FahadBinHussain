@@ -44,7 +44,7 @@ From: 17 March 2026 - To: 24 March 2026
 
 Total Time: 0 hrs 0 mins
 
-No activity tracked
+Json   0 hrs 0 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 %
 ```
 
 <!--END_SECTION:waka-->
