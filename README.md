@@ -28,7 +28,7 @@
 <details open> <summary><h3>🚀 About Me</h3></summary>
 
 - 🎓 I am pursuing a Bachelor of Science in Computer Science and Engineering.
-- 🔭 Currently actively developing my [lore](https://github.com/FahadBinHussain/lore) project.
+- 🔭 Currently actively developing my [vubon-ecommerce](https://github.com/FahadBinHussain/vubon-ecommerce), [bazartoday](https://github.com/FahadBinHussain/bazartoday) & [lore](https://github.com/FahadBinHussain/lore) projects.
 - 🤝 I’m looking for assistance with my [DotsAndBoxesMipsAssemblyEdition](https://github.com/FahadBinHussain/DotsAndBoxesMipsAssemblyEdition) repository.
 - 🌱 I’m currently further expanding my knowledge in **C++**
 - ⚡ Fun fact **I love eating spicy food 🌶️ & talking about space🌌🧑‍🚀**
