@@ -58,10 +58,26 @@ Bash         0 hrs 58 mins         █░░░░░░░░░░░░░░
 <div markdown="1" style="display: flex;">
 <details open>
     <summary><h3 align="left">📈 My Github Stats:</h3></summary>
-    <img align="left" src="https://gitbio.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical" alt="fahadbinhussain" />
-    <img align="right" src="https://gitbio.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact" alt="fahadbinhussain" />
-    <img align="left" src="https://gitstreak.vercel.app?user=fahadbinhussain&theme=radical" alt="fahadbinhussain" />
-    <img height="170" align="right" src="https://gitrophy.vercel.app/?username=FahadBinHussain&theme=tokyonight&column=4" /></p>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://gitbio.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical">
+      <source media="(prefers-color-scheme: light)" srcset="https://gitbio.vercel.app/api?username=fahadbinhussain&show_icons=true">
+      <img align="left" src="https://gitbio.vercel.app/api?username=fahadbinhussain&show_icons=true" alt="fahadbinhussain" />
+    </picture>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://gitbio.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact">
+      <source media="(prefers-color-scheme: light)" srcset="https://gitbio.vercel.app/api/top-langs/?username=fahadbinhussain&layout=compact">
+      <img align="right" src="https://gitbio.vercel.app/api/top-langs/?username=fahadbinhussain&layout=compact" alt="fahadbinhussain" />
+    </picture>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://gitstreak.vercel.app?user=fahadbinhussain&theme=radical">
+      <source media="(prefers-color-scheme: light)" srcset="https://gitstreak.vercel.app?user=fahadbinhussain">
+      <img align="left" src="https://gitstreak.vercel.app?user=fahadbinhussain" alt="fahadbinhussain" />
+    </picture>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://gitrophy.vercel.app/?username=FahadBinHussain&theme=tokyonight&column=4">
+      <source media="(prefers-color-scheme: light)" srcset="https://gitrophy.vercel.app/?username=FahadBinHussain&column=4">
+      <img height="170" align="right" src="https://gitrophy.vercel.app/?username=FahadBinHussain&column=4" />
+    </picture></p>
 </details>
 
 
