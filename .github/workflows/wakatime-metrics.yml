@@ -64,6 +64,12 @@ jobs:
           WAKATIME_USERNAME: ${{ secrets.WAKATIME_USERNAME }}
         run: python update_readme.py
       
+      - name: Update README stack section
+        env:
+          GITHUB_USERNAME: FahadBinHussain
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: python generate_stack_section.py
+      
       - name: Configure Git
         run: |
           git config --global user.name 'github-actions[bot]'
