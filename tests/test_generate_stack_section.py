@@ -35,6 +35,34 @@ def test_detect_tools_from_content():
     assert {"React", "Next.js", "Prisma", "MongoDB"} <= detected
 
 
+def test_detect_tools_from_paths_for_additional_ecosystems():
+    paths = [
+        "src-tauri/Cargo.toml",
+        "tauri.conf.json",
+        "go.mod",
+        "pubspec.yaml",
+        "main.tf",
+        "Chart.yaml",
+        "vercel.json",
+    ]
+    detected = detect_tools_from_paths(paths)
+    assert {"Tauri", "Rust", "Go", "Dart", "Terraform", "Kubernetes", "Vercel"} <= detected
+
+
+def test_detect_tools_from_content_for_additional_ecosystems():
+    content = """
+    dependencies:
+      tauri: latest
+      tailwindcss: latest
+      fastapi: latest
+      supabase: latest
+      aws-sdk: latest
+      playwright: latest
+    """
+    detected = detect_tools_from_content(content)
+    assert {"Tauri", "Tailwind CSS", "FastAPI", "Supabase", "AWS", "Playwright"} <= detected
+
+
 def test_build_stack_block_contains_markers():
     block = build_stack_block(["JavaScript", "Python"], ["Docker", "Git"])
     assert README_MARKER_START in block
