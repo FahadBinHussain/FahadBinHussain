@@ -67,7 +67,7 @@ jobs:
       - name: Update README stack section
         env:
           GITHUB_USERNAME: FahadBinHussain
-          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
         run: python generate_stack_section.py
       
       - name: Configure Git

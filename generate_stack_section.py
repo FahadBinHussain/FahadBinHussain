@@ -116,13 +116,25 @@ def fetch_json(url: str, headers: dict[str, str], params: dict | None = None):
     return response.json()
 
 
-def fetch_repositories(username: str, headers: dict[str, str], max_repos: int = 30) -> list[dict]:
-    repos = fetch_json(
-        f"{GITHUB_API_URL}/users/{username}/repos",
-        headers,
-        params={"per_page": max_repos, "sort": "updated", "type": "owner"},
-    )
-    return [repo for repo in repos if not repo.get("fork")]
+def fetch_repositories(username: str, headers: dict[str, str]) -> list[dict]:
+    repos: list[dict] = []
+    page = 1
+    per_page = 100
+
+    while True:
+        batch = fetch_json(
+            f"{GITHUB_API_URL}/users/{username}/repos",
+            headers,
+            params={"per_page": per_page, "page": page, "sort": "updated", "type": "owner"},
+        )
+        if not batch:
+            break
+        repos.extend(repo for repo in batch if not repo.get("fork"))
+        if len(batch) < per_page:
+            break
+        page += 1
+
+    return repos
 
 
 def fetch_languages(repo: dict, headers: dict[str, str]) -> Counter:
@@ -184,31 +196,52 @@ def normalize_language_name(name: str) -> str | None:
     return mapping.get(name)
 
 
-def gather_stack(username: str, max_repos: int = 20) -> tuple[list[str], list[str]]:
+def gather_stack(username: str) -> tuple[list[str], list[str]]:
     headers = build_headers()
-    repos = fetch_repositories(username, headers, max_repos=max_repos)
+    repos = fetch_repositories(username, headers)
+    print(f"Scanning {len(repos)} non-fork repositories for {username}")
     language_counts: Counter = Counter()
     tool_counts: Counter = Counter()
 
-    for repo in repos:
-        language_counts.update(fetch_languages(repo, headers))
+    for index, repo in enumerate(repos, start=1):
+        repo_name = repo["full_name"]
+        print(f"[{index}/{len(repos)}] Scanning {repo_name}")
+
+        repo_languages = fetch_languages(repo, headers)
+        language_counts.update(repo_languages)
+        if repo_languages:
+            top_languages = ", ".join(
+                language for language, _ in repo_languages.most_common(5)
+            )
+            print(f"  Languages: {top_languages}")
+        else:
+            print("  Languages: none reported by GitHub")
 
         try:
             paths = fetch_repo_tree(repo, headers)
+            print(f"  Indexed {len(paths)} files")
         except requests.RequestException:
             paths = []
+            print("  Could not fetch repository tree")
 
         detected_tools = detect_tools_from_paths(paths)
 
         for candidate in ("package.json", "requirements.txt", "pyproject.toml", "pom.xml"):
             if candidate in paths:
                 try:
+                    print(f"  Inspecting {candidate}")
                     detected_tools.update(detect_tools_from_content(fetch_file_content(repo, headers, candidate)))
                 except requests.RequestException:
+                    print(f"  Failed to inspect {candidate}")
                     continue
 
         for tool in detected_tools:
             tool_counts[tool] += 1
+
+        if detected_tools:
+            print(f"  Tools: {', '.join(sorted(detected_tools))}")
+        else:
+            print("  Tools: none detected")
 
     languages = [
         name
@@ -224,6 +257,8 @@ def gather_stack(username: str, max_repos: int = 20) -> tuple[list[str], list[st
             seen_languages.add(normalized)
 
     tools = [name for name, _ in tool_counts.most_common() if name in BADGE_MAP and name not in seen_languages]
+    print(f"Final languages: {', '.join(normalized_languages[:8]) if normalized_languages else 'none'}")
+    print(f"Final tools: {', '.join(tools[:12]) if tools else 'none'}")
     return normalized_languages[:8], tools[:12]
 
 
@@ -273,6 +308,7 @@ def update_readme_stack(readme_path: str = "README.md", username: str | None = N
 
     with open(readme_path, "w", encoding="utf-8") as file:
         file.write(updated_content)
+    print(f"Updated {readme_path} stack section")
 
 
 if __name__ == "__main__":
