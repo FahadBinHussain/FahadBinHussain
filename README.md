@@ -61,7 +61,7 @@ Bash         0 hrs 58 mins         █░░░░░░░░░░░░░░
     <img align="left" src="https://gitbio.vercel.app/api?username=fahadbinhussain&show_icons=true&theme=radical" alt="fahadbinhussain" />
     <img align="right" src="https://gitbio.vercel.app/api/top-langs/?username=fahadbinhussain&theme=radical&layout=compact" alt="fahadbinhussain" />
     <img align="left" src="https://gitstreak.vercel.app?user=fahadbinhussain&theme=radical" alt="fahadbinhussain" />
-    <img height="170" align="right" src="https://github-profile-trophy.vercel.app/?username=ryo-ma&theme=tokyonight&column=4" /></p>
+    <img height="170" align="right" src="https://gitrophy.vercel.app/?username=FahadBinHussain&theme=tokyonight&column=4" /></p>
 </details>
 
 
