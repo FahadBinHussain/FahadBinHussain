@@ -44,8 +44,8 @@ From: 10 April 2026 - To: 17 April 2026
 
 Total Time: 34 hrs 45 mins
 
-Unknown      22 hrs 57 mins        ████████████████▓░░░░░░░░   66.08 %
-JSX          3 hrs 18 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.51 %
+Unknown      22 hrs 58 mins        ████████████████▓░░░░░░░░   66.09 %
+JSX          3 hrs 18 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.50 %
 TSX          2 hrs 14 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.45 %
 Markdown     0 hrs 57 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.73 %
 Javascript   0 hrs 56 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.69 %
