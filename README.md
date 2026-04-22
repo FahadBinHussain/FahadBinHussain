@@ -42,13 +42,13 @@
 ```txt
 From: 15 April 2026 - To: 22 April 2026
 
-Total Time: 24 hrs 43 mins
+Total Time: 23 hrs 15 mins
 
-Unknown      13 hrs 18 mins        █████████████▒░░░░░░░░░░░   53.79 %
-YAML         2 hrs 16 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.17 %
-TSX          2 hrs 1 mins          ██░░░░░░░░░░░░░░░░░░░░░░░   08.14 %
-JSX          1 hrs 33 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.26 %
-Markdown     1 hrs 12 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   04.86 %
+Unknown      12 hrs 29 mins        █████████████▒░░░░░░░░░░░   53.72 %
+YAML         2 hrs 16 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.75 %
+TSX          2 hrs 1 mins          ██░░░░░░░░░░░░░░░░░░░░░░░   08.65 %
+JSX          1 hrs 33 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.66 %
+Markdown     1 hrs 12 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.16 %
 ```
 
 <!--END_SECTION:waka-->
