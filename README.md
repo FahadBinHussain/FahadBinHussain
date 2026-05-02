@@ -28,7 +28,7 @@
 <details open> <summary><h3>🚀 About Me</h3></summary>
 
 - 🎓 I am pursuing a Bachelor of Science in Computer Science and Engineering.
-- 🔭 Currently actively developing my [flixora](https://github.com/FahadBinHussain/flixora), [awesome-file-hosts](https://github.com/FahadBinHussain/awesome-file-hosts) & [Ditto](https://github.com/FahadBinHussain/Ditto) projects.
+- 🔭 Currently actively developing my [awesome-file-hosts](https://github.com/FahadBinHussain/awesome-file-hosts), [nix](https://github.com/FahadBinHussain/nix) & [flixora](https://github.com/FahadBinHussain/flixora) projects.
 - 🤝 I’m looking for assistance with my [DotsAndBoxesMipsAssemblyEdition](https://github.com/FahadBinHussain/DotsAndBoxesMipsAssemblyEdition) repository.
 - 🌱 I’m currently further expanding my knowledge in **C++**
 - ⚡ Fun fact **I love eating spicy food 🌶️ & talking about space🌌🧑‍🚀**
