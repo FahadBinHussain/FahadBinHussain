@@ -339,8 +339,8 @@ def gather_stack(username: str) -> tuple[list[str], list[str]]:
 
     tools = [name for name, _ in tool_counts.most_common() if name in BADGE_MAP and name not in seen_languages]
     print(f"Final languages: {', '.join(normalized_languages[:8]) if normalized_languages else 'none'}")
-    print(f"Final tools: {', '.join(tools[:12]) if tools else 'none'}")
-    return normalized_languages[:8], tools[:12]
+    print(f"Final tools: {', '.join(tools) if tools else 'none'}")
+    return normalized_languages[:8], tools
 
 
 def badge_markdown(name: str) -> str:
@@ -351,17 +351,28 @@ def badge_markdown(name: str) -> str:
     )
 
 
-def build_stack_block(languages: list[str], tools: list[str]) -> str:
+def build_stack_block(languages: list[str], tools: list[str], featured_tool_count: int = 11) -> str:
     parts = ["", README_MARKER_START, ""]
+    featured_tools = tools[:featured_tool_count]
+    remaining_tools = tools[featured_tool_count:]
+
     if languages:
         parts.append("**Languages**")
         parts.append("")
         parts.append(" ".join(badge_markdown(language) for language in languages))
         parts.append("")
-    if tools:
+    if featured_tools:
         parts.append("**Tools & Frameworks**")
         parts.append("")
+        parts.append(" ".join(badge_markdown(tool) for tool in featured_tools))
+        parts.append("")
+    if remaining_tools:
+        parts.append("<details>")
+        parts.append("  <summary><b>All detected tools & frameworks</b></summary>")
+        parts.append("")
         parts.append(" ".join(badge_markdown(tool) for tool in tools))
+        parts.append("")
+        parts.append("</details>")
         parts.append("")
     parts.append(README_MARKER_END)
     return "\n".join(parts)

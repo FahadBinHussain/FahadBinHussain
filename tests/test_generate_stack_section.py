@@ -71,6 +71,32 @@ def test_build_stack_block_contains_markers():
     assert "Docker" in block
 
 
+def test_build_stack_block_adds_collapsed_all_tools_view():
+    tools = [
+        "Docker",
+        "Git",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Vite",
+        "Prisma",
+        "Supabase",
+        "Redis",
+        "Firebase",
+        "Vercel",
+        "Tauri",
+    ]
+    block = build_stack_block(["JavaScript"], tools)
+    assert "<details>" in block
+    assert "All detected tools & frameworks" in block
+    assert "Tauri" in block
+
+
+def test_build_stack_block_omits_collapsed_view_for_short_tool_list():
+    block = build_stack_block(["JavaScript"], ["Docker", "Git"])
+    assert "<details>" not in block
+
+
 def test_replace_stack_block_updates_only_marker_content():
     original = f"""Header
 {README_MARKER_START}
