@@ -1,9 +1,11 @@
+import generate_stack_section
 from generate_stack_section import (
     README_MARKER_END,
     README_MARKER_START,
     build_stack_block,
     detect_tools_from_content,
     detect_tools_from_paths,
+    fetch_repositories,
     replace_stack_block,
 )
 
@@ -18,6 +20,26 @@ def test_detect_tools_from_paths():
     ]
     detected = detect_tools_from_paths(paths)
     assert {"Node.js", "Next.js", "React", "GitHub Actions", "Docker", "Python"} <= detected
+
+
+def test_fetch_repositories_uses_authenticated_listing(monkeypatch):
+    calls = []
+
+    def fake_fetch_json(url, headers, params=None):
+        calls.append((url, params))
+        return [
+            {"fork": False, "owner": {"login": "FahadBinHussain"}, "name": "public-or-private"},
+            {"fork": True, "owner": {"login": "FahadBinHussain"}, "name": "forked"},
+            {"fork": False, "owner": {"login": "OtherUser"}, "name": "other-owner"},
+        ]
+
+    monkeypatch.setattr(generate_stack_section, "fetch_json", fake_fetch_json)
+    repos = fetch_repositories("FahadBinHussain", {"Authorization": "Bearer token"})
+
+    assert calls[0][0].endswith("/user/repos")
+    assert calls[0][1]["visibility"] == "all"
+    assert calls[0][1]["affiliation"] == "owner"
+    assert [repo["name"] for repo in repos] == ["public-or-private"]
 
 
 def test_detect_tools_from_content():
@@ -61,6 +83,42 @@ def test_detect_tools_from_content_for_additional_ecosystems():
     """
     detected = detect_tools_from_content(content)
     assert {"Tauri", "Tailwind CSS", "FastAPI", "Supabase", "AWS", "Playwright"} <= detected
+
+
+def test_detect_tools_from_paths_for_project_types():
+    paths = [
+        "notebooks/model.ipynb",
+        "src/App.csproj",
+        "MyApp.sln",
+        "app/src/main/AndroidManifest.xml",
+        "manifest.json",
+        "_config.yml",
+        ".eslintrc.json",
+        ".prettierrc",
+    ]
+    detected = detect_tools_from_paths(paths)
+    assert {"Jupyter", ".NET", "C#", "Android", "Chrome Extension", "Jekyll", "GitHub Pages"} <= detected
+    assert {"ESLint", "Prettier"} <= detected
+
+
+def test_detect_tools_from_content_for_python_and_android_libraries():
+    content = """
+    discord.py
+    python-telegram-bot
+    beautifulsoup4
+    requests
+    pandas
+    numpy
+    scikit-learn
+    tensorflow
+    torch
+    androidx.compose
+    com.android.application
+    """
+    detected = detect_tools_from_content(content)
+    assert {"Discord.py", "Telegram Bot", "Beautiful Soup", "Requests"} <= detected
+    assert {"Pandas", "NumPy", "scikit-learn", "TensorFlow", "PyTorch"} <= detected
+    assert {"Android", "Jetpack Compose"} <= detected
 
 
 def test_build_stack_block_contains_markers():

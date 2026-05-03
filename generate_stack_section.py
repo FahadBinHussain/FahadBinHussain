@@ -29,6 +29,14 @@ BADGE_MAP = {
     "Dart": ("Dart", "dart", "white", "0175C2"),
     "PHP": ("PHP", "php", "white", "777BB4"),
     "Ruby": ("Ruby", "ruby", "white", "CC342D"),
+    "C#": ("C%23", "csharp", "white", "512BD4"),
+    ".NET": (".NET", "dotnet", "white", "512BD4"),
+    "Android": ("Android", "android", "white", "3DDC84"),
+    "Jetpack Compose": ("Jetpack Compose", "jetpackcompose", "white", "4285F4"),
+    "Jupyter": ("Jupyter", "jupyter", "white", "F37626"),
+    "Cython": ("Cython", "python", "white", "3670A0"),
+    "SQL": ("SQL", "postgresql", "white", "336791"),
+    "Chrome Extension": ("Chrome Extension", "googlechrome", "white", "4285F4"),
     "Docker": ("Docker", "docker", "white", "2496ED"),
     "Flask": ("Flask", "flask", "white", "000000"),
     "Django": ("Django", "django", "white", "092E20"),
@@ -46,6 +54,21 @@ BADGE_MAP = {
     "Bootstrap": ("Bootstrap", "bootstrap", "white", "7952B3"),
     "Redux": ("Redux", "redux", "white", "764ABC"),
     "FastAPI": ("FastAPI", "fastapi", "white", "009688"),
+    "Jest": ("Jest", "jest", "white", "C21325"),
+    "Vitest": ("Vitest", "vitest", "white", "6E9F18"),
+    "ESLint": ("ESLint", "eslint", "white", "4B32C3"),
+    "Prettier": ("Prettier", "prettier", "black", "F7B93E"),
+    "Axios": ("Axios", "axios", "white", "5A29E4"),
+    "Discord.py": ("Discord.py", "discord", "white", "5865F2"),
+    "Discord.js": ("Discord.js", "discord", "white", "5865F2"),
+    "Telegram Bot": ("Telegram Bot", "telegram", "white", "26A5E4"),
+    "Beautiful Soup": ("Beautiful Soup", "python", "white", "3670A0"),
+    "Requests": ("Requests", "python", "white", "3670A0"),
+    "Pandas": ("Pandas", "pandas", "white", "150458"),
+    "NumPy": ("NumPy", "numpy", "white", "013243"),
+    "scikit-learn": ("scikit-learn", "scikitlearn", "white", "F7931E"),
+    "TensorFlow": ("TensorFlow", "tensorflow", "white", "FF6F00"),
+    "PyTorch": ("PyTorch", "pytorch", "white", "EE4C2C"),
     "MongoDB": ("MongoDB", "mongodb", "white", "47A248"),
     "PostgreSQL": ("PostgreSQL", "postgresql", "white", "4169E1"),
     "MySQL": ("MySQL", "mysql", "white", "4479A1"),
@@ -69,6 +92,8 @@ BADGE_MAP = {
     "GitLab CI": ("GitLab CI", "gitlab", "white", "FC6D26"),
     "Vercel": ("Vercel", "vercel", "white", "000000"),
     "Netlify": ("Netlify", "netlify", "white", "00C7B7"),
+    "GitHub Pages": ("GitHub Pages", "githubpages", "white", "222222"),
+    "Jekyll": ("Jekyll", "jekyll", "white", "CC0000"),
 }
 
 
@@ -80,6 +105,7 @@ FILE_HINTS = {
     "requirements.txt": {"Python"},
     "pyproject.toml": {"Python"},
     "Pipfile": {"Python"},
+    "ipynb": {"Jupyter", "Python"},
     "Cargo.toml": {"Rust"},
     "Cargo.lock": {"Rust"},
     "go.mod": {"Go"},
@@ -92,6 +118,15 @@ FILE_HINTS = {
     "pubspec.yaml": {"Dart"},
     "composer.json": {"PHP"},
     "Gemfile": {"Ruby"},
+    "manifest.json": {"Chrome Extension"},
+    "AndroidManifest.xml": {"Android"},
+    "gradle.properties": {"Android"},
+    "app/build.gradle": {"Android", "Java"},
+    "app/build.gradle.kts": {"Android", "Kotlin"},
+    "Directory.Build.props": {".NET"},
+    "Directory.Build.targets": {".NET"},
+    ".csproj": {".NET", "C#"},
+    ".sln": {".NET", "C#"},
     "Dockerfile": {"Docker"},
     "docker-compose.yml": {"Docker Compose", "Docker"},
     "docker-compose.yaml": {"Docker Compose", "Docker"},
@@ -106,6 +141,14 @@ FILE_HINTS = {
     "tailwind.config.js": {"Tailwind CSS"},
     "tailwind.config.ts": {"Tailwind CSS"},
     "tailwind.config.cjs": {"Tailwind CSS"},
+    "jest.config.js": {"Jest", "Node.js"},
+    "jest.config.ts": {"Jest", "Node.js"},
+    "vitest.config.js": {"Vitest", "Vite", "Node.js"},
+    "vitest.config.ts": {"Vitest", "Vite", "Node.js"},
+    ".eslintrc": {"ESLint"},
+    ".eslintrc.json": {"ESLint"},
+    ".prettierrc": {"Prettier"},
+    ".prettierrc.json": {"Prettier"},
     "manage.py": {"Django", "Python"},
     "wsgi.py": {"Django", "Python"},
     "flask_app.py": {"Flask", "Python"},
@@ -115,6 +158,8 @@ FILE_HINTS = {
     "Chart.yaml": {"Kubernetes"},
     "vercel.json": {"Vercel"},
     "netlify.toml": {"Netlify"},
+    "_config.yml": {"Jekyll", "GitHub Pages"},
+    ".nojekyll": {"GitHub Pages"},
     "nginx.conf": {"Nginx"},
     "tauri.conf.json": {"Tauri"},
     "src-tauri/Cargo.toml": {"Tauri", "Rust"},
@@ -129,11 +174,31 @@ CONTENT_HINTS = {
     "vite": {"Vite"},
     "tailwindcss": {"Tailwind CSS"},
     "bootstrap": {"Bootstrap"},
+    "jest": {"Jest"},
+    "vitest": {"Vitest", "Vite"},
+    "eslint": {"ESLint"},
+    "prettier": {"Prettier"},
+    "axios": {"Axios"},
     "@reduxjs/toolkit": {"Redux"},
     "redux": {"Redux"},
     "express": {"Express"},
     "prisma": {"Prisma"},
     "fastapi": {"FastAPI"},
+    "flask": {"Flask"},
+    "django": {"Django"},
+    "discord.py": {"Discord.py"},
+    "discord.js": {"Discord.js"},
+    "python-telegram-bot": {"Telegram Bot"},
+    "beautifulsoup4": {"Beautiful Soup"},
+    "bs4": {"Beautiful Soup"},
+    "requests": {"Requests"},
+    "pandas": {"Pandas"},
+    "numpy": {"NumPy"},
+    "scikit-learn": {"scikit-learn"},
+    "sklearn": {"scikit-learn"},
+    "tensorflow": {"TensorFlow"},
+    "torch": {"PyTorch"},
+    "pytorch": {"PyTorch"},
     "mongoose": {"MongoDB"},
     "mongodb": {"MongoDB"},
     "postgres": {"PostgreSQL"},
@@ -156,6 +221,13 @@ CONTENT_HINTS = {
     "@google-cloud": {"Google Cloud"},
     "vercel": {"Vercel"},
     "netlify": {"Netlify"},
+    "github-pages": {"GitHub Pages"},
+    "jekyll": {"Jekyll"},
+    "androidx.compose": {"Jetpack Compose", "Android"},
+    "jetpack compose": {"Jetpack Compose", "Android"},
+    "com.android.application": {"Android"},
+    "microsoft.net.sdk": {".NET", "C#"},
+    "targetframework": {".NET", "C#"},
 }
 
 
@@ -172,6 +244,10 @@ def build_headers() -> dict[str, str]:
     return headers
 
 
+def has_auth(headers: dict[str, str]) -> bool:
+    return "Authorization" in headers
+
+
 def fetch_json(url: str, headers: dict[str, str], params: dict | None = None):
     response = requests.get(url, headers=headers, params=params, timeout=30)
     response.raise_for_status()
@@ -182,16 +258,30 @@ def fetch_repositories(username: str, headers: dict[str, str]) -> list[dict]:
     repos: list[dict] = []
     page = 1
     per_page = 100
+    repo_url = f"{GITHUB_API_URL}/user/repos" if has_auth(headers) else f"{GITHUB_API_URL}/users/{username}/repos"
 
     while True:
+        params = {"per_page": per_page, "page": page, "sort": "updated", "type": "owner"}
+        if has_auth(headers):
+            params = {
+                "per_page": per_page,
+                "page": page,
+                "sort": "updated",
+                "visibility": "all",
+                "affiliation": "owner",
+            }
         batch = fetch_json(
-            f"{GITHUB_API_URL}/users/{username}/repos",
+            repo_url,
             headers,
-            params={"per_page": per_page, "page": page, "sort": "updated", "type": "owner"},
+            params=params,
         )
         if not batch:
             break
-        repos.extend(repo for repo in batch if not repo.get("fork"))
+        repos.extend(
+            repo
+            for repo in batch
+            if not repo.get("fork") and repo.get("owner", {}).get("login", "").lower() == username.lower()
+        )
         if len(batch) < per_page:
             break
         page += 1
@@ -227,7 +317,13 @@ def detect_tools_from_paths(paths: Iterable[str]) -> set[str]:
     detected: set[str] = set()
     path_set = set(paths)
     for hint_path, tools in FILE_HINTS.items():
-        if hint_path in path_set or any(path.startswith(f"{hint_path}/") for path in path_set):
+        if (
+            hint_path in path_set
+            or any(path.startswith(f"{hint_path}/") for path in path_set)
+            or any(path.endswith(f"/{hint_path}") for path in path_set)
+            or any(path.endswith(hint_path) for path in path_set if hint_path.startswith("."))
+            or any(path.endswith(f".{hint_path}") for path in path_set if "." not in hint_path and "/" not in hint_path)
+        ):
             detected.update(tools)
     return detected
 
@@ -257,6 +353,9 @@ def normalize_language_name(name: str) -> str | None:
         "Dart": "Dart",
         "PHP": "PHP",
         "Ruby": "Ruby",
+        "C#": "C#",
+        "Cython": "Cython",
+        "PLpgSQL": "SQL",
         "Shell": "Shell",
         "C++": "C++",
         "C": "C",
@@ -298,15 +397,22 @@ def gather_stack(username: str) -> tuple[list[str], list[str]]:
             "package.json",
             "requirements.txt",
             "pyproject.toml",
+            "Pipfile",
             "pom.xml",
             "Cargo.toml",
             "go.mod",
             "pubspec.yaml",
             "composer.json",
             "Gemfile",
+            "manifest.json",
+            "AndroidManifest.xml",
+            "app/build.gradle",
+            "app/build.gradle.kts",
+            "Directory.Build.props",
             "vercel.json",
             "netlify.toml",
             "tauri.conf.json",
+            "_config.yml",
         ):
             if candidate in paths:
                 try:
