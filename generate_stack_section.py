@@ -463,18 +463,18 @@ def build_stack_block(languages: list[str], tools: list[str], featured_tool_coun
     remaining_tools = tools[featured_tool_count:]
 
     if languages:
-        parts.append("**Languages**")
+        parts.append("**Primary Languages**")
         parts.append("")
         parts.append(" ".join(badge_markdown(language) for language in languages))
         parts.append("")
     if featured_tools:
-        parts.append("**Tools & Frameworks**")
+        parts.append("**Primary Tools & Frameworks**")
         parts.append("")
         parts.append(" ".join(badge_markdown(tool) for tool in featured_tools))
         parts.append("")
     if remaining_tools:
         parts.append("<details>")
-        parts.append("  <summary><b>All detected tools & frameworks</b></summary>")
+        parts.append("  <summary><b>Full auto-detected stack</b></summary>")
         parts.append("")
         parts.append(" ".join(badge_markdown(tool) for tool in tools))
         parts.append("")

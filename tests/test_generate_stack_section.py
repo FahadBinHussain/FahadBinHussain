@@ -125,6 +125,8 @@ def test_build_stack_block_contains_markers():
     block = build_stack_block(["JavaScript", "Python"], ["Docker", "Git"])
     assert README_MARKER_START in block
     assert README_MARKER_END in block
+    assert "Primary Languages" in block
+    assert "Primary Tools & Frameworks" in block
     assert "JavaScript" in block
     assert "Docker" in block
 
@@ -146,7 +148,7 @@ def test_build_stack_block_adds_collapsed_all_tools_view():
     ]
     block = build_stack_block(["JavaScript"], tools)
     assert "<details>" in block
-    assert "All detected tools & frameworks" in block
+    assert "Full auto-detected stack" in block
     assert "Tauri" in block
 
 
