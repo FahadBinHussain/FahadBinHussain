@@ -155,4 +155,4 @@ TSX          4 hrs 13 mins         ██▓░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [hi](https://github.com/FahadBinHussain/hi) & [hi-4](https://github.com/FahadBinHussain/hi-4) projects.
+- 🔭 Currently actively developing my [hi](https://github.com/FahadBinHussain/hi), [scour-the-internet-any-good-new](https://github.com/FahadBinHussain/scour-the-internet-any-good-new) & [hi-4](https://github.com/FahadBinHussain/hi-4) projects.
