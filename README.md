@@ -155,4 +155,4 @@ Json         4 hrs 37 mins         ███░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [hi-4](https://github.com/FahadBinHussain/hi-4), [hi-3](https://github.com/FahadBinHussain/hi-3) & [awesome-file-hosts](https://github.com/FahadBinHussain/awesome-file-hosts) projects.
+- 🔭 Currently actively developing my [hi](https://github.com/FahadBinHussain/hi) & [hi-4](https://github.com/FahadBinHussain/hi-4) projects.
