@@ -155,4 +155,4 @@ TSX          3 hrs 31 mins         ██░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [Mojify](https://github.com/FahadBinHussain/Mojify), [awesome-file-hosts](https://github.com/FahadBinHussain/awesome-file-hosts) & [bazartoday](https://github.com/FahadBinHussain/bazartoday) projects.
+- 🔭 Currently actively developing my [is-there-gun-in-minecraft-also](https://github.com/FahadBinHussain/is-there-gun-in-minecraft-also), [Mojify](https://github.com/FahadBinHussain/Mojify) & [awesome-file-hosts](https://github.com/FahadBinHussain/awesome-file-hosts) projects.
