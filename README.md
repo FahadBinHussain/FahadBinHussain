@@ -57,13 +57,13 @@
 ```txt
 From: 28 April 2026 - To: 05 May 2026
 
-Total Time: 44 hrs 35 mins
+Total Time: 44 hrs 40 mins
 
-Unknown      12 hrs 27 mins        ███████░░░░░░░░░░░░░░░░░░   27.91 %
-Typescript   9 hrs 6 mins          █████░░░░░░░░░░░░░░░░░░░░   20.41 %
-Markdown     7 hrs 21 mins         ████░░░░░░░░░░░░░░░░░░░░░   16.48 %
-Json         4 hrs 46 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.69 %
-TSX          3 hrs 31 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.87 %
+Unknown      13 hrs 50 mins        ███████▓░░░░░░░░░░░░░░░░░   30.98 %
+Typescript   9 hrs 6 mins          █████░░░░░░░░░░░░░░░░░░░░   20.38 %
+Markdown     7 hrs 11 mins         ████░░░░░░░░░░░░░░░░░░░░░   16.09 %
+Json         4 hrs 24 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.84 %
+Javascript   3 hrs 18 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.40 %
 ```
 
 <!--END_SECTION:waka-->
