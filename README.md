@@ -155,4 +155,4 @@ Javascript   3 hrs 17 mins         ██░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [touchless-vending-machine](https://github.com/FahadBinHussain/touchless-vending-machine), [hi](https://github.com/FahadBinHussain/hi) & [is-there-gun-in-minecraft-also](https://github.com/FahadBinHussain/is-there-gun-in-minecraft-also) projects.
+- 🔭 Currently actively developing my [ai game](https://github.com/FahadBinHussain/ai game), [touchless-vending-machine](https://github.com/FahadBinHussain/touchless-vending-machine) & [hi](https://github.com/FahadBinHussain/hi) projects.
