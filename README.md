@@ -155,4 +155,4 @@ Python       2 hrs 11 mins         █░░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [murmur](https://github.com/FahadBinHussain/murmur), [now-research-internet-and-find-best](https://github.com/FahadBinHussain/now-research-internet-and-find-best) & [vengeance-luxury-elite-i-love-this](https://github.com/FahadBinHussain/vengeance-luxury-elite-i-love-this) projects.
+- 🔭 Currently actively developing my [murmur](https://github.com/FahadBinHussain/murmur), [now-research-internet-and-find-best](https://github.com/FahadBinHussain/now-research-internet-and-find-best) & [bazartoday](https://github.com/FahadBinHussain/bazartoday) projects.
