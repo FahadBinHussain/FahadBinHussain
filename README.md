@@ -155,4 +155,4 @@ Bash         1 hrs 48 mins         █░░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [murmur](https://github.com/FahadBinHussain/murmur), [whos-ken-in-pewdiepie-videos](https://github.com/FahadBinHussain/whos-ken-in-pewdiepie-videos) & [is-this-true-any-base-of](https://github.com/FahadBinHussain/is-this-true-any-base-of) projects.
+- 🔭 Currently actively developing my [murmur](https://github.com/FahadBinHussain/murmur), [bazartoday](https://github.com/FahadBinHussain/bazartoday) & [whos-ken-in-pewdiepie-videos](https://github.com/FahadBinHussain/whos-ken-in-pewdiepie-videos) projects.
