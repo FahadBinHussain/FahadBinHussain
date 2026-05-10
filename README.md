@@ -155,4 +155,4 @@ Bash         2 hrs 2 mins          █░░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [deep-dive-in-internet-research-to](https://github.com/FahadBinHussain/deep-dive-in-internet-research-to), [murmur](https://github.com/FahadBinHussain/murmur) & [FahadBinHussain](https://github.com/FahadBinHussain/FahadBinHussain) projects.
+- 🔭 Currently actively developing my [murmur](https://github.com/FahadBinHussain/murmur) & [deep-dive-in-internet-research-to](https://github.com/FahadBinHussain/deep-dive-in-internet-research-to) projects.
