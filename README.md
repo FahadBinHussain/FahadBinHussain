@@ -155,4 +155,4 @@ Bash         2 hrs 25 mins         █░░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [investigate-c-users-admin-codex-how](https://github.com/FahadBinHussain/investigate-c-users-admin-codex-how), [samsung-ifg-decoder](https://github.com/FahadBinHussain/samsung-ifg-decoder) & [daily-bnp](https://github.com/FahadBinHussain/daily-bnp) projects.
+- 🔭 Currently actively developing my [can-you-help-me-find-some](https://github.com/FahadBinHussain/can-you-help-me-find-some), [codex](https://github.com/FahadBinHussain/codex) & [investigate-c-users-admin-codex-how](https://github.com/FahadBinHussain/investigate-c-users-admin-codex-how) projects.
