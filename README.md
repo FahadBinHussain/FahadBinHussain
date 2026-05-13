@@ -55,15 +55,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 05 May 2026 - To: 12 May 2026
+From: 06 May 2026 - To: 13 May 2026
 
-Total Time: 72 hrs 23 mins
+Total Time: 74 hrs 14 mins
 
-Unknown      30 hrs 52 mins        ██████████▓░░░░░░░░░░░░░░   42.64 %
-Markdown     15 hrs 6 mins         █████▒░░░░░░░░░░░░░░░░░░░   20.86 %
-Python       9 hrs 5 mins          ███░░░░░░░░░░░░░░░░░░░░░░   12.55 %
-Powershell   5 hrs 25 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.47 %
-Bash         2 hrs 25 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.34 %
+Unknown      31 hrs 24 mins        ██████████▓░░░░░░░░░░░░░░   42.29 %
+Markdown     14 hrs 51 mins        █████░░░░░░░░░░░░░░░░░░░░   20.01 %
+Python       9 hrs 5 mins          ███░░░░░░░░░░░░░░░░░░░░░░   12.23 %
+Powershell   7 hrs 25 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.99 %
+Bash         2 hrs 25 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.25 %
 ```
 
 <!--END_SECTION:waka-->
