@@ -155,4 +155,4 @@ Javascript   4 hrs 4 mins          █▒░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [murmur](https://github.com/FahadBinHussain/murmur), [https-en-wikipedia-org-wiki-inje](https://github.com/FahadBinHussain/https-en-wikipedia-org-wiki-inje) & [test-whether-built-in-image-generation](https://github.com/FahadBinHussain/test-whether-built-in-image-generation) projects.
+- 🔭 Currently actively developing my [murmur](https://github.com/FahadBinHussain/murmur), [MyopicVicar](https://github.com/FahadBinHussain/MyopicVicar) & [look-for-open-source-projects-where](https://github.com/FahadBinHussain/look-for-open-source-projects-where) projects.
