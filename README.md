@@ -155,4 +155,4 @@ Javascript   4 hrs 1 mins          █▒░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [daily-bnp](https://github.com/FahadBinHussain/daily-bnp), [grafana](https://github.com/FahadBinHussain/grafana) & [node](https://github.com/FahadBinHussain/node) projects.
+- 🔭 Currently actively developing my [daily-bnp](https://github.com/FahadBinHussain/daily-bnp), [murmur](https://github.com/FahadBinHussain/murmur) & [samsung-ifg-decoder](https://github.com/FahadBinHussain/samsung-ifg-decoder) projects.
