@@ -155,4 +155,4 @@ Javascript   4 hrs 1 mins          █▒░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [deep-research-internet-for-hours-and](https://github.com/FahadBinHussain/deep-research-internet-for-hours-and), [i-need-some-top-trending-skills](https://github.com/FahadBinHussain/i-need-some-top-trending-skills) & [murmur](https://github.com/FahadBinHussain/murmur) projects.
+- 🔭 Currently actively developing my [deep-research-internet-for-hours-and](https://github.com/FahadBinHussain/deep-research-internet-for-hours-and) project.
