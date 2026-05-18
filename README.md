@@ -155,4 +155,4 @@ Python       5 hrs 14 mins         ██░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [how-many-mails-currently-on-this](https://github.com/FahadBinHussain/how-many-mails-currently-on-this), [touchless-vending-machine](https://github.com/FahadBinHussain/touchless-vending-machine) & [https-en-wikipedia-org-wiki-inje](https://github.com/FahadBinHussain/https-en-wikipedia-org-wiki-inje) projects.
+- 🔭 Currently actively developing my [how-many-mails-currently-on-this](https://github.com/FahadBinHussain/how-many-mails-currently-on-this), [automata](https://github.com/FahadBinHussain/automata) & [samsung-ifg-decoder](https://github.com/FahadBinHussain/samsung-ifg-decoder) projects.
