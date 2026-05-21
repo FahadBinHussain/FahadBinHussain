@@ -155,4 +155,4 @@ Powershell   3 hrs 52 mins         ██░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [boi](https://github.com/FahadBinHussain/boi), [daily-bnp](https://github.com/FahadBinHussain/daily-bnp) & [how-many-mails-currently-on-this](https://github.com/FahadBinHussain/how-many-mails-currently-on-this) projects.
+- 🔭 Currently actively developing my [codex-wakapi-repair-probe](https://github.com/FahadBinHussain/codex-wakapi-repair-probe), [boi](https://github.com/FahadBinHussain/boi) & [daily-bnp](https://github.com/FahadBinHussain/daily-bnp) projects.
