@@ -155,4 +155,4 @@ Powershell   3 hrs 52 mins         ██░░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
-- 🔭 Currently actively developing my [how-many-mails-currently-on-this](https://github.com/FahadBinHussain/how-many-mails-currently-on-this), [vubon-ecommerce](https://github.com/FahadBinHussain/vubon-ecommerce) & [imgvault](https://github.com/FahadBinHussain/imgvault) projects.
+- 🔭 Currently actively developing my [scoopcryo](https://github.com/FahadBinHussain/scoopcryo), [daily-bnp](https://github.com/FahadBinHussain/daily-bnp) & [how-many-mails-currently-on-this](https://github.com/FahadBinHussain/how-many-mails-currently-on-this) projects.
