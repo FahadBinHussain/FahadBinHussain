@@ -160,4 +160,5 @@ Powershell   4 hrs 8 mins          ██░░░░░░░░░░░░░
 <a href="https://github.com/FahadBinHussain/FahadBinHussain/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=FahadBinHussain/FahadBinHussain" alt="Contributors" />
 </a>
-- 🔭 Currently actively developing my [samsung-ifg-decoder](https://github.com/FahadBinHussain/samsung-ifg-decoder), [boi](https://github.com/FahadBinHussain/boi) & [lore](https://github.com/FahadBinHussain/lore) projects.
+
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/samsung-ifg-decoder">samsung-ifg-decoder</a>, <a href="https://github.com/FahadBinHussain/boi">boi</a> &amp; <a href="https://github.com/FahadBinHussain/lore">lore</a> projects.</p>

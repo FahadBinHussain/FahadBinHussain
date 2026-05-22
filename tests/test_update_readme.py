@@ -77,11 +77,25 @@ def test_build_new_projects_text_three_projects():
     from update_readme import build_new_projects_text
     projects = ["A", "B", "C"]
     new_text = build_new_projects_text(projects, max_projects=3)
-    assert new_text.count("[") == 3  # three links
-    assert new_text.endswith("projects.")
-    assert "A]" in new_text and "B]" in new_text and "C]" in new_text
+    assert new_text.count("<a ") == 3  # three links
+    assert new_text.endswith("projects.</p>")
+    assert 'href="https://github.com/FahadBinHussain/A">A</a>' in new_text
+    assert 'href="https://github.com/FahadBinHussain/B">B</a>' in new_text
+    assert 'href="https://github.com/FahadBinHussain/C">C</a>' in new_text
+    assert "[A](" not in new_text
     # Should be of form A, B & C projects.
-    assert "," in new_text and " & " in new_text
+    assert "," in new_text and " &amp; " in new_text
+
+
+def test_replace_html_projects_line():
+    content = """Header
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/Old">Old</a> project.</p>
+Footer
+"""
+    new_text = build_new_projects_text(["new-proj"])
+    updated = replace_projects_block(content, new_text)
+    assert updated.count("Currently actively developing my") == 1
+    assert new_text in updated
 
 
 def test_filter_existing_github_projects_skips_non_repos():

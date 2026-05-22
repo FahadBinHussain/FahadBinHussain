@@ -4,6 +4,7 @@ import base64
 from datetime import datetime
 import sys
 import os
+from html import escape
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -129,15 +130,18 @@ def build_new_projects_text(most_recent_projects, max_projects=3):
         return None
 
     projects = most_recent_projects[:max_projects]
-    links = [f"[{p}](https://github.com/{GITHUB_USERNAME}/{p})" for p in projects]
+    links = [
+        f'<a href="https://github.com/{GITHUB_USERNAME}/{escape(p, quote=True)}">{escape(p)}</a>'
+        for p in projects
+    ]
 
     if len(links) == 1:
-        return f"- 🔭 Currently actively developing my {links[0]} project."
+        return f"<p>🔭 Currently actively developing my {links[0]} project.</p>"
     elif len(links) == 2:
-        return f"- 🔭 Currently actively developing my {links[0]} & {links[1]} projects."
+        return f"<p>🔭 Currently actively developing my {links[0]} &amp; {links[1]} projects.</p>"
     else:
         # Join all but the last with commas, use & before the final project
-        return f"- 🔭 Currently actively developing my {', '.join(links[:-1])} & {links[-1]} projects."
+        return f"<p>🔭 Currently actively developing my {', '.join(links[:-1])} &amp; {links[-1]} projects.</p>"
 
 
 def replace_projects_block(readme_content: str, new_projects_text: str) -> str:
@@ -148,9 +152,11 @@ def replace_projects_block(readme_content: str, new_projects_text: str) -> str:
     if not new_projects_text:
         return readme_content
 
-    # Match one or more occurrences (possible blocks) of the projects statement lines
-    # We match lines individually and include optional whitespace and CRLF/LF
-    block_re = re.compile(r"^\s*- 🔭 Currently actively developing my .*?project(?:s)?\.\s*$\r?\n?", re.M)
+    # Match old Markdown bullets and the HTML paragraph generated now.
+    block_re = re.compile(
+        r"^\s*(?:- 🔭 Currently actively developing my .*?project(?:s)?\.|<p>🔭 Currently actively developing my .*?project(?:s)?\.</p>)\s*$\r?\n?",
+        re.M,
+    )
 
     if block_re.search(readme_content):
         # Remove all existing occurrences (deduplicate)
