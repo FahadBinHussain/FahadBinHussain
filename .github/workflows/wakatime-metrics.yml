@@ -62,6 +62,9 @@ jobs:
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           WAKATIME_USERNAME: ${{ secrets.WAKATIME_USERNAME }}
+          GITHUB_USERNAME: FahadBinHussain
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: python update_readme.py
       
       - name: Update README stack section

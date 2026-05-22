@@ -1,5 +1,5 @@
 import re
-from update_readme import replace_projects_block, build_new_projects_text
+from update_readme import replace_projects_block, build_new_projects_text, filter_existing_github_projects
 
 
 def test_replace_multiple_singular_lines():
@@ -82,3 +82,21 @@ def test_build_new_projects_text_three_projects():
     assert "A]" in new_text and "B]" in new_text and "C]" in new_text
     # Should be of form A, B & C projects.
     assert "," in new_text and " & " in new_text
+
+
+def test_filter_existing_github_projects_skips_non_repos():
+    projects = ["scoopcryo", "how-many-mails-currently-on-this", "hi", "lore"]
+    existing = {"scoopcryo", "lore"}
+
+    filtered = filter_existing_github_projects(projects, repo_exists=existing.__contains__)
+
+    assert filtered == ["scoopcryo", "lore"]
+
+
+def test_filter_existing_github_projects_keeps_scanning_until_max():
+    projects = ["thread-one", "scoopcryo", "thread-two", "lore", "thread-three", "imgvault"]
+    existing = {"scoopcryo", "lore", "imgvault"}
+
+    filtered = filter_existing_github_projects(projects, max_projects=3, repo_exists=existing.__contains__)
+
+    assert filtered == ["scoopcryo", "lore", "imgvault"]

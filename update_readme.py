@@ -11,6 +11,8 @@ load_dotenv()
 
 WAKATIME_API_KEY = os.getenv('WAKATIME_API_KEY')
 WAKATIME_USERNAME = os.getenv('WAKATIME_USERNAME')
+GITHUB_USERNAME = os.getenv('GITHUB_USERNAME', 'FahadBinHussain')
+GITHUB_TOKEN = os.getenv('PROFILE_STATS_TOKEN') or os.getenv('GITHUB_TOKEN')
 
 # Set the default encoding to utf-8 where available
 try:
@@ -28,6 +30,45 @@ else:
 
 # API base URL for fetching heartbeats
 HEARTBEATS_API_URL = f"https://wakapi-qt1b.onrender.com/api/compat/wakatime/v1/users/{WAKATIME_USERNAME}/heartbeats"
+
+def github_repo_exists(project_name):
+    if not project_name:
+        return False
+
+    repo_url = f"https://api.github.com/repos/{GITHUB_USERNAME}/{project_name}"
+    repo_headers = {}
+    if GITHUB_TOKEN:
+        repo_headers['Authorization'] = f"Bearer {GITHUB_TOKEN}"
+
+    try:
+        response = requests.get(repo_url, headers=repo_headers, timeout=10)
+    except requests.exceptions.RequestException as err:
+        print(f"Could not verify GitHub repo for project {project_name}: {err}")
+        return False
+
+    if response.status_code == 200:
+        return True
+
+    if response.status_code == 404:
+        print(f"Skipping Wakapi project without matching GitHub repo: {project_name}")
+        return False
+
+    print(f"Skipping Wakapi project {project_name}; GitHub repo check returned {response.status_code}")
+    return False
+
+
+def filter_existing_github_projects(projects, max_projects=3, repo_exists=github_repo_exists):
+    selected_projects = []
+
+    for project in projects:
+        if len(selected_projects) >= max_projects:
+            break
+
+        if repo_exists(project):
+            selected_projects.append(project)
+
+    return selected_projects
+
 
 def fetch_most_recent_projects():
     # Get the current date in YYYY-MM-DD format
@@ -72,10 +113,10 @@ def fetch_most_recent_projects():
         print(f"Unique projects: {unique_projects}")  # Debug statement
 
         if unique_projects:
-            # Get the three most recent projects
-            most_recent_projects = unique_projects[:3]
+            # Keep scanning recent Wakapi projects until we find real GitHub repos.
+            most_recent_projects = filter_existing_github_projects(unique_projects)
             print(f"Most recent projects: {most_recent_projects}")
-            return most_recent_projects
+            return most_recent_projects or None
         else:
             print("No projects found in heartbeats.")
             return None
@@ -88,7 +129,7 @@ def build_new_projects_text(most_recent_projects, max_projects=3):
         return None
 
     projects = most_recent_projects[:max_projects]
-    links = [f"[{p}](https://github.com/FahadBinHussain/{p})" for p in projects]
+    links = [f"[{p}](https://github.com/{GITHUB_USERNAME}/{p})" for p in projects]
 
     if len(links) == 1:
         return f"- 🔭 Currently actively developing my {links[0]} project."
