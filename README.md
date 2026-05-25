@@ -160,4 +160,4 @@ Typescript   4 hrs 11 mins         █▓░░░░░░░░░░░░░
 <a href="https://github.com/FahadBinHussain/FahadBinHussain/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=FahadBinHussain/FahadBinHussain" alt="Contributors" />
 </a>
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/samsung-ifg-decoder">samsung-ifg-decoder</a>, <a href="https://github.com/FahadBinHussain/boi">boi</a> &amp; <a href="https://github.com/FahadBinHussain/automata">automata</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/scoopcryo">scoopcryo</a>, <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> &amp; <a href="https://github.com/FahadBinHussain/boi">boi</a> projects.</p>
