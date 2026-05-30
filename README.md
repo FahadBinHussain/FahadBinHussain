@@ -160,4 +160,4 @@ Powershell   5 hrs 16 mins         ██▒░░░░░░░░░░░░
 <a href="https://github.com/FahadBinHussain/FahadBinHussain/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=FahadBinHussain/FahadBinHussain" alt="Contributors" />
 </a>
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/picture-in-picture-chrome-extension">picture-in-picture-chrome-extension</a>, <a href="https://github.com/FahadBinHussain/litellm-huggingface-template">litellm-huggingface-template</a> &amp; <a href="https://github.com/FahadBinHussain/jobab-chai">jobab-chai</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/scoopcryo">scoopcryo</a>, <a href="https://github.com/FahadBinHussain/boi">boi</a> &amp; <a href="https://github.com/FahadBinHussain/picture-in-picture-chrome-extension">picture-in-picture-chrome-extension</a> projects.</p>
