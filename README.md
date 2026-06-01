@@ -155,9 +155,16 @@ Powershell   7 hrs 3 mins          ██▓░░░░░░░░░░░░
 
 <!-- [![SkillIcons](https://skillicons.dev/icons?i=linux,gitlab,regex,xd,workers,wordpress,visualstudio,unreal,unity,twitter,sqlite,raspberrypi,pr,ps,netlify,matlab,linkedin,instagram,ai,heroku,githubactions,figma,dotnet,codepen,bash,androidstudio)](https://skillicons.dev)<br/> -->
 <!-- -->
+<!--START_SECTION:current-projects-->
+
+## Current Focus
+
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/imgvault">imgvault</a>, <a href="https://github.com/FahadBinHussain/boi">boi</a> &amp; <a href="https://github.com/FahadBinHussain/jobab-chai">jobab-chai</a> projects.</p>
+
+<!--END_SECTION:current-projects-->
+
 ## Contributors
 
 <a href="https://github.com/FahadBinHussain/FahadBinHussain/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=FahadBinHussain/FahadBinHussain" alt="Contributors" />
 </a>
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/imgvault">imgvault</a>, <a href="https://github.com/FahadBinHussain/boi">boi</a> &amp; <a href="https://github.com/FahadBinHussain/jobab-chai">jobab-chai</a> projects.</p>

@@ -144,10 +144,25 @@ def build_new_projects_text(most_recent_projects, max_projects=3):
         return f"<p>🔭 Currently actively developing my {', '.join(links[:-1])} &amp; {links[-1]} projects.</p>"
 
 
-def replace_projects_block(readme_content: str, new_projects_text: str) -> str:
-    """Replace one or more lines that start with the projects line with a single new_projects_text.
+PROJECTS_SECTION_START = "<!--START_SECTION:current-projects-->"
+PROJECTS_SECTION_END = "<!--END_SECTION:current-projects-->"
+CONTRIBUTORS_HEADING_RE = re.compile(r"^## Contributors\s*$", re.M)
 
-    The regex matches either 'project.' or 'projects.' and supports CRLF/LF newlines.
+
+def build_projects_section(new_projects_text: str) -> str:
+    return (
+        f"{PROJECTS_SECTION_START}\n\n"
+        "## Current Focus\n\n"
+        f"{new_projects_text}\n\n"
+        f"{PROJECTS_SECTION_END}\n\n"
+    )
+
+
+def replace_projects_block(readme_content: str, new_projects_text: str) -> str:
+    """Replace the generated current-projects block and keep it before contributors.
+
+    The README is updated by GitHub Actions, so the project names stay dynamic;
+    this function only controls where the generated block lives.
     """
     if not new_projects_text:
         return readme_content
@@ -158,26 +173,23 @@ def replace_projects_block(readme_content: str, new_projects_text: str) -> str:
         re.M,
     )
 
-    if block_re.search(readme_content):
-        # Remove all existing occurrences (deduplicate)
-        content_clean = block_re.sub('', readme_content)
+    section_re = re.compile(
+        rf"{re.escape(PROJECTS_SECTION_START)}.*?{re.escape(PROJECTS_SECTION_END)}\s*",
+        re.S,
+    )
 
-        # Insert the new projects line after the first bullet that describes education (approx location)
-        insert_after_re = re.compile(r"(^\s*- 🎓 .*?$\r?\n?)", re.M)
-        if insert_after_re.search(content_clean):
-            content_inserted = insert_after_re.sub(r"\1" + new_projects_text + "\n", content_clean, count=1)
-            return content_inserted
-        else:
-            # fallback: append to the end
-            if not content_clean.endswith("\n"):
-                content_clean += "\n"
-            return content_clean + new_projects_text + "\n"
-    else:
-        # If not found, append the projects line at the end
-        if not readme_content.endswith("\n"):
-            readme_content += "\n"
-    # If no occurrences found, append to end as before
-    return readme_content + new_projects_text + "\n"
+    # Remove older generated paragraphs and any previous marked section, then
+    # reinsert the one generated block in the stable spot.
+    content_clean = section_re.sub("", readme_content)
+    content_clean = block_re.sub("", content_clean)
+    new_section = build_projects_section(new_projects_text)
+
+    if CONTRIBUTORS_HEADING_RE.search(content_clean):
+        return CONTRIBUTORS_HEADING_RE.sub(new_section + "## Contributors", content_clean, count=1)
+
+    if not content_clean.endswith("\n"):
+        content_clean += "\n"
+    return content_clean + "\n" + new_section
 
 
 def update_readme(most_recent_projects, readme_path='README.md'):

@@ -1,5 +1,11 @@
 import re
-from update_readme import replace_projects_block, build_new_projects_text, filter_existing_github_projects
+from update_readme import (
+    PROJECTS_SECTION_END,
+    PROJECTS_SECTION_START,
+    replace_projects_block,
+    build_new_projects_text,
+    filter_existing_github_projects,
+)
 
 
 def test_replace_multiple_singular_lines():
@@ -36,8 +42,9 @@ Final line
 """
     new_text = build_new_projects_text(["vubon-skills"])  # single project
     updated = replace_projects_block(content, new_text)
-    # should append at the end
-    assert updated.strip().endswith(new_text)
+    # should append a marked dynamic block at the end
+    assert updated.strip().endswith(PROJECTS_SECTION_END)
+    assert new_text in updated
 
 
 def test_replace_across_multiple_blocks():
@@ -53,6 +60,8 @@ Footer
     # Exactly one line for the currently developing project
     assert updated.count("Currently actively developing my") == 1
     assert new_text in updated
+    assert PROJECTS_SECTION_START in updated
+    assert PROJECTS_SECTION_END in updated
 
 
 def test_update_readme_writes_file(tmp_path):
@@ -71,6 +80,7 @@ Other content
     result = temp_file.read_text(encoding="utf-8")
     assert result.count("Currently actively developing my") == 1
     assert "vubon-skills" in result
+    assert PROJECTS_SECTION_START in result
 
 
 def test_build_new_projects_text_three_projects():
@@ -95,6 +105,23 @@ Footer
     new_text = build_new_projects_text(["new-proj"])
     updated = replace_projects_block(content, new_text)
     assert updated.count("Currently actively developing my") == 1
+    assert new_text in updated
+    assert PROJECTS_SECTION_START in updated
+
+
+def test_projects_section_is_inserted_before_contributors():
+    content = """Intro
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/Old">Old</a> project.</p>
+
+## Contributors
+
+Contributor content
+"""
+    new_text = build_new_projects_text(["new-proj"])
+    updated = replace_projects_block(content, new_text)
+
+    assert updated.count("Currently actively developing my") == 1
+    assert updated.index("## Current Focus") < updated.index("## Contributors")
     assert new_text in updated
 
 
