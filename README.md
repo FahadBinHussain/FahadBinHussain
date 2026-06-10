@@ -159,7 +159,7 @@ Json         3 hrs 38 mins         █▒░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a>, <a href="https://github.com/FahadBinHussain/mojify">mojify</a> &amp; <a href="https://github.com/FahadBinHussain/awesome-file-hosts">awesome-file-hosts</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> project.</p>
 
 <!--END_SECTION:current-projects-->
 
