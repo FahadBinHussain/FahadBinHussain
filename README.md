@@ -159,7 +159,7 @@ Markdown     4 hrs 31 mins         █▓░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/scoopcryo">scoopcryo</a> project.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> &amp; <a href="https://github.com/FahadBinHussain/scoopcryo">scoopcryo</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
