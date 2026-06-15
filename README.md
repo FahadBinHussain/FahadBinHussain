@@ -159,7 +159,7 @@ Markdown     3 hrs 45 mins         ██░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata">automata</a>, <a href="https://github.com/FahadBinHussain/murmur">murmur</a> &amp; <a href="https://github.com/FahadBinHussain/litellm-huggingface-template">litellm-huggingface-template</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/murmur">murmur</a>, <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> &amp; <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
