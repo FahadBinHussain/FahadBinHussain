@@ -55,15 +55,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 09 June 2026 - To: 15 June 2026
+From: 09 June 2026 - To: 16 June 2026
 
-Total Time: 48 hrs 3 mins
+Total Time: 49 hrs 34 mins
 
-Unknown      13 hrs 28 mins        ███████░░░░░░░░░░░░░░░░░░   28.02 %
-Python       11 hrs 48 mins        ██████░░░░░░░░░░░░░░░░░░░   24.57 %
-Powershell   4 hrs 48 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.98 %
-Javascript   4 hrs 6 mins          ██░░░░░░░░░░░░░░░░░░░░░░░   08.54 %
-Markdown     3 hrs 44 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.78 %
+Unknown      13 hrs 49 mins        ███████░░░░░░░░░░░░░░░░░░   27.86 %
+Python       11 hrs 48 mins        ██████░░░░░░░░░░░░░░░░░░░   23.82 %
+Powershell   4 hrs 48 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.68 %
+Javascript   4 hrs 6 mins          ██░░░░░░░░░░░░░░░░░░░░░░░   08.28 %
+Markdown     3 hrs 44 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.55 %
 ```
 
 <!--END_SECTION:waka-->
