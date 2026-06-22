@@ -159,7 +159,7 @@ Python       2 hrs 50 mins         ██░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> project.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/imgvault">imgvault</a>, <a href="https://github.com/FahadBinHussain/automata">automata</a> &amp; <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
