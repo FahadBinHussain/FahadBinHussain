@@ -55,13 +55,11 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 23 June 2026 - To: 23 June 2026
+From: 23 June 2026 - To: 30 June 2026
 
-Total Time: 0 hrs 58 mins
+Total Time: 0 hrs 0 mins
 
-Unknown      0 hrs 28 mins         ████████████░░░░░░░░░░░░░   48.48 %
-Powershell   0 hrs 28 mins         ███████████▓░░░░░░░░░░░░░   47.20 %
-Json         0 hrs 3 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   04.32 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
