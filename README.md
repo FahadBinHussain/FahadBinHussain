@@ -13,7 +13,7 @@
 
 <p align="right"> 
         <a href="https://oangrybird.onrender.com/" target="_blank"><img src="https://img.shields.io/badge/Personal_Site-00FFFF?style=for-the-badge&logo=react&logoColor=black" alt="Work in progess ..."/></a>
-        <a href="https://algoject.statuspage.io/" target="_blank"><img src="https://img.shields.io/badge/AlgoJect_Status-00CCFF?style=for-the-badge&logo=statuspage&logoColor=black" alt="AlgoJect Status"/></a>
+        <a href="https://stats.uptimerobot.com/Lzp85tNpgV" target="_blank"><img src="https://img.shields.io/badge/AlgoJect_Status-00CCFF?style=for-the-badge&logo=statuspage&logoColor=black" alt="AlgoJect Status"/></a>
 </p>
 
 <div style="padding-left: 20px;">
