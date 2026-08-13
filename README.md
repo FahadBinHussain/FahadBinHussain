@@ -57,9 +57,13 @@
 ```txt
 From: 06 August 2026 - To: 13 August 2026
 
-Total Time: 0 hrs 0 mins
+Total Time: 4 hrs 35 mins
 
-No activity tracked
+TSX          1 hrs 51 mins         ██████████░░░░░░░░░░░░░░░   40.28 %
+Markdown     1 hrs 36 mins         ████████▓░░░░░░░░░░░░░░░░   34.81 %
+Json         0 hrs 26 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.33 %
+Javascript   0 hrs 14 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.10 %
+Typescript   0 hrs 12 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.53 %
 ```
 
 <!--END_SECTION:waka-->
