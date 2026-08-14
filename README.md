@@ -55,15 +55,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 13 August 2026 - To: 13 August 2026
+From: 07 August 2026 - To: 13 August 2026
 
-Total Time: 0 hrs 35 mins
+Total Time: 8 hrs 22 mins
 
-Javascript   0 hrs 14 mins         ██████████░░░░░░░░░░░░░░░   39.89 %
-Markdown     0 hrs 12 mins         ████████▒░░░░░░░░░░░░░░░░   33.73 %
-Powershell   0 hrs 7 mins          █████░░░░░░░░░░░░░░░░░░░░   20.23 %
-Unknown      0 hrs 2 mins          █▒░░░░░░░░░░░░░░░░░░░░░░░   05.40 %
-TSX          0 hrs 0 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.76 %
+Javascript   2 hrs 35 mins         ███████▓░░░░░░░░░░░░░░░░░   30.81 %
+TSX          1 hrs 44 mins         █████▒░░░░░░░░░░░░░░░░░░░   20.80 %
+Powershell   1 hrs 12 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.40 %
+Go           1 hrs 12 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.38 %
+Markdown     0 hrs 38 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.48 %
 ```
 
 <!--END_SECTION:waka-->
