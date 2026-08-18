@@ -57,13 +57,13 @@
 ```txt
 From: 11 August 2026 - To: 14 August 2026
 
-Total Time: 4 hrs 45 mins
+Total Time: 4 hrs 42 mins
 
-Markdown     3 hrs 0 mins          ███████████████▓░░░░░░░░░   63.00 %
-Powershell   0 hrs 36 mins         ███░░░░░░░░░░░░░░░░░░░░░░   12.65 %
-Javascript   0 hrs 30 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.58 %
-YAML         0 hrs 17 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.04 %
-C#           0 hrs 8 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.97 %
+Markdown     2 hrs 56 mins         ███████████████▓░░░░░░░░░   62.54 %
+Powershell   0 hrs 36 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   12.81 %
+Javascript   0 hrs 30 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.71 %
+YAML         0 hrs 17 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.12 %
+C#           0 hrs 8 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.01 %
 ```
 
 <!--END_SECTION:waka-->
