@@ -159,7 +159,7 @@ Python       0 hrs 1 mins          ▒░░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> project.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> &amp; <a href="https://github.com/FahadBinHussain/blindspot">blindspot</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
