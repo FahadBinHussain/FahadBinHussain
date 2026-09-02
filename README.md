@@ -57,9 +57,9 @@
 ```txt
 From: 30 August 2026 - To: 02 September 2026
 
-Total Time: 0 hrs 45 mins
+Total Time: 0 hrs 43 mins
 
-Markdown   0 hrs 45 mins         █████████████████████████   100.00 %
+Markdown   0 hrs 43 mins         █████████████████████████   100.00 %
 ```
 
 <!--END_SECTION:waka-->
