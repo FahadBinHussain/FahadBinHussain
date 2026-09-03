@@ -159,7 +159,7 @@ Python       0 hrs 2 mins          ▒░░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/swift-backup-rev">swift-backup-rev</a>, <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> &amp; <a href="https://github.com/FahadBinHussain/automata">automata</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> &amp; <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
