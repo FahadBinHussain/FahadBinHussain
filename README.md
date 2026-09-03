@@ -159,7 +159,7 @@ Json         0 hrs 23 mins         ██░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> &amp; <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/lumen-agent">lumen-agent</a>, <a href="https://github.com/FahadBinHussain/blindspot">blindspot</a> &amp; <a href="https://github.com/FahadBinHussain/mojify">mojify</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
