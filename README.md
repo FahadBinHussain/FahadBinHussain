@@ -159,7 +159,7 @@ Typescript   0 hrs 45 mins         █░░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/vubon-virtuals">vubon-virtuals</a>, <a href="https://github.com/FahadBinHussain/automata">automata</a> &amp; <a href="https://github.com/FahadBinHussain/vubon-ecommerce">vubon-ecommerce</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a>, <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> &amp; <a href="https://github.com/FahadBinHussain/vubon-ecommerce">vubon-ecommerce</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
