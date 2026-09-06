@@ -159,7 +159,7 @@ Python       0 hrs 49 mins         █░░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a>, <a href="https://github.com/FahadBinHussain/vubon-virtuals">vubon-virtuals</a> &amp; <a href="https://github.com/FahadBinHussain/vubon-skills">vubon-skills</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> project.</p>
 
 <!--END_SECTION:current-projects-->
 
