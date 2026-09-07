@@ -159,7 +159,7 @@ Python       0 hrs 57 mins         █░░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> project.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/lumen-agent">lumen-agent</a>, <a href="https://github.com/FahadBinHussain/automata">automata</a> &amp; <a href="https://github.com/FahadBinHussain/vubon-ecommerce">vubon-ecommerce</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
