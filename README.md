@@ -159,7 +159,7 @@ Json          3 hrs 30 mins         ██░░░░░░░░░░░░�
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/lore">lore</a>, <a href="https://github.com/FahadBinHussain/the-daily-times">the-daily-times</a> &amp; <a href="https://github.com/FahadBinHussain/automata">automata</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/the-daily-times">the-daily-times</a>, <a href="https://github.com/FahadBinHussain/lore">lore</a> &amp; <a href="https://github.com/FahadBinHussain/automata">automata</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
