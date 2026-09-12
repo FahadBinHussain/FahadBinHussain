@@ -57,13 +57,13 @@
 ```txt
 From: 05 September 2026 - To: 12 September 2026
 
-Total Time: 43 hrs 59 mins
+Total Time: 45 hrs 30 mins
 
-Unknown       14 hrs 35 mins        ████████▒░░░░░░░░░░░░░░░░   33.16 %
-Markdown      6 hrs 38 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   15.08 %
-Powershell    5 hrs 12 mins         ███░░░░░░░░░░░░░░░░░░░░░░   11.82 %
-Javascript    4 hrs 36 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.45 %
-Json          3 hrs 14 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.35 %
+Unknown       14 hrs 28 mins        ████████░░░░░░░░░░░░░░░░░   31.79 %
+Powershell    6 hrs 47 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.90 %
+Markdown      6 hrs 34 mins         ███▓░░░░░░░░░░░░░░░░░░░░░   14.42 %
+Javascript    4 hrs 36 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.11 %
+Json          3 hrs 15 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   07.14 %
 ```
 
 <!--END_SECTION:waka-->
