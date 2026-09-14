@@ -159,7 +159,7 @@ Javascript    5 hrs 13 mins         ██▓░░░░░░░░░░░�
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/imgvault">imgvault</a> project.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata">automata</a>, <a href="https://github.com/FahadBinHussain/lore">lore</a> &amp; <a href="https://github.com/FahadBinHussain/lore-private">lore-private</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
