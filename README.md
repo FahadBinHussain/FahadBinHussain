@@ -159,7 +159,7 @@ Javascript   2 hrs 35 mins         ██░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata">automata</a> &amp; <a href="https://github.com/FahadBinHussain/the-daily-times">the-daily-times</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata">automata</a> project.</p>
 
 <!--END_SECTION:current-projects-->
 
