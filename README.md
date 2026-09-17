@@ -159,7 +159,7 @@ Javascript   3 hrs 2 mins          ██▒░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a>, <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> &amp; <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a>, <a href="https://github.com/FahadBinHussain/litellm-huggingface-template">litellm-huggingface-template</a> &amp; <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
