@@ -84,9 +84,9 @@ Javascript   2 hrs 31 mins         █▓░░░░░░░░░░░░░
       <img align="right" src="https://gitbio.vercel.app/api/top-langs/?username=fahadbinhussain&layout=compact" alt="fahadbinhussain" />
     </picture>
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://gitstreak.vercel.app/?user=fahadbinhussain&theme=radical&cache_seconds=1800&v=20260420">
-      <source media="(prefers-color-scheme: light)" srcset="https://gitstreak.vercel.app/?user=fahadbinhussain&cache_seconds=1800&v=20260420">
-      <img align="left" src="https://gitstreak.vercel.app/?user=fahadbinhussain&cache_seconds=1800&v=20260420" alt="fahadbinhussain" />
+      <source media="(prefers-color-scheme: dark)" srcset="https://gitstreak.vercel.app/?user=fahadbinhussain&theme=radical&cache_seconds=1800&v=20260917">
+      <source media="(prefers-color-scheme: light)" srcset="https://gitstreak.vercel.app/?user=fahadbinhussain&cache_seconds=1800&v=20260917">
+      <img align="left" src="https://gitstreak.vercel.app/?user=fahadbinhussain&cache_seconds=1800&v=20260917" alt="fahadbinhussain" />
     </picture>
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://gitrophy.vercel.app/?username=FahadBinHussain&theme=tokyonight&column=4">
