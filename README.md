@@ -159,7 +159,7 @@ Python       4 hrs 53 mins         ███░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a>, <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> &amp; <a href="https://github.com/FahadBinHussain/ytm-comments">ytm-comments</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a>, <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a> &amp; <a href="https://github.com/FahadBinHussain/ytm-comments">ytm-comments</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
