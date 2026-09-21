@@ -159,7 +159,7 @@ Typescript   4 hrs 24 mins         ██▒░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/the-daily-times">the-daily-times</a>, <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> &amp; <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/the-daily-times">the-daily-times</a>, <a href="https://github.com/FahadBinHussain/lore-private">lore-private</a> &amp; <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
