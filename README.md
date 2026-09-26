@@ -159,7 +159,7 @@ Typescript   3 hrs 17 mins         ██▒░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/lore-private">lore-private</a>, <a href="https://github.com/FahadBinHussain/koodo-reader">koodo-reader</a> &amp; <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a>, <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a> &amp; <a href="https://github.com/FahadBinHussain/lore-private">lore-private</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
