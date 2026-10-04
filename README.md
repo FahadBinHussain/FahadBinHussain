@@ -159,7 +159,7 @@ Javascript        5 hrs 28 mins         ██▓░░░░░░░░░░�
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a>, <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> &amp; <a href="https://github.com/FahadBinHussain/imgvault">imgvault</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/imgvault">imgvault</a>, <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a> &amp; <a href="https://github.com/FahadBinHussain/lumen-agent">lumen-agent</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
