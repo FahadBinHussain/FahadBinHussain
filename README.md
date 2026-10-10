@@ -159,7 +159,7 @@ C#                3 hrs 7 mins          █▒░░░░░░░░░░░�
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a>, <a href="https://github.com/FahadBinHussain/lumen-agent">lumen-agent</a> &amp; <a href="https://github.com/FahadBinHussain/aura">aura</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a>, <a href="https://github.com/FahadBinHussain/aura">aura</a> &amp; <a href="https://github.com/FahadBinHussain/mojify">mojify</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
