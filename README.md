@@ -159,7 +159,7 @@ C#                3 hrs 50 mins         █▒░░░░░░░░░░░�
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/koodo-reader">koodo-reader</a>, <a href="https://github.com/FahadBinHussain/Redirector-izer">Redirector-izer</a> &amp; <a href="https://github.com/FahadBinHussain/blindspot">blindspot</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a>, <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> &amp; <a href="https://github.com/FahadBinHussain/Redirector-izer">Redirector-izer</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
