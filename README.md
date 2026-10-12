@@ -159,7 +159,7 @@ C#                5 hrs 10 mins         █▓░░░░░░░░░░░�
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a>, <a href="https://github.com/FahadBinHussain/blindspot">blindspot</a> &amp; <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/imgvault">imgvault</a>, <a href="https://github.com/FahadBinHussain/aura">aura</a> &amp; <a href="https://github.com/FahadBinHussain/lore-private">lore-private</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
