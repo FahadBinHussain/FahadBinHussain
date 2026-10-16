@@ -55,15 +55,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 09 October 2026 - To: 16 October 2026
+From: 10 October 2026 - To: 16 October 2026
 
-Total Time: 82 hrs 43 mins
+Total Time: 82 hrs 11 mins
 
-Powershell   16 hrs 43 mins        █████░░░░░░░░░░░░░░░░░░░░   20.21 %
-Python       14 hrs 44 mins        ████▒░░░░░░░░░░░░░░░░░░░░   17.81 %
-Markdown     12 hrs 22 mins        ███▓░░░░░░░░░░░░░░░░░░░░░   14.96 %
-Javascript   11 hrs 54 mins        ███▓░░░░░░░░░░░░░░░░░░░░░   14.39 %
-Typescript   5 hrs 35 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.74 %
+Powershell   16 hrs 43 mins        █████░░░░░░░░░░░░░░░░░░░░   20.34 %
+Python       14 hrs 32 mins        ████▒░░░░░░░░░░░░░░░░░░░░   17.68 %
+Markdown     12 hrs 21 mins        ███▓░░░░░░░░░░░░░░░░░░░░░   15.03 %
+Javascript   11 hrs 40 mins        ███▓░░░░░░░░░░░░░░░░░░░░░   14.21 %
+Typescript   5 hrs 35 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.79 %
 ```
 
 <!--END_SECTION:waka-->
