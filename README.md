@@ -159,7 +159,7 @@ Python       2 hrs 5 mins          ██▒░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a>, <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> &amp; <a href="https://github.com/FahadBinHussain/bd-railway-eticket">bd-railway-eticket</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/bd-railway-eticket">bd-railway-eticket</a>, <a href="https://github.com/FahadBinHussain/lore-private">lore-private</a> &amp; <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
