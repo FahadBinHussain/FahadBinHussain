@@ -159,7 +159,7 @@ Python       1 hrs 35 mins         █▓░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a> project.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/glitchdraft">glitchdraft</a>, <a href="https://github.com/FahadBinHussain/daily-bnp">daily-bnp</a> &amp; <a href="https://github.com/FahadBinHussain/lore-private">lore-private</a> projects.</p>
 
 <!--END_SECTION:current-projects-->
 
