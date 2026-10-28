@@ -169,3 +169,49 @@ Footer
     assert "old" not in updated
     assert updated.startswith("Header")
     assert updated.strip().endswith("Footer")
+
+
+def test_detect_tools_from_paths_and_content_for_expanded_stack():
+    paths = [
+        "bun.lockb",
+        "drizzle.config.ts",
+        "components.json",
+        "wxt.config.ts",
+        "wrangler.toml",
+        "turbo.json",
+    ]
+    detected_paths = detect_tools_from_paths(paths)
+    assert {"Bun", "Drizzle ORM", "shadcn/ui", "WXT", "Cloudflare", "Turborepo"} <= detected_paths
+
+    content = """
+    dependencies:
+      drizzle-orm: latest
+      @neondatabase/serverless: latest
+      @upstash/redis: latest
+      @trpc/server: latest
+      @radix-ui/react-dialog: latest
+      lucide-react: latest
+      framer-motion: latest
+      three: latest
+      zustand: latest
+      zod: latest
+      openai: latest
+      @anthropic-ai/sdk: latest
+      @google/genai: latest
+    """
+    detected_content = detect_tools_from_content(content)
+    assert {
+        "Drizzle ORM",
+        "Neon",
+        "Upstash",
+        "tRPC",
+        "Radix UI",
+        "Lucide",
+        "Framer Motion",
+        "Three.js",
+        "Zustand",
+        "Zod",
+        "OpenAI",
+        "Anthropic",
+        "Google Gemini",
+    } <= detected_content
