@@ -159,7 +159,7 @@ Javascript   0 hrs 57 mins         █▓░░░░░░░░░░░░░
 
 ## Current Focus
 
-<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/bd-railway-eticket">bd-railway-eticket</a>, <a href="https://github.com/FahadBinHussain/automata-private">automata-private</a> &amp; <a href="https://github.com/FahadBinHussain/mainframe">mainframe</a> projects.</p>
+<p>🔭 Currently actively developing my <a href="https://github.com/FahadBinHussain/bd-railway-eticket">bd-railway-eticket</a> project.</p>
 
 <!--END_SECTION:current-projects-->
 
