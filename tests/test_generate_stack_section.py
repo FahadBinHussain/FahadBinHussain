@@ -215,3 +215,28 @@ def test_detect_tools_from_paths_and_content_for_expanded_stack():
         "Anthropic",
         "Google Gemini",
     } <= detected_content
+
+
+def test_detect_tools_for_mega_batch():
+    paths = [
+        "postcss.config.js",
+        "webpack.config.js",
+        "flake.nix",
+        "Caddyfile",
+        "capacitor.config.ts",
+    ]
+    detected_paths = detect_tools_from_paths(paths)
+    assert {"PostCSS", "Webpack", "Nix / NixOS", "Caddy", "Capacitor"} <= detected_paths
+
+    content = """
+    dependencies:
+      fastify: latest
+      @clerk/nextjs: latest
+      stripe: latest
+      @sentry/nextjs: latest
+      tailscale: latest
+      posthog-js: latest
+      meilisearch: latest
+    """
+    detected_content = detect_tools_from_content(content)
+    assert {"Fastify", "Clerk", "Stripe", "Sentry", "Tailscale", "PostHog", "Meilisearch"} <= detected_content
