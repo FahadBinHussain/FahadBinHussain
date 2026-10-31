@@ -57,13 +57,13 @@
 ```txt
 From: 24 October 2026 - To: 30 October 2026
 
-Total Time: 9 hrs 39 mins
+Total Time: 7 hrs 56 mins
 
-Markdown     2 hrs 51 mins         ███████▒░░░░░░░░░░░░░░░░░   29.59 %
-Powershell   2 hrs 1 mins          █████▒░░░░░░░░░░░░░░░░░░░   20.90 %
-Kotlin       1 hrs 17 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.27 %
-Typescript   0 hrs 55 mins         ██▒░░░░░░░░░░░░░░░░░░░░░░   09.52 %
-SQL          0 hrs 37 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.47 %
+Markdown     2 hrs 31 mins         ████████░░░░░░░░░░░░░░░░░   31.80 %
+Powershell   1 hrs 50 mins         █████▓░░░░░░░░░░░░░░░░░░░   23.15 %
+Kotlin       1 hrs 17 mins         ████░░░░░░░░░░░░░░░░░░░░░   16.16 %
+Typescript   0 hrs 50 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.45 %
+SQL          0 hrs 26 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.50 %
 ```
 
 <!--END_SECTION:waka-->
