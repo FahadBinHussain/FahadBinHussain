@@ -57,13 +57,13 @@
 ```txt
 From: 06 November 2026 - To: 13 November 2026
 
-Total Time: 55 hrs 28 mins
+Total Time: 60 hrs 0 mins
 
-Unknown      51 hrs 42 mins        ███████████████████████▒░   93.22 %
-Markdown     1 hrs 26 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.59 %
-Python       0 hrs 30 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.89 %
-Java         0 hrs 19 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.57 %
-Javascript   0 hrs 18 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.54 %
+Unknown      57 hrs 9 mins         ███████████████████████▓░   95.24 %
+Markdown     1 hrs 3 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.74 %
+Python       0 hrs 30 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.83 %
+Javascript   0 hrs 18 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.50 %
+Kotlin       0 hrs 16 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.44 %
 ```
 
 <!--END_SECTION:waka-->
