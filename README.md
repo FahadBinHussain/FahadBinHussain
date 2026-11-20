@@ -55,14 +55,14 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 13 November 2026 - To: 19 November 2026
+From: 13 November 2026 - To: 20 November 2026
 
-Total Time: 83 hrs 33 mins
+Total Time: 78 hrs 19 mins
 
-Unknown      82 hrs 48 mins        ████████████████████████▓   99.11 %
-Markdown     0 hrs 28 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.55 %
-Kotlin       0 hrs 8 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.17 %
-Javascript   0 hrs 6 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.11 %
+Unknown      77 hrs 34 mins        ████████████████████████▓   99.06 %
+Markdown     0 hrs 28 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.59 %
+Kotlin       0 hrs 8 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.18 %
+Javascript   0 hrs 6 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.12 %
 Powershell   0 hrs 2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.03 %
 ```
 
