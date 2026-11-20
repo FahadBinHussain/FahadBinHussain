@@ -57,12 +57,12 @@
 ```txt
 From: 13 November 2026 - To: 20 November 2026
 
-Total Time: 78 hrs 19 mins
+Total Time: 72 hrs 5 mins
 
-Unknown      77 hrs 34 mins        ████████████████████████▓   99.06 %
-Markdown     0 hrs 28 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.59 %
-Kotlin       0 hrs 8 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.18 %
-Javascript   0 hrs 6 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.12 %
+Unknown      71 hrs 20 mins        ████████████████████████▓   98.98 %
+Markdown     0 hrs 28 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.64 %
+Kotlin       0 hrs 8 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.19 %
+Javascript   0 hrs 6 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.13 %
 Powershell   0 hrs 2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.03 %
 ```
 
